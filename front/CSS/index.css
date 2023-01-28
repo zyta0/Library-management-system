@@ -1,0 +1,316 @@
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .w {
+            width: 1500px;
+            margin: auto;
+        }
+        a{
+            text-decoration: none;
+        }
+        .nav {
+            position: relative;
+            height: 80px;
+            
+        }
+        .pic{
+            position: absolute;
+            left: 300px;
+            height: 80px;
+            width: 80px;
+        }
+        .pic img{
+            width: 80px;
+        }
+        .home{
+            position: absolute;
+            left: 400px;
+            width: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+        .stacks{
+            position: absolute;
+            left: 500px;
+            width: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+        .borrow{
+            position: absolute;
+            left: 600px;
+            width: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+        .friendCircle{
+            position: absolute;
+            left: 700px;
+            width: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+        .nav span{
+            cursor: pointer;
+        }
+        .navMain span:hover{
+            border-bottom: #3f74b3 solid 2px;
+        }
+        .search{
+            position: absolute;
+            left: 900px;
+            height: 80px;
+            line-height: 80px;
+        }
+        .search input{
+            padding: 3px;
+            height: 30px;
+            width: 230px;
+            border: 0px;
+            border-radius: 5px;
+            background-color: #f4f8fa;
+        }
+        .icon-sousuo1{
+            font-size: 20px;
+        }
+        #searchIcon{
+            position: absolute;
+            left: 210px;
+            top: 3px;
+        }
+        .personal{
+            position: absolute;
+            right: 150px;
+            height: 80px;
+        }
+        .personal img{
+            position: absolute;
+            display: inline-block;
+            right: 20px;
+            top: 10px;
+            height: 60px;
+            border-radius: 50%;;
+        }
+        .message{
+            position: absolute;
+            top: 23px;
+            right: 130px;
+        }
+        .icon-xiaoxi{
+            font-size: 30px;
+        }
+        .subject{
+            position: absolute;
+            right: 80px;
+            top: 23px;
+        }
+        .icon-yejian{
+            font-size: 30px;
+        }
+        .logReg{
+            position: absolute;
+            right: 0px;
+            top: 25px;
+        }
+
+        .carouselMap{
+            position: relative;
+            top: 5px;
+            left: 300px;
+            background-color: black;
+            height: 300px;
+            width: 850px;
+            
+        }
+        .recommand{
+            position: absolute;
+            top: 20px;
+            left: 250px;
+            width: 700px;
+            height: 650px;
+            padding: 5px;
+            background-color:#e5e5e5;
+        }
+        .recHead{
+            position: relative;
+        }
+        .recommandText{
+            position: absolute;
+            left: 20px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 30px;
+        }
+        
+        .middle{
+            position: relative;
+            height: 1300px;
+        }
+        .boundary{
+            position: absolute;
+            top: 25px;
+            left: 170px;
+            display: inline-block;
+            background-color: black;
+            width: 500px;
+            height: 3px;
+        }
+        .recommandBook{
+            position: absolute;
+            top: 80px;
+            left: 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            background-color: #fff;
+            width: 650px;
+            height: 500px;
+        }
+        .recBook{
+            width: 150px;
+            height: 220px;
+            background-color: #000;
+        }
+        .recBook img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .recBook img:hover{
+            transform: scale(110%);
+        }
+        .recFoot{
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+        }
+        .icon-xiangzuo{
+            font-size: 40px;
+        }
+        .icon-xiangyou{
+            font-size: 40px;
+        }
+        .footText{
+            position: absolute;
+            left: 550px;
+            top: 3px;
+            display: inline-block;
+            background-color: black;
+            color: white;
+            text-align: center;
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 10px;
+        }
+        .rank{
+            position: absolute;
+            top: 20px;
+            left: 980px;
+            height: 650px;
+            width: 200px;
+            background-color: #e5e5e5;
+            border-radius: 20px;
+        }
+        .rankText{
+            position: absolute;
+            top: 10px;
+            left: 8px;
+            font-size: 20px;
+        }
+        .rankBookOuter{
+            position: absolute;
+            top: 50px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 580px;
+        } 
+        .rankBookOuter li{
+            display: block;
+            list-style: none;
+            height: 60px;
+            line-height: 60px;
+        }
+        .rankBookOuter li span{
+            cursor: pointer;
+        }
+        .hotReview{
+            position: absolute;
+            top: 700px;
+            left: 250px;
+            width: 940px;
+            height: 580px;
+            background-color: #e5e5e5;
+        }
+        .hotRevText{
+            position: absolute;
+            left: 20px;
+            height: 60px;
+            width: 900px;
+            line-height: 60px;
+            font-size: 30px;
+            border-bottom: whitesmoke solid 5px;
+        }
+        .hotRevConOuter{
+            position: absolute;
+            top: 80px;
+            left: 20px;
+            height: 430px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .hotRevContent{
+            width: 900px;
+            height: 200px;
+            background-color: #000;
+        }
+        .icon-xiangxiazhanhang{
+            font-size: 30px;
+        }
+        .hotRevFoot{
+            position: absolute;
+            top: 530px;
+            left: 455px;
+        }
+        .notice{
+            position: absolute;
+            top: 1300px;
+            left: 250px;
+            width: 940px;
+            height: 300px;
+            border-radius: 10px;
+            background-color: #e5e5e5;
+        }
+        .notText{
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            width: 900px;
+            font-size: 30px;
+            text-align: center;
+        }
+        .notConOuter{
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: #fff;
+            width: 900px;
+            height: 220px;
+        }
+        .notContent{
+            width: 900px;
+            height: 100px;
+            background-color: yellow;
+        }
+   
