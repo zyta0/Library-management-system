@@ -189,6 +189,9 @@
             bottom: 20px;
             left: 30px;
         }
+        .recFoot span{
+            cursor: pointer;
+        }
         .icon-xiangzuo{
             font-size: 40px;
         }
@@ -207,6 +210,7 @@
             height: 30px;
             line-height: 30px;
             border-radius: 10px;
+            cursor: pointer;
         }
         .rank{
             position: absolute;
