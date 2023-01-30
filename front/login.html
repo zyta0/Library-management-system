@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="./CSS/login.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="outer">
+        <div class="text">密码登录</div>
+        <div class="outerAccount">
+            <input type="text" id="account" placeholder="请输入账号">
+        </div>
+        <div class="outerPwd">
+            <input type="password" id="pwd" placeholder="请输入密码">
+        </div>
+        <button id="btn">登录</button>
+    </div>
+    <script>
+        const account = document.getElementById("account");
+        const pwd = document.getElementById("pwd");
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click",()=>{
+            axios({
+                method: "POST",
+                url: "http://api.reginvolver.cn/user/login",
+                data:{
+                    password: `${pwd.value}`,
+                    name: `${account.value}` 
+                }
+            }).then(res => console.log(res))
+        })
+    </script>
+</body>
+</html>

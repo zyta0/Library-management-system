@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="./CSS/register.css">
+</head>
+<body>
+    <div class="outer">
+        <div class="text">账号注册</div>
+        <div class="info">
+            <div class="realNameOuter">
+                <input type="text" id="realName" placeholder="姓名">
+            </div>
+            <div class="department">
+                <span>方向</span>
+                <div class="depContent">
+                    <p>CPU&OS</p>
+                    <p>Java</p>
+                    <p>秘书处</p>
+                    <p>全栈</p>
+                    <p>人工智能</p>
+                    <p>设计</p>
+                </div>
+            </div>
+            <div class="issueNum">
+                <span>期数</span>
+                <div class="issueNumCont">
+                    <p>七期</p>
+                    <p>六期</p>
+                    <p>五期</p>
+                </div>
+            </div>
+            <!-- <div class="inviCode">邀请码</div> -->
+            <input type="text" placeholder="邀请码" id="inviCode">
+            <input type="text" placeholder="邮箱" id="account">
+            <input type="password" placeholder="密码" id="pwd">
+        </div>
+        <button id="btn">注册</button>
+        <script>
+            const dep = document.querySelector(".department span");
+            const depCont = document.querySelectorAll(".depContent p");
+            const issueNum = document.querySelector(".issueNum span");
+            const issueNumCont = document.querySelectorAll(".issueNumCont p");
+            function uploadInfo(ele,tar) {
+                ele.addEventListener("click", () => {
+                    tar.textContent = ele.textContent
+                })
+            }
+            depCont.forEach(ele => uploadInfo(ele,dep));
+            issueNumCont.forEach(ele => uploadInfo(ele,issueNum));
+        </script>
+    </div>
+</body>
+</html>
