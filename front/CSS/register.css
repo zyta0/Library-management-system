@@ -81,3 +81,6 @@
         #btn:hover {
             background-color: #00aae6;
         }
+        p {
+            cursor: pointer;
+        }
