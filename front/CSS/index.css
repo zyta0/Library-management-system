@@ -85,7 +85,7 @@
         }
         .personal{
             position: absolute;
-            right: 150px;
+            left: 1300px;
             height: 80px;
         }
         .personal img{
@@ -99,14 +99,14 @@
         .message{
             position: absolute;
             top: 23px;
-            right: 130px;
+            left: 1290px;
         }
         .icon-xiaoxi{
             font-size: 30px;
         }
         .subject{
             position: absolute;
-            right: 80px;
+            left: 1340px;
             top: 23px;
         }
         .icon-yejian{
@@ -114,7 +114,7 @@
         }
         .logReg{
             position: absolute;
-            right: 0px;
+            left: 1390px;
             top: 25px;
         }
 
