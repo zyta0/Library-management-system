@@ -1,0 +1,63 @@
+
+                .typeCenter {
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 1200px;
+                    margin-top: 30px;
+                }
+        
+                .selectionBar {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    width: 12%;
+                    height: 200px;
+                    border: 2px solid black;
+                    text-align: center;
+                }
+        
+                .selectionBar .selectBox {
+                    position: relative;
+                }
+        
+                .selectionBar .selectedSign {
+                    display: none;
+                    position: absolute;
+                    top: 2px;
+                    left: 5px;
+                    height: 70%;
+                    border: 2px solid black;
+                }
+        
+                .information {
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    width: 80%;
+                }
+        
+                .information .tab {
+                    display: flex;
+                    background-color: burlywood;
+                    margin-top: 20px;
+                }
+        
+                .information .tab span {
+                    flex: 1;
+                }
+
+                .information .tab .changes {
+                    display: block;
+                }
+
+                .information .tab .preserve {
+                    display: none;
+                }
+        
+                .information .details .profilePhoto {
+                    width: 50px;
+                    height: 50px;
+                    border: 2px solid black;
+                    border-radius: 50%;
+                }
