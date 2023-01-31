@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        body {
+            margin-top: 60px;
+        }
+
+        .typeCenter {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            height: 1000px;
+            width: 960px;
+        }
+
+        .selectedGoodBooks {
+            position: relative;
+            background-color: burlywood;
+        }
+
+        .selectedGoodBooks .title {
+            float: left;
+            width: 50px;
+            text-align: center;
+            background-color: dodgerblue;
+        }
+
+        .classification {
+            margin-top: 60px;
+            border: 5px solid black;
+        }
+
+        .books {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .book {
+            cursor: pointer;
+            height: 60px;
+            width: 60px;
+            background-color: darkgreen;
+        }
+
+        .book:hover {
+            transform: translateY(-5px);
+        }
+
+        .classification .classifiedNavigationBar {
+            display: flex;
+            height: 50px;
+            width: 100%;
+            background-color: cornsilk;
+        }
+
+        .classification .classifiedNavigationBar>.classLabel {
+            width: 8%;
+            background-color: palegreen;
+        }
+
+        .classification .classifiedNavigationBar>.classificationDetails {
+            display: flex;
+            justify-content: space-around;
+            flex: 1;
+        }
+
+        .classification .classifiedNavigationBar>.classificationMark {
+            width: 4%;
+            background-color: palegreen;
+        }
+
+        .classification .classifiedNavigationBar>.classificationDetails .unSign {
+            cursor: pointer;
+            border: none;
+        }
+
+        .classification .classifiedNavigationBar>.classificationDetails .signed {
+            cursor: pointer;
+            border-bottom: 3px solid black;
+        }
+
+        .classification .viewMoreBooks {
+            cursor: pointer;
+            margin: 0 auto;
+            width: 100px;
+            height: 50px;
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="typeCenter">
+        <div class="selectedGoodBooks">
+            <div class="title">
+                精<br>选<br>好<br>书
+            </div>
+            <div class="books">
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+            </div>
+            <div class="books">
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+            </div>
+        </div>
+        <div class="classification">
+            <div class="classifiedNavigationBar">
+                <div class="classLabel"></div>
+                <div class="classificationDetails">
+                    <div class="unSign">专业书籍</div>
+                    <div class="unSign">名著</div>
+                    <div class="unSign">自传</div>
+                    <div class="unSign">小说</div>
+                    <div class="unSign">漫画</div>
+                </div>
+                <div class="classificationMark"></div>
+            </div>
+            <div class="books">
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+            </div>
+            <div class="books">
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+            </div>
+            <div class="books">
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+            </div>
+            <div class="books">
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+                <div class="book"></div>
+            </div>
+            <div class="viewMoreBooks">
+                <span>查看更多</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        //classificationDetails点击时对应的装饰出现，其余消失
+        let classificationDetails = document.querySelectorAll(".classificationDetails>div") //获取分类导航栏里的功能
+        for (let i = 0; i < classificationDetails.length; i++) {
+            classificationDetails[i].onclick = function () {
+                for (let j = 0; j < classificationDetails.length; j++) {
+                    classificationDetails[j].className = "unSign";
+                }
+                classificationDetails[i].className = "signed";
+            }
+        }
+    </script>
+</body>
+
+</html>
