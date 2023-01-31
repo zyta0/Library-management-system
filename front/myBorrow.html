@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3870007_dyrfpb9ksv6.css">
+    <link rel="stylesheet" href="./CSS/myBorrow.css">
+</head>
+<body>
+    <div class="nav w">
+        <div class="pic">
+            <a href="https://baike.baidu.com/item/%E4%BA%91%E9%A1%B6%E4%B9%A6%E9%99%A2/23672117?fr=aladdin" target="_blank">
+                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/%E4%BA%91%E9%A1%B6%E4%B9%A6%E9%99%A2.png" alt="">
+            </a>
+        </div>
+        <div class="navMain">
+            <span class="home"><a href="./index.html">首页</a></span>
+            <span class="stacks"><a href="./stackRoom.html">书库</a></span>
+            <span class="borrow">我的借阅</span>
+            <span class="friendCircle">书友圈</span>
+        </div>
+        <div class="search">
+            <input type="text">
+            <span class="iconfont icon-sousuo1" id="searchIcon"></span>
+        </div>
+        <div class="personal">
+            <a href="./personInformation.html"><img src="https://ta0.oss-cn-beijing.aliyuncs.com/%E5%A4%B4%E5%83%8F.png" alt=""></a>
+        </div>
+        <div class="message">
+            <span class="iconfont icon-xiaoxi"></span>
+        </div>
+        <div class="subject">
+            <span class="iconfont icon-yejian"></span>
+        </div>
+        <div class="logReg"><a href="/login.html">登录</a>/<a href="/register.html">注册</a></div>
+    </div>
+
+    <div class="middle">
+        <div class="midNav">
+            <span id="midNavBor">借阅中</span>
+            <span id="midNavRet">待归还</span>
+            <span id="midNavRes">预约中</span>
+        </div>
+        <div class="borrowBook">
+            <div id="borBookAtl">
+                <div class="borBookLeftOuter">
+                    <div class="borBook">
+                        <div>
+                            <div class="bookImg">
+                                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/ming.png" alt="">
+                            </div>
+                            <span class="bookName">明朝那些事儿</span>
+                            <span class="writter">当年明月</span>
+                            <span class="briefInfo">简介</span>
+                            <span class="iconfont icon-pinglun"></span>
+                            <span class="borBookReturn">归还</span>
+                        </div>
+                        <div>
+                            <div class="bookImg">
+                                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/ming.png" alt="">
+                            </div>
+                            <span class="bookName">明朝那些事儿</span>
+                            <span class="writter">当年明月</span>
+                            <span class="briefInfo">简介</span>
+                            <span class="iconfont icon-pinglun"></span>
+                            <span class="borBookReturn">归还</span>
+                        </div>
+                        <div>
+                            <div class="bookImg">
+                                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/ming.png" alt="">
+                            </div>
+                            <span class="bookName">明朝那些事儿</span>
+                            <span class="writter">当年明月</span>
+                            <span class="briefInfo">简介</span>
+                            <span class="iconfont icon-pinglun"></span>
+                            <span class="borBookReturn">归还</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="borBookRightOuter">
+                    <div class="borBook">
+                        <div>
+                            <div class="bookImg">
+                                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/ming.png" alt="">
+                            </div>
+                            <span class="bookName">明朝那些事儿</span>
+                            <span class="writter">当年明月</span>
+                            <span class="briefInfo">简介</span>
+                            <span class="iconfont icon-pinglun"></span>
+                            <span class="borBookReturn">归还</span>
+                        </div>
+                        <div>
+                            <div class="bookImg">
+                                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/ming.png" alt="">
+                            </div>
+                            <span class="bookName">明朝那些事儿</span>
+                            <span class="writter">当年明月</span>
+                            <span class="briefInfo">简介</span>
+                            <span class="iconfont icon-pinglun"></span>
+                            <span class="borBookReturn">归还</span>
+                        </div>
+                        <div>
+                            <div class="bookImg">
+                                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/ming.png" alt="">
+                            </div>
+                            <span class="bookName">明朝那些事儿</span>
+                            <span class="writter">当年明月</span>
+                            <span class="briefInfo">简介</span>
+                            <span class="iconfont icon-pinglun"></span>
+                            <span class="borBookReturn">归还</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="returnBookAtl" class="hidden">
+                <div class="borBookLeftOuter">
+                    <div class="borBook">
+                        <div>
+                            <div class="bookImg">
+                                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/bailuyuan.jpg" alt="">
+                            </div>
+                            <span class="bookName">白鹿原</span>
+                            <span class="writter">陈忠实</span>
+                            <span class="briefInfo">简介</span>
+                            <span class="iconfont icon-pinglun"></span>
+                            <span class="borBookReturn">归还</span>
+                            <span class="borBookContinue">续借</span>
+                        </div>
+                        <div>
+                            <div class="bookImg">
+                                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/bailuyuan.jpg" alt="">
+                            </div>
+                            <span class="bookName">白鹿原</span>
+                            <span class="writter">陈忠实</span>
+                            <span class="briefInfo">简介</span>
+                            <span class="iconfont icon-pinglun"></span>
+                            <span class="borBookReturn">归还</span>
+                            <span class="borBookContinue">续借</span>
+                        </div>
+                        <div>
+                            <div class="bookImg">
+                                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/bailuyuan.jpg" alt="">
+                            </div>
+                            <span class="bookName">白鹿原</span>
+                            <span class="writter">陈忠实</span>
+                            <span class="briefInfo">简介</span>
+                            <span class="iconfont icon-pinglun"></span>
+                            <span class="borBookReturn">归还</span>
+                            <span class="borBookContinue">续借</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="borBookRightOuter">
+                    <div class="borBook">
+                        <div>
+                            <div class="bookImg">
+                                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/bailuyuan.jpg" alt="">
+                            </div>
+                            <span class="bookName">白鹿原</span>
+                            <span class="writter">陈忠实</span>
+                            <span class="briefInfo">简介</span>
+                            <span class="iconfont icon-pinglun"></span>
+                            <span class="borBookReturn">归还</span>
+                            <span class="borBookContinue">续借</span>
+                        </div>
+                        <div>
+                            <div class="bookImg">
+                                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/bailuyuan.jpg" alt="">
+                            </div>
+                            <span class="bookName">白鹿原</span>
+                            <span class="writter">陈忠实</span>
+                            <span class="briefInfo">简介</span>
+                            <span class="iconfont icon-pinglun"></span>
+                            <span class="borBookReturn">归还</span>
+                            <span class="borBookContinue">续借</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="resBookAtl" class="hidden">
+                <div class="borBookLeftOuter">
+                    <div class="borBook">
+                        <div>
+                            <div class="bookImg">
+                                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/pingfandeshijie.png" alt="">
+                            </div>
+                            <span class="bookName">平凡的世界</span>
+                            <span class="writter">路遥</span>
+                            <span class="briefInfo">简介</span>
+                            <span class="iconfont icon-pinglun"></span>
+                            <span class="borBookReturn">预约</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="borBookRightOuter">
+                    <div class="borBook">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/myBorrow.js"></script>
+</body>
+</html>

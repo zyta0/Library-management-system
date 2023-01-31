@@ -1,0 +1,265 @@
+
+        a {
+            text-decoration: none;
+        }
+        a:link{
+            color: #000;
+        }
+        a:hover{
+            color: #000;
+        }
+        a:visited{
+            color: #000;
+        }
+        a:active{
+            color: #000;
+        }
+        .nav {
+            position: relative;
+            height: 80px;
+
+        }
+
+        .pic {
+            position: absolute;
+            left: 300px;
+            height: 80px;
+            width: 80px;
+        }
+
+        .pic img {
+            width: 80px;
+        }
+
+        .home {
+            position: absolute;
+            left: 400px;
+            width: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .stacks {
+            position: absolute;
+            left: 500px;
+            width: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .borrow {
+            position: absolute;
+            left: 600px;
+            width: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .friendCircle {
+            position: absolute;
+            left: 700px;
+            width: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .nav span {
+            cursor: pointer;
+        }
+
+        .navMain span:hover {
+            border-bottom: #3f74b3 solid 2px;
+        }
+
+        .search {
+            position: absolute;
+            left: 900px;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .search input {
+            padding: 3px;
+            height: 30px;
+            width: 230px;
+            border: 0px;
+            border-radius: 5px;
+            background-color: #f4f8fa;
+        }
+
+        .icon-sousuo1 {
+            font-size: 20px;
+        }
+
+        #searchIcon {
+            position: absolute;
+            left: 210px;
+            top: 3px;
+        }
+
+        .personal {
+            position: absolute;
+            left: 1300px;
+            height: 80px;
+        }
+
+        .personal img {
+            position: absolute;
+            display: inline-block;
+            right: 20px;
+            top: 10px;
+            height: 60px;
+            border-radius: 50%;
+            ;
+        }
+
+        .message {
+            position: absolute;
+            top: 23px;
+            left: 1290px;
+        }
+
+        .icon-xiaoxi {
+            font-size: 30px;
+        }
+
+        .subject {
+            position: absolute;
+            left: 1340px;
+            top: 23px;
+        }
+
+        .icon-yejian {
+            font-size: 30px;
+        }
+
+        .logReg {
+            position: absolute;
+            left: 1390px;
+            top: 25px;
+        }
+
+        .typeCenter {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1200px;
+            margin-top: 30px;
+        }
+
+        .selectionBar {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 12%;
+            height: 200px;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .selectionBar .selectBox {
+            position: relative;
+        }
+
+        .selectionBar .selectedSign {
+            display: none;
+            position: absolute;
+            top: 2px;
+            left: 5px;
+            height: 70%;
+            border: 2px solid black;
+        }
+
+        .information {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 80%;
+        }
+
+        .information>div {
+            border: 2px solid black;
+            margin-bottom: 30px;
+        }
+
+        .information .tab {
+            display: flex;
+            background-color: burlywood;
+            padding: 0 20px 0 10px;
+        }
+
+        .information .tab span {
+            flex: 1;
+        }
+
+        .information .tab .changes {
+            display: block;
+        }
+
+        .information .tab .preserve {
+            display: none;
+        }
+
+        .information .details {
+            padding: 30px;
+            position: relative;
+        }
+
+        .information .details .profilePhoto {
+            width: 80px;
+            height: 80px;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+
+        .information .details>button {
+            position: absolute;
+            top: 30%;
+            left: 14%;
+        }
+
+        .information .personInformation .details>input {
+            position: absolute;
+            top: 14%;
+            left: 26%;
+        }
+
+        .information .personInformation .details>.birthDay {
+            top: 86px;
+        }
+
+        .information .contactWay input {
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .information .contactWay .phoneNumber {
+            margin-bottom: 0;
+        }
+
+        .information .bind .details>div {
+            display: inline-block;
+            width: 278px;
+            height: 50px;
+            background-color: cornflowerblue;
+        }
+
+        .information .bind .details .mailBox {
+            margin-left: 30px;
+        }
+
+        .information .changePassword .details>div {
+            display: inline-block;
+            width: 278px;
+            height: 50px;
+            line-height: 50px;
+            background-color: cornflowerblue;
+        }
+
+        .information .changePassword .details .verificationCode {
+            margin-left: 30px;
+        }
