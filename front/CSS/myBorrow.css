@@ -1,3 +1,7 @@
+        .w {
+            width: 1500px;
+            margin: auto;
+        }
         a{
             text-decoration: none;
         }
@@ -124,7 +128,6 @@
         .middle{
             position: relative;
             top: 10px;
-            left: 300px;
             background-color: #e3e3e3;
             height: 800px;
             width: 850px;
