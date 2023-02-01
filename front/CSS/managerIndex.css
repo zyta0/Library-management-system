@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+}
+
+.navigationBar {
+    height: 40px;
+    width: 100%;
+}
+
+.typeCenter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+}
+
+.navigationBar .pic {
+    width: 40px;
+    height: 40px;
+    background-color: cornflowerblue;
+}
+
+.function {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    cursor: pointer;
+}
+
+.function>span {
+    display: inline-block;
+    width: 14%;
+    text-align: center;
+}
+
+.function>span:hover {
+    border-bottom: 3px solid black;
+}
+
+.function>div {
+    display: inline-block;
+}
+
+.search input {
+    padding: 3px;
+    height: 30px;
+    width: 230px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: #f4f8fa;
+}
+
+.bulletinBoard {
+    position: relative;
+    height: 200px;
+    background-color: goldenrod;
+    border-radius: 14px;
+    padding: 10px 20px;
+}
+
+.bulletinBoard .title .change {
+    position: absolute;
+    right: 20px;
+}
+
+.bulletinBoard .details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 80%;
+    height: 142px;
+}
+
+.bulletinBoard .details>div {
+    height: 58px;
+    background-color: lightpink;
+}
+
+.bulletinBoard .viewMoreBooks {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+
+.classification {
+    margin-top: 60px;
+    border: 5px solid black;
+}
+
+.books {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.book {
+    cursor: pointer;
+    height: 220px;
+    width: 150px;
+    background-color: darkgreen;
+}
+
+.book:hover {
+    transform: translateY(-5px);
+}
+
+.classification .classifiedNavigationBar {
+    display: flex;
+    height: 50px;
+    width: 100%;
+    background-color: cornsilk;
+}
+
+.classification .classifiedNavigationBar>.classLabel {
+    width: 8%;
+    background-color: palegreen;
+}
+
+.classification .classifiedNavigationBar>.classificationDetails {
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.classification .classifiedNavigationBar .classificationMark {
+    width: 4%;
+    background-color: palegreen;
+}
+
+.classification .classifiedNavigationBar .addBooks {
+    width: 12%;
+    background-color: palegreen;
+}
+
+.classification .classifiedNavigationBar>.classificationDetails .unSign {
+    cursor: pointer;
+    border: none;
+}
+
+.classification .classifiedNavigationBar>.classificationDetails .signed {
+    cursor: pointer;
+    border-bottom: 3px solid black;
+}
+
+.pageButton div {
+    display: inline-block;
+    font-size: 30px;
+    margin-top: 2%;
+    margin-left: 4%;
+    cursor: pointer;
+}
