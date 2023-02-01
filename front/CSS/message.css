@@ -20,7 +20,7 @@
         .nav {
             position: relative;
             height: 80px;
-            margin: auto;
+            
         }
         .pic{
             position: absolute;
@@ -102,7 +102,7 @@
             right: 20px;
             top: 10px;
             height: 60px;
-            border-radius: 50%;;
+            border-radius: 50%;
         }
         .message{
             position: absolute;
@@ -117,7 +117,7 @@
             left: 1340px;
             top: 23px;
         }
-         .icon-yejian{
+        .icon-yejian{
             font-size: 30px;
         }
         .logReg{
@@ -127,118 +127,71 @@
         }
         .middle{
             position: relative;
-            top: 10px;
-            background-color: #e3e3e3;
-            height: 800px;
-            width: 850px;
-            padding: 10px 20px;
+            top: 100px;
+            height: 600px;
+            width: 800px;
+            background-color: #c5e4f9;
         }
         .midNav{
-            font-size: 25px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width:600px;
         }
         .midNav span{
             display: inline-block;
-            width: 150px;
+            width: 100px;
             height: 50px;
+            line-height: 50px;
+            font-size: 20px;
             text-align: center;
-            cursor: pointer;
         }
         .midNav span:hover{
-            border-bottom: #3f74b3 solid 5px ;
+            border-bottom: #f4f8fa solid 10px;
         }
-        .borrowBook{
-            position: relative;
-            width: 840px; 
-            height: 720px;
-        }
-        #borBookAtl,
-        #returnBookAtl
-        #resBookAtl{
-            width: 100%;
-            height: 100%;
-            margin-top: 10px;
-        }
-        #borBookAtl{
-            position: absolute;
-        }
-        #returnBookAtl{
-            position: absolute;
-        }
-        .hidden{
-            opacity:0;
-            transition: all .3s linear;
-        }
-        .borBookLeftOuter,
-        .borBookRightOuter{
-            display: inline-block;
-            height: 100%;
-            width: 415px;
-        }
-        .borBookLeftOuter{
-            border-right: #929091 solid 5px;
-        }
-        .borBook{
-            width: 100%;
-            height: 100%;
+        #chatList,
+        #recLikes,
+        #replyMe,
+        #myComment,
+        #myLike{
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            position: absolute;
+            top: 60px;
         }
-        .borBook div{
+        #chatList div,
+        #recLikes div,
+        #replyMe div,
+        #myComment div,
+        #myLike div{
             position: relative;
-            width: 100%;
-            height: 200px;
-            margin-bottom: 55px;
+            width: 700px;
+            height: 100px;
+            /* background-color: #000; */
+            margin-bottom: 10px;
+            margin-left: 30px;
         }
-        .borBook div .bookImg{
-            display: inline-block;
-            height: 200px;
-            width: 140px;
-        }
-        .bookImg img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .bookName{
+        #chatList div img,
+        #recLikes div img,
+        #replyMe div img,
+        #myComment div img,
+        #myLike div img{
             position: absolute;
-            top: 10px;
-            left: 180px;
-            font-size: 25px;
+            top: 25px;
+            height: 50px;
+            border-radius: 50%;
         }
-        .writter{
+        .midMsgText{
             position: absolute;
-            top: 48px;
-            left: 180px;
-            font-size: 14px;
+            left: 80px;
+            font-size: 18px;
         }
-        .briefInfo{
+        .midMsgTextCont{
             position: absolute;
-            top: 75px;
-            left: 180px;
-            font-size: 20px;
+            left: 80px;
+            top: 40px;
         }
-        .icon-pinglun{
-            position: absolute;
-            top: 110px;
-            left: 180px;
-            font-size: 25px;
-        }
-        .borBookReturn,
-        .borBookContinue{
-            position: absolute;
-            top: 150px;
-            left: 180px;
-            display: inline-block;
-            width: 50px;
-            height: 20px;
-            line-height: 20px;
-            text-align: center;
-            color: white;
-            background-color: #000;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .borBookContinue{
-            left: 250px;
+        .hidden{
+            transition: all .5s linear;
+            opacity: 0;
         }

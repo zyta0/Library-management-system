@@ -1,4 +1,7 @@
-
+        .w {
+            width: 1500px;
+            margin: auto;
+        }
         a {
             text-decoration: none;
         }
@@ -123,7 +126,7 @@
             left: 1290px;
         }
 
-        .icon-xiaoxi {
+        .message .icon-xiaoxi {
             font-size: 30px;
         }
 
@@ -133,7 +136,7 @@
             top: 23px;
         }
 
-        .icon-yejian {
+        .subject .icon-yejian {
             font-size: 30px;
         }
 
