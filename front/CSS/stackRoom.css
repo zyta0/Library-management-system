@@ -127,7 +127,7 @@ a:link{
     left: 1290px;
 }
 
-.icon-xiaoxi {
+.message .icon-xiaoxi {
     font-size: 30px;
 }
 
@@ -137,7 +137,7 @@ a:link{
     top: 23px;
 }
 
-.icon-yejian {
+.subject .icon-yejian {
     font-size: 30px;
 }
 
