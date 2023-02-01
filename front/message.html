@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图书管理系统</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3870007_ifhufqnubw.css">
+    <link rel="stylesheet" href="./CSS/message.css">
+</head>
+<body>
+    <div class="nav w">
+        <div class="pic">
+            <a href="https://baike.baidu.com/item/%E4%BA%91%E9%A1%B6%E4%B9%A6%E9%99%A2/23672117?fr=aladdin" target="_blank">
+                <img src="https://ta0.oss-cn-beijing.aliyuncs.com/%E4%BA%91%E9%A1%B6%E4%B9%A6%E9%99%A2.png" alt="">
+            </a>
+        </div>
+        <div class="navMain">
+            <span class="home">首页</span>
+            <span class="stacks"><a href="./stackRoom.html">书库</a></span>
+            <span class="borrow"><a href="./myBorrow.html">我的借阅</a></span>
+            <span class="friendCircle">书友圈</span>
+        </div>
+        <div class="search">
+            <input type="text">
+            <span class="iconfont icon-sousuo1" id="searchIcon"></span>
+        </div>
+        <div class="personal">
+            <a href="./personInformation.html"><img src="https://ta0.oss-cn-beijing.aliyuncs.com/%E5%A4%B4%E5%83%8F.png"
+                    alt=""></a>
+        </div>
+        <div class="message">
+            <span class="iconfont icon-xiaoxi"></span>
+        </div>
+        <div class="subject">
+            <span class="iconfont icon-yejian"></span>
+        </div>
+        <div class="logReg"><a href="./login.html">登录</a>/<a href="./register.html">注册</a></div>
+        <div class="middle w">
+            <div class="midNav">
+                <span id="midNav01">聊天列表</span>
+                <span id="midNav02">收到的赞</span>
+                <span id="midNav03">回复我的</span>
+                <span id="midNav04">我的评论</span>
+                <span id="midNav05">我的点赞</span>
+            </div>
+            <div class="midMsg">
+                <div id="chatList">
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                </div>
+                <div id="recLikes" class="hidden">
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">赞了你</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">赞了你</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                </div>
+                <div id="replyMe" class="hidden">
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">回复了你</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">回复了你</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                </div>
+                <div id="myComment" class="hidden">
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">你评论了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">你评论了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                </div>
+                <div id="myLike" class="hidden">
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">你点赞了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">你点赞了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                    <div>
+                        <img src="https://ta0.oss-cn-beijing.aliyuncs.com/msg.jpg" alt="">
+                        <span class="midMsgText">系统通知</span><span class="midMsgTextCont">该还书了</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./JS/message.js"></script>
+</body>
+</html>
