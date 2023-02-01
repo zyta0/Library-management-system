@@ -162,7 +162,8 @@
             position: absolute;
         }
         .hidden{
-            display: none;
+            opacity:0;
+            transition: all .3s linear;
         }
         .borBookLeftOuter,
         .borBookRightOuter{
@@ -171,7 +172,6 @@
             width: 415px;
         }
         .borBookLeftOuter{
-            /* background-color: #3f74b3; */
             border-right: #929091 solid 5px;
         }
         .borBook{
