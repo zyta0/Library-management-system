@@ -2,11 +2,25 @@
 * {
     margin: 0;
 }
-
+.w {
+            width: 1500px;
+            margin: auto;
+        }
 a {
     text-decoration: none;
 }
-
+a:link{
+            color: #000;
+        }
+        a:hover{
+            color: #000;
+        }
+        a:visited{
+            color: #000;
+        }
+        a:active{
+            color: #000;
+        }
 .nav {
     position: relative;
     height: 80px;
@@ -116,7 +130,7 @@ a {
     left: 1290px;
 }
 
-.icon-xiaoxi {
+.message .icon-xiaoxi {
     font-size: 30px;
 }
 
@@ -126,7 +140,7 @@ a {
     top: 23px;
 }
 
-.icon-yejian {
+.subject .icon-yejian {
     font-size: 30px;
 }
 
