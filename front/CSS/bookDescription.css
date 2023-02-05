@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.document {
+    position: relative;
+    width: 100%;
+    height: 1720px;
+}
+
+.top {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    background-color: black;
+}
+
+.middle {
+    position: relative;
+    top: 65px;
+    width: 100%;
+    height: 1655px;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    margin-left: -590px;
+    width: 1180px;
+    height: 1655px;
+}
+
+.sectionOne {
+    position: relative;
+    width: 1180px;
+    height: 355px;
+    border-bottom: 1px solid #94a6b4;
+}
+
+.picture {
+    position: absolute;
+    top: 65px;
+    width: 200px;
+    height: 250px;
+    background-color: #cdd9e5;
+}
+
+.picture img {
+    width: 200px;
+    height: 250px;
+}
+
+.text {
+    position: absolute;
+    bottom:0;
+    left: 250px;
+    width: 600px;
+    height: 250px;
+    font: 20px "隶书";
+}
+
+.buttonOne {
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 200px;
+    height: 50px;
+    background-color: #cdd9e5;
+}
+
+.buttonTwo {
+    position: absolute;
+    top: 155px;
+    right: 0;
+    width: 200px;
+    height: 50px;
+    background-color: #cdd9e5;
+}
+
+.buttonThree {
+    position: absolute;
+    top: 260px;
+    right: 0;
+    width: 200px;
+    height: 50px;
+    background-color: #cdd9e5;
+}
+
+.buttonOne a {
+    left: 55px;
+}
+
+.buttonTwo a {
+    left: 55px;
+}
+
+.buttonThree a {
+    left: 55px;
+}
+
+a {
+    position: relative;
+    font: 100 40px "楷体";
+    color: white;
+    text-decoration: none;
+}
+
+.sectionTwo {
+    position: relative;
+    width: 1180px;
+    height: 288px;
+    border-bottom: 1px solid #94a6b4;
+}
+
+.titleBox {
+    position: absolute;
+    top: 15px;
+    width: 200px;
+    height: 35px;
+    background-color: #cdd9e5;
+}
+
+.titleBox p {
+    font: 100 30px "隶书";
+    color: #52606d;
+}
+
+.textTwo {
+    position: absolute;
+    bottom:0;
+    width: 1160px;
+    height: 190px;
+}
+
+.textTwo p {
+    font: 100 15px "宋体";
+    color: #c4c4c4;
+}
+
+.sectionThree {
+    position: relative;
+    width: 1180px;
+    height: 288px;
+    border-bottom: 1px solid #94a6b4;
+}
+
+.sectionFour {
+    position: relative;
+    width: 1180px;
+    height: 580px;
+}
+
+.profilePhotoOne {
+    position: absolute;
+    top: 100px;
+    width: 60px;
+    height: 70px;
+    background-color: #c5ccd6;
+}
+
+.profilePhotoTwo {
+    position: absolute;
+    top: 250px;
+    width: 60px;
+    height: 70px;
+    background-color: #c5ccd6;
+}
+
+.profilePhotoThree {
+    position: absolute;
+    top: 400px;
+    width: 60px;
+    height: 70px;
+    background-color: #c5ccd6;
+}
+
+.commentOne {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 1085px;
+    height: 80px;
+    border-bottom: 1px solid #94a6b4;
+}
+
+.commentTwo {
+    position: absolute;
+    top: 250px;
+    right: 0;
+    width: 1085px;
+    height: 80px;
+    border-bottom: 1px solid #94a6b4;
+}
+
+.commentThree {
+    position: absolute;
+    top: 400px;
+    right: 0;
+    width: 1085px;
+    height: 80px;
+    border-bottom: 1px solid #94a6b4;
+}
+
+.timeOne {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    font: 100 20px "隶书";
+    color: #52606d;
+}
+
+.timeTwo {
+    position: absolute;
+    top: 250px;
+    left: 80px;
+    font: 100 20px "隶书";
+    color: #52606d;
+}
+
+.timeThree {
+    position: absolute;
+    top: 400px;
+    left: 80px;
+    font: 100 20px "隶书";
+    color: #52606d;
+}
+
+.sectionFive {
+    position: relative;
+    width: 1180px;
+    height: 55px;
+}
+
+.buttonFour {
+    position: absolute;
+    left: 0;
+    width: 1030px;
+    height: 55px;
+    background-color: #cdd9e5;
+}
+
+.buttonFive {
+    position: absolute;
+    right: 0;
+    width: 110px;
+    height: 55px;
+    background-color: #cdd9e5;
+}
