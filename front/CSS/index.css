@@ -129,7 +129,9 @@
             left: 1390px;
             top: 25px;
         }
-
+        .hiddenLog{
+            display: none;
+        }
         .carouselMap{
             position: relative;
             top: 5px;
