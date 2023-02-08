@@ -1,6 +1,12 @@
+        *{
+            margin: 0;
+        }
         .w {
             width: 1500px;
             margin: auto;
+        }
+        body{
+            background-color: #e4f4f4;
         }
         a{
             text-decoration: none;
@@ -20,7 +26,7 @@
         .nav {
             position: relative;
             height: 80px;
-            
+            background-color: #fff;
         }
         .pic{
             position: absolute;
@@ -130,7 +136,8 @@
             top: 100px;
             height: 600px;
             width: 800px;
-            background-color: #c5e4f9;
+            background-color: #fff;
+            box-shadow:0 15px 30px rgba(0,0,0,0.1);
         }
         .midNav{
             position: absolute;
@@ -147,7 +154,7 @@
             text-align: center;
         }
         .midNav span:hover{
-            border-bottom: #f4f8fa solid 10px;
+            border-bottom: #3f74b3 solid 5px;
         }
         #chatList,
         #recLikes,
