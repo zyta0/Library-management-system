@@ -135,11 +135,48 @@
         .carouselMap{
             position: relative;
             top: 5px;
-            left: 300px;
-            background-color: black;
             height: 300px;
             width: 850px;
-            
+            overflow: hidden;
+        }
+        .carouselMapPic {
+            position: absolute;
+            left: 0%;
+            width: 300%;
+            height: 100%;
+            transition: all 1s linear;
+        }
+        .carouselMapPic li{
+            width: 850px;
+            height: 300px;
+            float: left;
+            list-style: none;
+        }
+        .carouselMapPic li img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .lis{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+        .lis li{
+            list-style: none;
+            float: left;
+            margin-left: 10px;
+            width: 15px;
+            height: 15px;
+            background-color: #d9d9d9;
+            border-radius: 50%;
+        }
+        .lis .lisSelect{
+            background-color: #979797;
+            /* background-color: #000; */
+
         }
         .recommand{
             position: absolute;
