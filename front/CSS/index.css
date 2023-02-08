@@ -9,6 +9,18 @@
         a{
             text-decoration: none;
         }
+        a:link{
+            color: #000;
+        }
+        a:hover{
+            color: #000;
+        }
+        a:visited{
+            color: #000;
+        }
+        a:active{
+            color: #000;
+        }
         .nav {
             position: relative;
             height: 80px;
@@ -85,7 +97,7 @@
         }
         .personal{
             position: absolute;
-            right: 150px;
+            left: 1300px;
             height: 80px;
         }
         .personal img{
@@ -94,19 +106,19 @@
             right: 20px;
             top: 10px;
             height: 60px;
-            border-radius: 50%;;
+            border-radius: 50%;
         }
         .message{
             position: absolute;
             top: 23px;
-            right: 130px;
+            left: 1290px;
         }
         .icon-xiaoxi{
             font-size: 30px;
         }
         .subject{
             position: absolute;
-            right: 80px;
+            left: 1340px;
             top: 23px;
         }
         .icon-yejian{
@@ -114,7 +126,7 @@
         }
         .logReg{
             position: absolute;
-            right: 0px;
+            left: 1390px;
             top: 25px;
         }
 
