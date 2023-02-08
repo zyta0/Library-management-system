@@ -1,10 +1,25 @@
+        a{
+            text-decoration: none;
+        }
+        a:link{
+            color: #000;
+        }
+        a:hover{
+            color: #000;
+        }
+        a:visited{
+            color: #000;
+        }
+        a:active{
+            color: #000;
+        }
         .outer{
             position: relative;
             margin: auto;
             top: 100px;
-            width: 500px;
+            width: 630px;
             height: 500px;
-            background-color: pink;
+            background-color: #fff;
             border-radius: 20px;
         }
         .text{
@@ -12,7 +27,12 @@
             left: 50%;
             transform: translateX(-50%);
             top: 100px;
-            font-size: 30px;
+            font-size: 25px;
+        }
+        .text img{
+            position: relative;
+            top: 10px;
+            width: 40px;
         }
         #account{
             position: absolute;
@@ -24,11 +44,12 @@
         #account,
         #pwd{
             height: 30px;
-            width: 200px;
+            width: 250px;
             border-radius: 5px;
             border: honeydew solid 3px;
             padding: 10px;
             font-size: 20px;
+            background-color: #e4f4f4;
             
         }
         .outerPwd{
@@ -41,11 +62,10 @@
             position: absolute;
             top: 350px;
             left: 50%;
-            transform: translateX(-50%);
-            width: 220px;
+            width: 130px;
             height: 50px;
             border-radius: 5px;
-            background-color: #fff;
+            background-color: #90c8fb;
             font-size: 20px;
             cursor: pointer;
             border: 0px;
@@ -53,3 +73,17 @@
         #btn:hover{
             background-color: #00aae6;
         }
+        body{
+            background-image: url("https://ta0.oss-cn-beijing.aliyuncs.com/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2-%E8%83%8C%E6%99%AF%E5%9B%BE.jpg");
+            background-position: center;
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        .outer a{
+            color: #666666;
+            font-size: 23px;
+            position: relative;
+            top: 360px;
+            left: 480px;
+        }
+        
