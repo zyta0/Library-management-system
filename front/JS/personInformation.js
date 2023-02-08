@@ -5,8 +5,10 @@
             selectBox[i].onclick = function () {
                 for (let j = 0; j < selectedSign.length; j++) {
                     selectedSign[j].style.display = "none";
+                selectBox[j].style.color = "black";
                 }
                 selectedSign[i].style.display = "block";
+                selectBox[i].style.color = "#90c8fb";
             }
         }
         
@@ -35,23 +37,6 @@
                 const element = allInformationInputs[i];
                 for (let j = 0; j < element.length; j++) {
                     element[j].disabled = true;
-                }
-            })
-        }
-
-//修改密码的眼睛在点击时发生变化
-        let eye = document.querySelectorAll(".eye>div");//获取眼睛按钮
-        let password = document.querySelectorAll(".password>input");//获取密码输入框
-        for (let i = 0; i < eye.length; i++) {
-            eye[i].addEventListener("click", () => {
-                if (i == 1) {
-                    eye[1].style.display = "none";
-                    eye[0].style.display = "block";
-                    password.type = text;
-                } else {
-                    eye[0].style.display = "none";
-                    eye[1].style.display = "block";
-                    password.type = password;
                 }
             })
         }

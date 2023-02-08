@@ -9,6 +9,309 @@
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3870007_dyrfpb9ksv6.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3875338_yjzdk955y5l.css">
     <title>图书管理系统</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        a {
+            text-decoration: none;
+        }
+
+        body {
+            background-color: #e4f4f4;
+        }
+
+        .nav {
+            position: relative;
+            height: 80px;
+            background-color: white;
+        }
+
+        .pic {
+            position: absolute;
+            left: 300px;
+            height: 80px;
+            width: 80px;
+        }
+
+        .pic img {
+            width: 80px;
+        }
+
+        .home {
+            position: absolute;
+            left: 400px;
+            width: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .stacks {
+            position: absolute;
+            left: 500px;
+            width: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .borrow {
+            position: absolute;
+            left: 600px;
+            width: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .friendCircle {
+            position: absolute;
+            left: 700px;
+            width: 100px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+        }
+
+        .nav span {
+            cursor: pointer;
+        }
+
+        .navMain span:hover {
+            border-bottom: #3f74b3 solid 2px;
+        }
+
+        .search {
+            position: absolute;
+            left: 900px;
+            height: 80px;
+            line-height: 80px;
+        }
+
+        .search input {
+            padding: 3px;
+            height: 30px;
+            width: 230px;
+            border: 0px;
+            border-radius: 5px;
+            background-color: #f4f8fa;
+        }
+
+        .icon-sousuo1 {
+            font-size: 20px;
+        }
+
+        #searchIcon {
+            position: absolute;
+            left: 210px;
+            top: 3px;
+        }
+
+        .personal {
+            position: absolute;
+            left: 1300px;
+            height: 80px;
+        }
+
+        .personal img {
+            position: absolute;
+            display: inline-block;
+            right: 20px;
+            top: 10px;
+            height: 60px;
+            border-radius: 50%;
+            ;
+        }
+
+        .message {
+            position: absolute;
+            top: 23px;
+            left: 1290px;
+        }
+
+        .icon-xiaoxi {
+            font-size: 30px;
+        }
+
+        .subject {
+            position: absolute;
+            left: 1340px;
+            top: 23px;
+        }
+
+        .icon-yejian {
+            font-size: 30px;
+        }
+
+        .logReg {
+            position: absolute;
+            left: 1390px;
+            top: 25px;
+        }
+
+        .typeCenter {
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1200px;
+            margin-top: 30px;
+        }
+
+        .selectionBar {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 201px;
+            height: 300px;
+            background-color: white;
+            border: 2px solid black;
+            text-align: center;
+        }
+
+        .selectionBar .selectBox {
+            position: relative;
+            font-size: 26px;
+        }
+
+        input {
+            width: 595px;
+            height: 62px;
+            font-size: 20px;
+            color: #a2a4a6;
+            background-color: #e2effb;
+            border: none;
+            border-radius: 32px;
+        }
+
+        .selectionBar .selectedSign {
+            display: none;
+            position: absolute;
+            top: -5px;
+            left: 5px;
+            height: 30px;
+            border: 5px solid #90c8fb ;
+        }
+
+        .information {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 941px;
+        }
+
+        .information>div {
+            margin-bottom: 30px;
+            background-color: white;
+        }
+
+        .information .tab {
+            display: flex;
+            height: 40px;
+            font-size: 28px;
+            line-height: 40px;
+        }
+
+        .information .tab span {
+            flex: 1;
+            border-bottom: 1px solid #eef8f8;
+        }
+
+        .information .tab .changes {
+            display: block;
+            font-size: 17px;
+            color: #999999;
+            border-bottom: 1px solid #eef8f8;
+        }
+
+        .information .tab .preserve {
+            display: none;
+            font-size: 17px;
+            color: #999999;
+            border-bottom: 1px solid #eef8f8;
+        }
+
+        .information .details {
+            position: relative;
+        }
+
+        .information .personInformation {
+            padding: 0 20px 0 40px;
+            width: 941px;
+            height: 381px;
+        }
+
+        .information .contactWay {
+            padding: 0 20px 0 40px;
+            width: 941px;
+            height: 381px;
+        }
+
+        .information .bind {
+            padding: 0 20px 0 40px;
+            width: 941px;
+            height: 181px;
+        }
+
+        .information .changePassword {
+            padding: 0 20px 0 40px;
+            width: 941px;
+            height: 282px;
+        }
+
+        .information .details .profilePhoto {
+            margin-top: 42px;
+            width: 142px;
+            height: 142px;
+            background-color: thistle;
+            border: 2px solid black;
+            border-radius: 50%;
+        }
+
+        .information .details>button {
+            position: absolute;
+            top: 68px;
+            left: 150px;
+            background-color: white;
+            border: none;
+            font-size: 17px;
+        }
+
+        .information .personInformation .genderGelection {
+            height: 60px;
+            line-height: 60px;
+        }
+
+        .information .personInformation .genderGelection input {
+            width: 13px;
+            height: 13px;
+        }
+
+        .information .personInformation .details>input {
+            position: absolute;
+            top: 12px;
+            left: 232px;
+        }
+
+        .information .personInformation .details>.birthDay {
+            top: 114px;
+        }
+
+        .information .contactWay input {
+            display: block;
+            margin-top: 40px;
+        }
+
+        .information .bind input {
+            display: block;
+            margin-top: 40px;
+        }
+
+        .information .changePassword .details>input {
+            display: inline-block;
+            margin-top: 40px;
+        }
+    </style>
 </head>
 
 <body>
@@ -40,6 +343,7 @@
         </div>
         <div class="logReg"><a href="/login.html">登录</a>/<a href="/register.html">注册</a></div>
     </div>
+
     <div class="typeCenter">
         <div class="selectionBar">
             <div class="selectBox">
@@ -72,10 +376,10 @@
                         <input type="radio" value="女" name="gender" disabled />女
                         <input type="radio" value="保密" name="gender" checked="checked" disabled />保密
                     </div>
-                    <input type="text" class="name" placeholder="期数-方向-姓名" disabled>
-                    <input type="text" class="birthDay" placeholder="(生日) 年-月-日" disabled>
-                    <div>签名
-                        <input type="text" class="motto" disabled>
+                    <input type="text" class="name" placeholder="      期数 - 方向 - 姓名" disabled>
+                    <input type="text" class="birthDay" placeholder="    （生日）年 - 月 - 日" disabled>
+                    <div>
+                        <input type="text" class="motto" placeholder="    （签名）该用户很懒，还没设置签名" disabled>
                     </div>
                 </div>
             </div>
@@ -88,27 +392,22 @@
                     <div class="preserve">保存</div>
                 </div>
                 <div class="details">
-                    <input class="wechatNumber" placeholder="微信号" disabled></input>
-                    <input class="qqNumber" placeholder="QQ号" disabled></input>
-                    <input class="phoneNumber" placeholder="手机号" disabled></input>
+                    <input class="wechatNumber" placeholder="      微信号" disabled></input>
+                    <input class="qqNumber" placeholder="      QQ号" disabled></input>
+                    <input class="phoneNumber" placeholder="      手机号" disabled></input>
                 </div>
             </div>
 
             <!-- 账号绑定 -->
             <div class="bind">
                 <div class="tab">
-                    <span>账号绑定</span>
+                    <span>邮箱绑定</span>
                     <div class="changes">修改</div>
                     <div class="preserve">保存</div>
                 </div>
                 <div class="details">
-                    <div class="phoneNumber">
-                        手机号<br>
-                        <input type="text" disabled>
-                    </div>
                     <div class="mailBox">
-                        邮箱<br>
-                        <input type="text" disabled>
+                        <input type="text" placeholder="      邮箱号" disabled>
                     </div>
                 </div>
             </div>
@@ -121,17 +420,9 @@
                     <div class="preserve">保存</div>
                 </div>
                 <div class="details">
-                    <div class="password">
-                        <input type="password" class="password" placeholder="请输入新的密码" disabled>
-                        <div class="eye">
-                            <div class="iconfont icon-yanjing_xianshi_o"></div>
-                            <div class="iconfont icon-yanjing_yincang_o"></div>
-                        </div>
-                    </div>
-                    <div class="verificationCode">
-                        <input type="text" class="verificationCode" placeholder="请输入验证码" disabled>
-                        <img src="" alt="">
-                    </div>
+                    <input type="password" class="password" placeholder="   请输入新的密码" disabled>
+                    <input type="text" class="verificationCode" placeholder="   请输入新的密码" disabled>
+                    <img src="" alt="">
                 </div>
             </div>
         </div>
