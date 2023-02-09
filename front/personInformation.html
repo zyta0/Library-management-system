@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,12 @@
     <link rel="stylesheet" href="./CSS/personInformation.css">
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3870007_dyrfpb9ksv6.css">
 </head>
+
 <body>
     <div class="nav w">
         <div class="pic">
-            <a href="https://baike.baidu.com/item/%E4%BA%91%E9%A1%B6%E4%B9%A6%E9%99%A2/23672117?fr=aladdin" target="_blank">
+            <a href="https://baike.baidu.com/item/%E4%BA%91%E9%A1%B6%E4%B9%A6%E9%99%A2/23672117?fr=aladdin"
+                target="_blank">
                 <img src="https://ta0.oss-cn-beijing.aliyuncs.com/%E4%BA%91%E9%A1%B6%E4%B9%A6%E9%99%A2.png" alt="">
             </a>
         </div>
@@ -35,91 +38,103 @@
         </div>
         <div class="logReg"><a href="/login.html">登录</a>/<a href="/register.html">注册</a></div>
     </div>
+    <div class="color">
+        <div class="typeCenter">
+            <div class="selectionBar">
+                <div class="selectBox">
+                    <div class="selectedSign"></div>个人信息
+                </div>
+                <div class="selectBox">
+                    <div class="selectedSign"></div>联系方式
+                </div>
+                <div class="selectBox">
+                    <div class="selectedSign"></div>账号绑定
+                </div>
+                <div class="selectBox">
+                    <div class="selectedSign"></div>修改登录密码
+                </div>
+            </div>
+            <div class="information">
 
-    <div class="typeCenter">
-        <div class="selectionBar">
-            <div class="selectBox">
-                <div class="selectedSign"></div>个人信息
-            </div>
-            <div class="selectBox">
-                <div class="selectedSign"></div>联系方式
-            </div>
-            <div class="selectBox">
-                <div class="selectedSign"></div>账号绑定
-            </div>
-            <div class="selectBox">
-                <div class="selectedSign"></div>修改登录密码
-            </div>
-        </div>
-        <div class="information">
-    
-            <!-- 个人信息 -->
-            <div class="personInformation">
-                <div class="tab">
-                    <span>个人信息</span>
-                    <div class="changes">修改</div>
-                    <div class="preserve">保存</div>
-                </div>
-                <div class="details">
-                    <div class="profilePhoto"></div>
-                    <button class="changePhoto" disabled>更换头像</button>
-                    <div class="genderGelection">
-                        <input type="radio" value="男" name="gender" disabled />男
-                        <input type="radio" value="女" name="gender" disabled />女
-                        <input type="radio" value="保密" name="gender" checked="checked" disabled />保密
+                <!-- 个人信息 -->
+                <div class="personInformation">
+                    <div class="tab">
+                        <span>个人信息</span>
+                        <div class="changes">修改</div>
+                        <div class="preserve">保存</div>
                     </div>
-                    <input type="text" class="name" placeholder="      期数 - 方向 - 姓名" disabled>
-                    <input type="text" class="birthDay" placeholder="    （生日）年 - 月 - 日" disabled>
-                    <div>
-                        <input type="text" class="motto" placeholder="    （签名）该用户很懒，还没设置签名" disabled>
+                    <div class="details">
+                        <div class="profilePhoto"></div>
+                        <button class="changePhoto" disabled>更换头像</button>
+                        <div class="genderGelection">
+                            <input type="radio" value="男" name="gender" disabled />男
+                            <input type="radio" value="女" name="gender" disabled />女
+                            <input type="radio" value="保密" name="gender" checked="checked" disabled />保密
+                        </div>
+                        <input type="text" class="name" placeholder="      期数 - 方向 - 姓名" disabled>
+                        <input type="text" class="birthDay" placeholder="    （生日）年 - 月 - 日" disabled>
+                        <div>
+                            <input type="text" class="motto" placeholder="    （签名）该用户很懒，还没设置签名" disabled>
+                        </div>
                     </div>
                 </div>
-            </div>
-    
-            <!-- 联系方式 -->
-            <div class="contactWay">
-                <div class="tab">
-                    <span>联系方式</span>
-                    <div class="changes">修改</div>
-                    <div class="preserve">保存</div>
-                </div>
-                <div class="details">
-                    <input class="wechatNumber" placeholder="      微信号" disabled></input>
-                    <input class="qqNumber" placeholder="      QQ号" disabled></input>
-                    <input class="phoneNumber" placeholder="      手机号" disabled></input>
-                </div>
-            </div>
-    
-            <!-- 账号绑定 -->
-            <div class="bind">
-                <div class="tab">
-                    <span>邮箱绑定</span>
-                    <div class="changes">修改</div>
-                    <div class="preserve">保存</div>
-                </div>
-                <div class="details">
-                    <div class="mailBox">
-                        <input type="text" placeholder="      邮箱号" disabled>
+
+                <!-- 联系方式 -->
+                <div class="contactWay">
+                    <div class="tab">
+                        <span>联系方式</span>
+                        <div class="changes">修改</div>
+                        <div class="preserve">保存</div>
+                    </div>
+                    <div class="details">
+                        <input class="wechatNumber" placeholder="      微信号" disabled></input>
+                        <input class="qqNumber" placeholder="      QQ号" disabled></input>
+                        <input class="phoneNumber" placeholder="      手机号" disabled></input>
                     </div>
                 </div>
-            </div>
-    
-            <!-- 修改登录密码 -->
-            <div class="changePassword">
-                <div class="tab">
-                    <span>修改登录密码</span>
-                    <div class="changes">修改</div>
-                    <div class="preserve">保存</div>
+
+                <!-- 账号绑定 -->
+                <div class="bind">
+                    <div class="tab">
+                        <span>邮箱绑定</span>
+                        <div class="changes">修改</div>
+                        <div class="preserve">保存</div>
+                    </div>
+                    <div class="details">
+                        <div class="mailBox">
+                            <input type="text" placeholder="      邮箱号" disabled>
+                        </div>
+                    </div>
                 </div>
-                <div class="details">
-                    <input type="password" class="password" placeholder="   请输入新的密码" disabled>
-                    <input type="text" class="verificationCode" placeholder="   请输入新的密码" disabled>
-                    <img src="" alt="">
+
+                <!-- 修改登录密码 -->
+                <div class="changePassword">
+                    <div class="tab">
+                        <span>修改登录密码</span>
+                        <div class="changes">修改</div>
+                        <div class="preserve">保存</div>
+                    </div>
+                    <div class="details">
+                        <input type="password" class="password" placeholder="      请输入新的密码" disabled>
+                        <input type="text" class="verificationCode" placeholder="      请输入新的密码" disabled>
+                        <img src="" alt="">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+    <div class="footer">
+        <div class="absoluteUs">
+            <div>关于我们</div>
+            <div>联系我们</div>
+            <div>版权所有</div>
+            <div>意见反馈</div>
+            <div>帮助中心</div>
+        </div>
+        <div class="copyright">Copyright © 2019 云顶书院图书管理系统 All Rights Reserved</div>
+    </div>
+
     <script src="./JS/personInformation.js"></script>
 </body>
+
 </html>
