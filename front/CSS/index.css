@@ -6,9 +6,6 @@
             width: 1920px;
             margin: auto;
         }
-        body{
-            background: #E4F4F4;
-        }
         a{
             text-decoration: none;
         }
@@ -210,7 +207,8 @@
         
         .middle{
             position: relative;
-            height: 1300px;
+            height: 2900px;
+            background: #E4F4F4;
         }
         .boundary{
             position: absolute;
@@ -456,4 +454,32 @@
         .notContent span{
             font-size: 32px;
         }
-   
+        .footer{
+            position: relative;
+            height: 425px;
+            background: #C6D0D1;
+        }
+        .footer ul{
+            position: absolute;
+            top: 94px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .footer li{
+            display: inline-block;
+            margin-right: 10px;
+            padding-right: 20px;
+            list-style: none;
+            font-size: 24px;
+            border-right: #fff solid 5px;
+        }
+        .footer .footLast{
+            border-right: #fff solid 0px;
+        }
+        .copyRight{
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+        }
