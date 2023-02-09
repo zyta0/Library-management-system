@@ -2,11 +2,8 @@
             margin: 0;
         }
         .w {
-            width: 1500px;
+            width: 1920px;
             margin: auto;
-        }
-        body{
-            background-color: #e4f4f4;
         }
         a{
             text-decoration: none;
@@ -27,6 +24,8 @@
             position: relative;
             height: 80px;
             background-color: #fff;
+            font-size: 20px;
+            font-family: 'PingFang SC';
         }
         .pic{
             position: absolute;
@@ -87,7 +86,7 @@
             width: 230px;
             border: 0px;
             border-radius: 5px;
-            background-color: #f4f8fa;
+            background: #A8D6F7;
         }
         .icon-sousuo1{
             font-size: 20px;
@@ -130,6 +129,13 @@
             position: absolute;
             left: 1390px;
             top: 25px;
+        }
+        .hiddenLog{
+            display: none;
+        }
+        .midBody{
+            background: #E4F4F4;
+            height: 710px;
         }
         .middle{
             position: relative;
@@ -201,4 +207,33 @@
         .hidden{
             transition: all .5s linear;
             opacity: 0;
+        }
+        .footer{
+            position: relative;
+            height: 425px;
+            background: #C6D0D1;
+        }
+        .footer ul{
+            position: absolute;
+            top: 94px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .footer li{
+            display: inline-block;
+            margin-right: 10px;
+            padding-right: 20px;
+            list-style: none;
+            font-size: 24px;
+            border-right: #fff solid 5px;
+        }
+        .footer .footLast{
+            border-right: #fff solid 0px;
+        }
+        .copyRight{
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
         }
