@@ -35,6 +35,7 @@
         </div>
         <div class="logReg"><a href="/login.html">登录</a>/<a href="/register.html">注册</a></div>
     </div>
+
     <div class="typeCenter">
         <div class="selectionBar">
             <div class="selectBox">
@@ -67,10 +68,10 @@
                         <input type="radio" value="女" name="gender" disabled />女
                         <input type="radio" value="保密" name="gender" checked="checked" disabled />保密
                     </div>
-                    <input type="text" class="name" placeholder="期数-方向-姓名" readonly>
-                    <input type="text" class="birthDay" placeholder="(生日) 年-月-日" readonly>
-                    <div>签名
-                        <input type="text" class="motto" readonly>
+                    <input type="text" class="name" placeholder="      期数 - 方向 - 姓名" disabled>
+                    <input type="text" class="birthDay" placeholder="    （生日）年 - 月 - 日" disabled>
+                    <div>
+                        <input type="text" class="motto" placeholder="    （签名）该用户很懒，还没设置签名" disabled>
                     </div>
                 </div>
             </div>
@@ -83,27 +84,22 @@
                     <div class="preserve">保存</div>
                 </div>
                 <div class="details">
-                    <input class="wechatNumber" placeholder="微信号" readonly></input>
-                    <input class="qqNumber" placeholder="QQ号" readonly></input>
-                    <input class="phoneNumber" placeholder="手机号" readonly></input>
+                    <input class="wechatNumber" placeholder="      微信号" disabled></input>
+                    <input class="qqNumber" placeholder="      QQ号" disabled></input>
+                    <input class="phoneNumber" placeholder="      手机号" disabled></input>
                 </div>
             </div>
     
             <!-- 账号绑定 -->
             <div class="bind">
                 <div class="tab">
-                    <span>账号绑定</span>
+                    <span>邮箱绑定</span>
                     <div class="changes">修改</div>
                     <div class="preserve">保存</div>
                 </div>
                 <div class="details">
-                    <div class="phoneNumber">
-                        手机号<br>
-                        <input type="text" readonly>
-                    </div>
                     <div class="mailBox">
-                        邮箱<br>
-                        <input type="text" readonly>
+                        <input type="text" placeholder="      邮箱号" disabled>
                     </div>
                 </div>
             </div>
@@ -116,15 +112,9 @@
                     <div class="preserve">保存</div>
                 </div>
                 <div class="details">
-                    <div class="password">
-                        <input type="password" class="password" placeholder="请输入新的密码" readonly>
-                        <div class="eye">
-                        </div>
-                    </div>
-                    <div class="verificationCode">
-                        <input type="text" class="verificationCode" placeholder="请输入验证码" readonly>
-                        <img src="" alt="">
-                    </div>
+                    <input type="password" class="password" placeholder="   请输入新的密码" disabled>
+                    <input type="text" class="verificationCode" placeholder="   请输入新的密码" disabled>
+                    <img src="" alt="">
                 </div>
             </div>
         </div>

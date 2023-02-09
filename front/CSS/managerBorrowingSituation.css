@@ -1,0 +1,129 @@
+
+        * {
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .pic img {
+            width: 80px;
+        }
+
+        .navigationBar {
+            height: 80px;
+            width: 100%;
+            line-height: 80px;
+        }
+
+        .typeCenter {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1200px;
+            height: 100%;
+        }
+
+        .navigationBar .pic {
+            width: 80px;
+            height: 80px;
+        }
+
+        .function {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            cursor: pointer;
+        }
+
+        .function>span {
+            display: inline-block;
+            width: 14%;
+            height: 72px;
+            text-align: center;
+        }
+
+        .function>span:hover {
+            border-bottom: 3px solid black;
+        }
+
+        .function>div {
+            display: inline-block;
+        }
+
+        .search input {
+            padding: 3px;
+            height: 30px;
+            width: 230px;
+            border: 0px;
+            border-radius: 5px;
+            background-color: #f4f8fa;
+        }
+
+        .content {
+            width: 100%;
+            background-color: darkseagreen;
+            border-radius: 4%;
+        }
+
+        .content .selectionBar {
+            height: 60px;
+        }
+
+        .content .selectionBar span {
+            display: inline-block;
+            width: 120px;
+            font-size: 25px;
+            margin: 2% 1% 0 5%;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .content .selectionBar span:hover {
+            border-bottom: 5px solid black;
+        }
+
+        .content .detail {
+            padding: 30px;
+        }
+
+        .content .books {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .content .books .book {
+            height: 220px;
+            width: 300px;
+            background-color: deepskyblue;
+            margin-bottom: 60px;
+        }
+
+        .content .books .book>img {
+            float: left;
+            width: 150px;
+            height: 100%;
+            background-color: green;
+        }
+
+        .content .books .book>div {
+            margin-left: 160px;
+        }
+
+        .content .books .book .person>.photo {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            background-color: gold;
+            border-radius: 50%;
+        }
+
+        .pageButton div{
+            display: inline-block;
+            font-size: 30px;
+            margin-top: 2%;
+            margin-left: 4%;
+            cursor: pointer;
+        }

@@ -5,8 +5,10 @@
             selectBox[i].onclick = function () {
                 for (let j = 0; j < selectedSign.length; j++) {
                     selectedSign[j].style.display = "none";
+                selectBox[j].style.color = "black";
                 }
                 selectedSign[i].style.display = "block";
+                selectBox[i].style.color = "#90c8fb";
             }
         }
         
@@ -27,7 +29,6 @@
                 const element = allInformationInputs[i];
                 for (let j = 0; j < element.length; j++) {
                     element[j].disabled = false;
-                    element[j].readonly = false;
                 }
             })
             preserves[i].addEventListener("click", () => {
@@ -36,7 +37,6 @@
                 const element = allInformationInputs[i];
                 for (let j = 0; j < element.length; j++) {
                     element[j].disabled = true;
-                    element[j].readonly = true;
                 }
             })
         }
