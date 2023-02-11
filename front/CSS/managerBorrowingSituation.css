@@ -119,7 +119,7 @@ a {
     text-align: center;
 }
 
-.content .selectionBar span:nth-child(1) {
+.content .selectionBar .signed {
     color: #74C9FB;
     border-bottom: 5px solid #74C9FB;
 }
@@ -170,13 +170,13 @@ a {
     font-size: 10px;
 }
 
-.content .books .book>.notDue {
+.content .books .book .notDue {
     font-size: 25px;
     color: #35BCF5;
     margin-top: 16px;
 }
 
-.content .books .book>.timeLimit {
+.content .books .book .expired {
     display: none;
     font-size: 25px;
     color: #EC1F44;
