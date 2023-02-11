@@ -115,7 +115,7 @@ a {
     text-align: center;
 }
 
-.content .selectionBar span:nth-child(1) {
+.content .selectionBar .signed{
     color: #74C9FB;
     border-bottom: 5px solid #74C9FB;
 }
