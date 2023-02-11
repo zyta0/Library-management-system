@@ -11,6 +11,18 @@ a {
     text-decoration: none;
 }
 
+a:link {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:active {
+    color: #000;
+}
+
 .pic img {
     width: 80px;
 }
@@ -43,19 +55,19 @@ a {
     cursor: pointer;
 }
 
-.function>span {
+.function span {
     display: inline-block;
     width: 19%;
-    height: 62px;
+    height: 75px;
     text-align: center;
 }
 
-.function>span:nth-child(1){
+.function .index {
     color: #74C9FB;
     border-bottom: 3px solid #74C9FB;
 }
 
-.function>span:hover {
+.function span:hover {
     color: #74C9FB;
     border-bottom: 3px solid #74C9FB;
 }
