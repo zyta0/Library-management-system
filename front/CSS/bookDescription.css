@@ -2,7 +2,142 @@
     margin: 0;
     padding: 0;
 }
-
+.w {
+    width: 1920px;
+    margin: auto;
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color: #000;
+}
+a:hover{
+    color: #000;
+}
+a:visited{
+    color: #000;
+}
+a:active{
+    color: #000;
+}
+.nav {
+    position: relative;
+    height: 80px;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: 'PingFang SC';
+}
+.nav a{
+    font-size: 20px;
+    font-family: 'PingFang SC';
+}
+.pic{
+    position: absolute;
+    left: 300px;
+    height: 80px;
+    width: 80px;
+}
+.pic img{
+    width: 80px;
+}
+.home{
+    position: absolute;
+    left: 400px;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+.stacks{
+    position: absolute;
+    left: 500px;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+.borrow{
+    position: absolute;
+    left: 600px;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+.friendCircle{
+    position: absolute;
+    left: 700px;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+.nav span{
+    cursor: pointer;
+}
+.navMain span:hover{
+    border-bottom: #3f74b3 solid 2px;
+}
+.search{
+    position: absolute;
+    left: 900px;
+    height: 80px;
+    line-height: 80px;
+}
+.search input{
+    padding: 3px;
+    height: 30px;
+    width: 230px;
+    border: 0px;
+    border-radius: 5px;
+    background: #A8D6F7;
+}
+.icon-sousuo1{
+    font-size: 20px;
+}
+#searchIcon{
+    position: absolute;
+    left: 210px;
+    top: 3px;
+}
+.personal{
+    position: absolute;
+    left: 1300px;
+    height: 80px;
+}
+.personal img{
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    top: 10px;
+    height: 60px;
+    border-radius: 50%;
+}
+.message{
+    position: absolute;
+    top: 23px;
+    left: 1290px;
+}
+.nav .iconfont {
+    font-size: 30px;
+}
+.subject{
+    position: absolute;
+    left: 1340px;
+    top: 23px;
+}
+.icon-yejian{
+    font-size: 30px;
+}
+.logReg{
+    position: absolute;
+    left: 1390px;
+    top: 25px;
+}
+.hiddenLog{
+    display: none;
+}
 .document {
     position: relative;
     width: 100%;
@@ -247,4 +382,37 @@ a {
     width: 110px;
     height: 55px;
     background-color: #cdd9e5;
+}
+.footer{
+    position: relative;
+    height: 425px;
+    background: #C6D0D1;
+}
+.footer ul{
+    position: absolute;
+    top: 94px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.footer li{
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 20px;
+    list-style: none;
+    font-size: 24px;
+    border-right: #fff solid 5px;
+}
+.footer .footLast{
+    border-right: #fff solid 0px;
+}
+.copyRight{
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+}
+.footer a{
+    font-size: 24px;
+    font-family: 'PingFang SC';
 }

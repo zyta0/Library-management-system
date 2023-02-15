@@ -1,5 +1,5 @@
         .w {
-            width: 1500px;
+            width: 1920px;
             margin: auto;
         }
         a{
@@ -20,7 +20,9 @@
         .nav {
             position: relative;
             height: 80px;
-            margin: auto;
+            background-color: #fff;
+            font-size: 20px;
+            font-family: 'PingFang SC';
         }
         .pic{
             position: absolute;
@@ -81,7 +83,7 @@
             width: 230px;
             border: 0px;
             border-radius: 5px;
-            background-color: #f4f8fa;
+            background: #A8D6F7;
         }
         .icon-sousuo1{
             font-size: 20px;
@@ -102,7 +104,7 @@
             right: 20px;
             top: 10px;
             height: 60px;
-            border-radius: 50%;;
+            border-radius: 50%;
         }
         .message{
             position: absolute;
@@ -117,7 +119,7 @@
             left: 1340px;
             top: 23px;
         }
-         .icon-yejian{
+        .icon-yejian{
             font-size: 30px;
         }
         .logReg{
@@ -125,10 +127,19 @@
             left: 1390px;
             top: 25px;
         }
+        .hiddenLog{
+            display: none;
+        }
+        .midBody{
+            background: #E4F4F4;
+            height: 850px;
+        }
         .middle{
             position: relative;
             top: 10px;
-            background-color: #e3e3e3;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #fff;
             height: 800px;
             width: 850px;
             padding: 10px 20px;
@@ -241,4 +252,33 @@
         }
         .borBookContinue{
             left: 250px;
+        }
+        .footer{
+            position: relative;
+            height: 425px;
+            background: #C6D0D1;
+        }
+        .footer ul{
+            position: absolute;
+            top: 94px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .footer li{
+            display: inline-block;
+            margin-right: 10px;
+            padding-right: 20px;
+            list-style: none;
+            font-size: 24px;
+            border-right: #fff solid 5px;
+        }
+        .footer .footLast{
+            border-right: #fff solid 0px;
+        }
+        .copyRight{
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
         }

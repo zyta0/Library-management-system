@@ -1,11 +1,16 @@
-
 * {
     margin: 0;
 }
+
+body {
+    background-color: #e4f4f4;
+}
+
 .w {
             width: 1500px;
             margin: auto;
         }
+
 a {
     text-decoration: none;
 }
@@ -24,7 +29,7 @@ a:link{
 .nav {
     position: relative;
     height: 80px;
-
+    background-color: white;
 }
 
 .pic {
@@ -154,25 +159,47 @@ a:link{
     position: relative;
     left: 50%;
     transform: translateX(-50%);
-    height: 1000px;
     width: 1200px;
 }
 
 .selectedGoodBooks {
     position: relative;
-    background-color: burlywood;
+    top: 60px;
+    height: 601px;
+    background-color: #fafafa;
+    box-shadow: 0px 0px 20px 20px rgba(221, 236, 236, .3);
 }
 
 .selectedGoodBooks .title {
     float: left;
-    width: 50px;
+    position: relative;
+    width: 81px;
+    height: 100%;
+    font-size: 35px;
+    background-color: #ffffff;
+}
+
+.selectedGoodBooks .title div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
     text-align: center;
-    background-color: dodgerblue;
+    color: #576e80;
 }
 
 .classification {
-    margin-top: 60px;
-    border: 5px solid black;
+    margin-top: 120px;
+    height: 1055px;
+    background-color: white;
+    box-shadow: 0px 0px 20px 20px rgba(221, 236, 236, .3);
+}
+
+.allBooks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
 }
 
 .books {
@@ -181,27 +208,46 @@ a:link{
     margin-top: 10px;
 }
 
-.book {
+.bookPic {
     cursor: pointer;
-    height: 220px;
-    width: 150px;
-    background-color: darkgreen;
+    height: 180px;
+    width: 122px;
+    background-color: #d9d9d9;
+    border-radius: 5%;
 }
 
-.book:hover {
+.bookPic:hover {
     transform: translateY(-5px);
+}
+
+.bookName {
+    font-size: 24px;
+    text-align: center;
+}
+
+.allClassedBooks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: 1081px;
+    height: 878px;
 }
 
 .classification .classifiedNavigationBar {
     display: flex;
-    height: 50px;
+    height: 75px;
     width: 100%;
-    background-color: cornsilk;
+    font-size: 32px;
+    line-height: 75px;
+    color: #576e80;
+    text-align: center;
+    background-color: white;
 }
 
 .classification .classifiedNavigationBar>.classLabel {
-    width: 8%;
-    background-color: palegreen;
+    width: 10%;
+    font-size: 43px;
 }
 
 .classification .classifiedNavigationBar>.classificationDetails {
@@ -211,8 +257,13 @@ a:link{
 }
 
 .classification .classifiedNavigationBar>.classificationMark {
-    width: 4%;
-    background-color: palegreen;
+    width: 12%;
+    cursor: pointer;
+}
+
+.classification .classifiedNavigationBar>.classificationMark img {
+    margin-top: 8px;
+    height: 85%;
 }
 
 .classification .classifiedNavigationBar>.classificationDetails .unSign {
@@ -228,7 +279,16 @@ a:link{
 .classification .viewMoreBooks {
     cursor: pointer;
     margin: 0 auto;
-    width: 100px;
-    height: 50px;
-    background-color: cornflowerblue;
+    width: 302px;
+    height: 76px;
+    background-color: #e4f4f4;
+    line-height: 76px;
+    text-align: center;
+    font-size: 30px;
+    color: #666666;
+    border-radius: 40px;
+}
+
+.classification .viewMoreBooks .icon-xiangxiazhanhang {
+    font-size: 30px;
 }

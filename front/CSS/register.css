@@ -1,24 +1,35 @@
-.outer {
+        body{
+            background-image: url("https://ta0.oss-cn-beijing.aliyuncs.com/%E7%99%BB%E5%BD%95%E9%A1%B5%E9%9D%A2-%E8%83%8C%E6%99%AF%E5%9B%BE.jpg");
+            background-position: center;
+            background-size:cover;
+            background-repeat: no-repeat;
+        }
+        .outer {
             position: relative;
             margin: auto;
-            top: 100px;
-            width: 500px;
+            top: 40px;
+            width: 600px;
             height: 650px;
-            background-color: pink;
+            background-color: #fff;
             border-radius: 20px;
         }
         .text {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            top: 100px;
-            font-size: 30px;
+            top: 50px;
+            font-size: 25px;
+        }
+        .text img{
+            position: relative;
+            top: 10px;
+            width: 40px;
         }
         .info{
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
-            top: 180px;
+            top: 130px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -34,6 +45,7 @@
             border: honeydew solid 3px;
             padding: 10px;
             font-size: 20px;
+            background-color: #e4f4f4;
         }
         .department,
         .issueNum{
@@ -45,6 +57,7 @@
             font-size: 20px;
             background-color: #fff;
             color: #757575;
+            background-color: #e4f4f4;
         }
         .department{
             position: relative;
@@ -67,16 +80,16 @@
         }
         #btn {
             position: absolute;
-            top: 600px;
+            top: 560px;
             left: 50%;
-            transform: translateX(-50%);
-            width: 220px;
+            width: 130px;
             height: 50px;
             border-radius: 5px;
             background-color: #fff;
             font-size: 20px;
             cursor: pointer;
             border: 0px;
+            background-color: #90c8fb;
         }
         #btn:hover {
             background-color: #00aae6;

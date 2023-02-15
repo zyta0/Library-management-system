@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>图书管理系统</title>
-    <!-- <link rel="stylesheet" href="./CSS/index.css"> -->
     <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3870007_ifhufqnubw.css">
     <link rel="stylesheet" href="./CSS/index.css">
 </head>
@@ -34,10 +33,19 @@
         <div class="subject">
             <span class="iconfont icon-yejian"></span>
         </div>
-        <div class="logReg"><a href="./login.html">登录</a>/<a href="./register.html">注册</a></div>
+        <div class="logReg" id="login"><a href="./login.html">登录</a>/<a href="./register.html">注册</a></div>
     </div>
-    <div class="outerMap w">
-        <div class="carouselMap"></div>
+    <div class="carouselMap w">
+        <ul class="carouselMapPic">
+            <li><img src="https://ta0.oss-cn-beijing.aliyuncs.com/3.jpg" alt=""></li>
+            <li><img src="https://ta0.oss-cn-beijing.aliyuncs.com/16.jpg" alt=""></li>
+            <li><img src="https://ta0.oss-cn-beijing.aliyuncs.com/ac6eddc451da81cb1a83519d0cb4a11f08243150.webp" alt=""></li>
+        </ul>
+        <ul class="lis">
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
     <div class="middle w">
         <div class="recommand">
@@ -46,14 +54,38 @@
                 <span class="boundary"></span>
             </div>
             <div class="recommandBook">
-                <div class="recBook"><img src="https://ta0.oss-cn-beijing.aliyuncs.com/ming.png" alt=""></div>
-                <div class="recBook"><img src="https://ta0.oss-cn-beijing.aliyuncs.com/R-C.jpg" alt=""></div>
-                <div class="recBook"><img src="https://ta0.oss-cn-beijing.aliyuncs.com/%E9%BB%91%E6%9A%97%E6%A3%AE%E6%9E%97.jpg" alt=""></div>
-                <div class="recBook"><img src="https://ta0.oss-cn-beijing.aliyuncs.com/OIP-C.jpg" alt=""></div>
-                <div class="recBook"><img src="https://ta0.oss-cn-beijing.aliyuncs.com/bailuyuan.jpg" alt=""></div>
-                <div class="recBook"><img src="https://ta0.oss-cn-beijing.aliyuncs.com/pingfandeshijie.png" alt=""></div>
-                <div class="recBook"><img src="https://ta0.oss-cn-beijing.aliyuncs.com/rensheng.png" alt=""></div>
-                <div class="recBook"><img src="https://ta0.oss-cn-beijing.aliyuncs.com/wei.png" alt=""></div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/ming.png" alt="">
+                    <div>明朝那些事儿</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/wei.png" alt="">
+                    <div>围城</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/%E9%BB%91%E6%9A%97%E6%A3%AE%E6%9E%97.jpg" alt="">
+                    <div>黑暗森林</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/OIP-C.jpg" alt="">
+                    <div>死神永生</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/bailuyuan.jpg" alt="">
+                    <div>白鹿原</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/pingfandeshijie.png" alt="">
+                    <div>平凡的世界</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/rensheng.png" alt="">
+                    <div>人生</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/wei.png" alt="">
+                    <div>围城</div>
+                </div>
             </div>
             <div class="recFoot">
                 <span class="iconfont icon-xiangzuo"></span>
@@ -81,20 +113,47 @@
         <div class="hotReview">
             <div class="hotRevText">热点书评</div>
             <div class="hotRevConOuter">
-                <div class="hotRevContent"></div>
-                <div class="hotRevContent"></div>
+                <div class="hotRevContent">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/ming.png" id="hotRevBookImg">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/%E5%A4%B4%E5%83%8F.png" id="hotRevAvaImg">
+                    <span id="hotRevUsrName">云泽小组</span>
+                    <span id="hotRevContHead">愿每一个善良的人都是那幸运的10%</span>
+                    <span id="hotRevContBody">春节前的一天深夜，翻开长篇爱情小说《细细密密的光》，原本只想读个开头，没想到沉浸在故事中，往事浮上心头。
+                    </span>
+                </div>
+                <div class="hotRevContent">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/ming.png" id="hotRevBookImg">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/%E5%A4%B4%E5%83%8F.png" id="hotRevAvaImg">
+                    <span id="hotRevUsrName">云泽小组</span>
+                    <span id="hotRevContHead">愿每一个善良的人都是那幸运的10%</span>
+                    <span id="hotRevContBody">春节前的一天深夜，翻开长篇爱情小说《细细密密的光》，原本只想读个开头，没想到沉浸在故事中，往事浮上心头。
+                    </span>
+                </div>
             </div>
-            <div class="hotRevFoot">
-                <span class="iconfont icon-xiangxiazhanhang"></span>
-            </div>
+            <button id="learnMoreRev">了解更多</button>
         </div>
         <div class="notice">
             <div class="notText">公告栏</div>
             <div class="notConOuter">
-                <div class="notContent"></div>
-                <div class="notContent"></div>
+                <div class="notContent">
+                    <span>1.借书规则</span>
+                </div>
+                <div class="notContent">
+                    <span>2.还书提醒</span>
+                </div>
             </div>
         </div>
+    </div>
+    <script src="./JS/index.js"></script>
+    <div class="footer w">
+        <ul>
+            <li><a href="">关于我们</a></li>
+            <li><a href="">联系我们</a></li>
+            <li><a href="">版权所有</a></li>
+            <li><a href="">意见反馈</a></li>
+            <li class="footLast"><a href="" >帮助中心</a></li>
+        </ul>
+        <span class="copyRight">Copyright © 2023 云顶书院图书管理系统 All Rights Reserved</span>
     </div>
 </body>
 </html>
