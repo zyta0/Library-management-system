@@ -1,0 +1,717 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    width: 1920px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:active {
+    color: #000;
+}
+
+.nav {
+    position: relative;
+    height: 80px;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: 'PingFang SC';
+}
+
+.nav a {
+    font-size: 20px;
+    font-family: 'PingFang SC';
+}
+
+.pic {
+    position: absolute;
+    left: 300px;
+    height: 80px;
+    width: 80px;
+}
+
+.pic img {
+    width: 80px;
+}
+
+.home {
+    position: absolute;
+    left: 400px;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+.stacks {
+    position: absolute;
+    left: 500px;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+.borrow {
+    position: absolute;
+    left: 600px;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+.friendCircle {
+    position: absolute;
+    left: 700px;
+    width: 100px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+}
+
+.nav span {
+    cursor: pointer;
+}
+
+.navMain span:hover {
+    border-bottom: #3f74b3 solid 2px;
+}
+
+.search {
+    position: absolute;
+    left: 900px;
+    height: 80px;
+    line-height: 80px;
+}
+
+.search input {
+    padding: 3px;
+    height: 30px;
+    width: 230px;
+    border: 0px;
+    border-radius: 5px;
+    background: #A8D6F7;
+}
+
+.icon-sousuo1 {
+    font-size: 20px;
+}
+
+#searchIcon {
+    position: absolute;
+    left: 210px;
+    top: 3px;
+}
+
+.personal {
+    position: absolute;
+    left: 1300px;
+    height: 80px;
+}
+
+.personal img {
+    position: absolute;
+    display: inline-block;
+    right: 20px;
+    top: 10px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.message {
+    position: absolute;
+    top: 23px;
+    left: 1290px;
+}
+
+.nav .iconfont {
+    font-size: 30px;
+}
+
+.subject {
+    position: absolute;
+    left: 1340px;
+    top: 23px;
+}
+
+.icon-yejian {
+    font-size: 30px;
+}
+
+.logReg {
+    position: absolute;
+    left: 1390px;
+    top: 25px;
+}
+
+.hiddenLog {
+    display: none;
+}
+
+.middle {
+    position: relative;
+    width: 100%;
+    height: 1985px;
+    background: #E4F4F4;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -600px;
+    width: 1200px;
+    height: 1985px;
+    background-color: #E4F4F4;
+}
+
+.discuss {
+    position: absolute;
+    left: 0;
+    top: 62px;
+    width: 746px;
+    height: 1750px;
+    background: #FFFFFF;
+    border-radius: 13px;
+}
+
+.Q {
+    position: absolute;
+    left: 68px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+}
+
+.profilePhotoSeven {
+    top: 127px;
+    background: url(https://tuchuang567.oss-cn-beijing.aliyuncs.com/f57e88c9c2368b1bea6aff1a623a2903.png);
+    background-size: 38px;
+}
+
+.profilePhotoEight {
+    top: 442px;
+    background: url(https://tuchuang567.oss-cn-beijing.aliyuncs.com/f57e88c9c2368b1bea6aff1a623a2903.png);
+    background-size: 38px;
+}
+
+.profilePhotoNine {
+    top: 760px;
+    background: url(https://tuchuang567.oss-cn-beijing.aliyuncs.com/f57e88c9c2368b1bea6aff1a623a2903.png);
+    background-size: 38px;
+}
+
+.profilePhotoTen {
+    top: 1086px;
+    background: url(https://tuchuang567.oss-cn-beijing.aliyuncs.com/f57e88c9c2368b1bea6aff1a623a2903.png);
+    background-size: 38px;
+}
+
+.profilePhotoEleven {
+    top: 1418px;
+    background: url(https://tuchuang567.oss-cn-beijing.aliyuncs.com/f57e88c9c2368b1bea6aff1a623a2903.png);
+    background-size: 38px;
+}
+
+.U {
+    position: absolute;
+    left: 129px;
+    width: 70px;
+    height: 22px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.userOne {
+    top: 133px;
+}
+
+.userTwo {
+    top: 448px;
+}
+
+.userThree {
+    top: 766px;
+}
+
+.userFour {
+    top: 1092px;
+}
+
+.userFive {
+    top: 1424px;
+}
+
+.T {
+    position: absolute;
+    left: 224px;
+    width: 76px;
+    height: 20px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    color: #969696;
+}
+
+.timeOne {
+    top: 142px;
+}
+
+.timeTwo {
+    top: 457px;
+}
+
+.timeThree {
+    top: 775px;
+}
+
+.timeFour {
+    top: 1101px;
+}
+
+.timeFive {
+    top: 1433px;
+}
+
+.B {
+    position: absolute;
+    left: 75px;
+    width: 97px;
+    height: 32px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 39px;
+    color: #000000;
+}
+
+.titleOne {
+    top: 179px;
+}
+
+.titleTwo {
+    top: 497px;
+}
+
+.titleThree {
+    top: 812px;
+}
+
+.titleFour {
+    top: 1138px;
+}
+
+.titleFive {
+    top: 1470px;
+}
+
+.discuss span {
+    cursor: pointer;
+}
+
+.discuss span a {
+    position: absolute;
+    width: 65px;
+    height: 36px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 42px;
+    color: #000000;
+}
+
+.discuss span:hover {
+    border-bottom: #3f74b3 solid 2px;
+}
+
+.discuss a {
+    position: absolute;
+    top: 5px;
+    left: 23px;
+    width: 60px;
+    height: 17px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.discuss .first {
+    top: 35px;
+    left: 54px;
+}
+
+.discuss .second {
+    top: 35px;
+    left: 209px;
+}
+
+.discuss .third {
+    top: 35px;
+    left: 364px;
+}
+
+.lineOne {
+    top: 426px;
+}
+
+.lineTwo {
+    top: 736px;
+}
+
+.lineThree {
+    top:1059px;
+}
+
+.lineFour {
+    top: 1385px;
+}
+
+.buttonSmallSeven {
+    right: 53px;
+    top: 142px;
+}
+
+.buttonSmallEight {
+    right: 53px;
+    top: 457px;
+}
+
+.buttonSmallNine {
+    right: 53px;
+    top: 775px;
+}
+
+.buttonSmallTen {
+    right: 53px;
+    top: 1101px;
+}
+
+.buttonSmallEleven {
+    right: 53px;
+    top: 1433px;
+}
+
+.L {
+    position: absolute;
+    width: 700px;
+    left: 23px;
+    height: 2px;
+    background: #C9C9C9;
+}
+
+.buttonBig {
+    position: absolute;
+    top: 62px;
+    right: 0;
+    width: 405px;
+    height: 107px;
+    background: #FFFFFF;
+    border-radius: 53.5px;
+}
+
+.buttonBig a {
+    position: absolute;
+    top: 30px;
+    left: 150px;
+    width: 242px;
+    height: 56px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 48px;
+    color: #000000;
+}
+
+.hotTopic {
+    position: absolute;
+    top: 206px;
+    right: 0;
+    width: 405px;
+    height: 360px;
+    background: #FFFFFF;
+    border-radius: 35px;
+}
+
+.hotTopic a {
+    position: absolute;
+    width: 112px;
+    height: 30px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 31px;
+    color: #000000;
+}
+
+.one {
+    top: 135px;
+    left: 56px;
+}
+
+.two {
+    top: 135px;
+    right: 79px;
+}
+
+.three {
+    top: 200px;
+    left: 56px;
+}
+
+.four {
+    top: 200px;
+    right: 79px;
+}
+
+.five {
+    top: 265px;
+    left: 56px;
+}
+
+.six {
+    top: 265px;
+    right: 79px;
+}
+
+.big {
+    position: absolute;
+    top: 51px;
+    left: 58px;
+    width: 132px;
+    height: 45px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 45px;
+    color: #000000;
+}
+
+.little {
+    position: absolute;
+    top: 63px;
+    right: 64px;
+    width: 76px;
+    height: 18px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 25px;
+    color: #929292;
+}
+
+.famousman {
+    position: absolute;
+    top: 603px;
+    right: 0;
+    width: 405px;
+    height: 654px;    
+    background: #FFFFFF;
+    border-radius: 35px;
+}
+
+.famousman a {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+    width: 60px;
+    height: 17px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #FFFFFF;
+}
+
+.famousman p {
+    position: absolute;
+    top: 28px;
+    left: 31px;
+    width: 132px;
+    height: 45px;
+    font-family: 'PingFang SC';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 31px;
+    line-height: 43px;
+    color: #000000;
+}
+
+.lineFive {
+    top: 88px;
+}
+
+.l {
+    position: absolute;
+    width: 381px;
+    left: 12px;
+    height: 3px;
+    background: #D9D9D9;
+}
+
+.s {
+    position: absolute;
+    width: 81px;
+    height: 33px;
+    background: #BCE7FA;
+    border-radius: 16.5px;
+}
+
+.buttonSmallOne {
+    right: 35px;
+    top: 144px;
+}
+
+.buttonSmallTwo {
+    right: 35px;
+    top: 230px;
+}
+
+.buttonSmallThree {
+    right: 35px;
+    top: 312px;
+}
+
+.buttonSmallFour {
+    right: 35px;
+    top: 400px;
+}
+
+.buttonSmallFive {
+    right: 35px;
+    top: 483px;
+}
+
+.buttonSmallSix {
+    right: 35px;
+    top: 573px;
+}
+
+.P {
+    position: absolute;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background: #D9D9D9;
+    border-radius: 50%;
+}
+
+.profilePhotoOne {
+    top: 133px;
+}
+
+.profilePhotoTwo {
+    top: 215px;
+}
+
+.profilePhotoThree {
+    top: 299px;
+}
+
+.profilePhotoFour {
+    top: 385px;
+}
+
+.profilePhotoFive {
+    top: 469px;
+}
+
+.profilePhotoSix {
+    top: 561px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+    position: relative;
+    height: 425px;
+    background: #C6D0D1;
+}
+
+.footer ul {
+    position: absolute;
+    top: 94px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer li {
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 20px;
+    list-style: none;
+    font-size: 24px;
+    border-right: #fff solid 5px;
+}
+
+.footer .footLast {
+    border-right: #fff solid 0px;
+}
+
+.copyRight {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+}
+
+.footer a {
+    font-size: 24px;
+    font-family: 'PingFang SC';
+}
