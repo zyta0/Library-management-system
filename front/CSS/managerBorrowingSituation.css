@@ -1,129 +1,259 @@
+* {
+    margin: 0;
+}
 
-        * {
-            margin: 0;
-        }
+.color {
+    background-color: #E4F4F4;
+    height: 1325px;
+}
 
-        a {
-            text-decoration: none;
-        }
+a {
+    text-decoration: none;
+}
 
-        .pic img {
-            width: 80px;
-        }
+a:link {
+    color: #000;
+}
 
-        .navigationBar {
-            height: 80px;
-            width: 100%;
-            line-height: 80px;
-        }
+a:visited {
+    color: #000;
+}
 
-        .typeCenter {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1200px;
-            height: 100%;
-        }
+a:active {
+    color: #000;
+}
 
-        .navigationBar .pic {
-            width: 80px;
-            height: 80px;
-        }
+.pic img {
+    width: 80px;
+}
 
-        .function {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            cursor: pointer;
-        }
+.navigationBar {
+    height: 80px;
+    width: 100%;
+    line-height: 80px;
+    background: rgba(255, 253, 253, 1);
+}
 
-        .function>span {
-            display: inline-block;
-            width: 14%;
-            height: 72px;
-            text-align: center;
-        }
+.typeCenter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+}
 
-        .function>span:hover {
-            border-bottom: 3px solid black;
-        }
+.navigationBar .pic {
+    width: 80px;
+    height: 80px;
+}
 
-        .function>div {
-            display: inline-block;
-        }
+.function {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 56%;
+    cursor: pointer;
+}
 
-        .search input {
-            padding: 3px;
-            height: 30px;
-            width: 230px;
-            border: 0px;
-            border-radius: 5px;
-            background-color: #f4f8fa;
-        }
+.function span {
+    display: inline-block;
+    width: 19%;
+    height: 75px;
+    text-align: center;
+}
 
-        .content {
-            width: 100%;
-            background-color: darkseagreen;
-            border-radius: 4%;
-        }
+.function .BorrowingSituation {
+    color: #74C9FB;
+    border-bottom: 3px solid #74C9FB;
+}
 
-        .content .selectionBar {
-            height: 60px;
-        }
+.function span:hover {
+    color: #74C9FB;
+    border-bottom: 3px solid #74C9FB;
+}
 
-        .content .selectionBar span {
-            display: inline-block;
-            width: 120px;
-            font-size: 25px;
-            margin: 2% 1% 0 5%;
-            cursor: pointer;
-            text-align: center;
-        }
+.function .headPortrait {
+    display: inline-block;
+    position: absolute;
+    left: 459px;
+    top: 19px;
+    width: 40px;
+    height: 42.5px;
+    background-color: burlywood;
+    border-radius: 50%;
+}
 
-        .content .selectionBar span:hover {
-            border-bottom: 5px solid black;
-        }
+.function .message .icon-xiaoxi {
+    display: inline-block;
+    position: absolute;
+    left: 559px;
+    top: 3px;
+    font-size: 33px;
+}
 
-        .content .detail {
-            padding: 30px;
-        }
+.navigationBar .function .icon-search {
+    position: absolute;
+    top: 2px;
+    left: 404px;
+    color: white;
+}
 
-        .content .books {
-            display: flex;
-            justify-content: space-around;
-        }
+.function .search {
+    width: 160px;
+    height: 29.75px;
+    background: #A8D6F7;
+    border: none;
+    border-radius: 14px;
+}
 
-        .content .books .book {
-            height: 220px;
-            width: 300px;
-            background-color: deepskyblue;
-            margin-bottom: 60px;
-        }
+.content {
+    position: absolute;
+    top: 99px;
+    width: 1246px;
+    height: 1074px;
+    background: #FFFFFF;
+    border-radius: 24px;
+}
 
-        .content .books .book>img {
-            float: left;
-            width: 150px;
-            height: 100%;
-            background-color: green;
-        }
+.content .selectionBar {
+    height: 92px;
+}
 
-        .content .books .book>div {
-            margin-left: 160px;
-        }
+.content .selectionBar span {
+    display: inline-block;
+    margin-top: 39px;
+    margin-left: 76px;
+    width: 146px;
+    height: 48px;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 40px;
+    cursor: pointer;
+    text-align: center;
+}
 
-        .content .books .book .person>.photo {
-            display: inline-block;
-            width: 25px;
-            height: 25px;
-            background-color: gold;
-            border-radius: 50%;
-        }
+.content .selectionBar .signed {
+    color: #74C9FB;
+    border-bottom: 5px solid #74C9FB;
+}
 
-        .pageButton div{
-            display: inline-block;
-            font-size: 30px;
-            margin-top: 2%;
-            margin-left: 4%;
-            cursor: pointer;
-        }
+.content .selectionBar span:hover {
+    color: #74C9FB;
+    border-bottom: 5px solid #74C9FB;
+}
+
+.content .detail {
+    position: absolute;
+    top: 165px;
+    width: 100%;
+}
+
+.content .books {
+    display: flex;
+    justify-content: space-around;
+}
+
+.content .books .book {
+    height: 195px;
+    width: 300px;
+    margin-bottom: 130px;
+}
+
+.content .books .book>img {
+    float: left;
+    width: 154px;
+    height: 195px;
+    background-color: green;
+}
+
+.content .books .book>div {
+    margin-left: 184px;
+}
+
+.content .books .book>.bookName {
+    font-size: 33px;
+}
+
+.content .books .book>.author {
+    font-size: 10px;
+    color: #808080;
+}
+
+.content .books .book>.person {
+    font-size: 10px;
+}
+
+.content .books .book .notDue {
+    font-size: 25px;
+    color: #35BCF5;
+    margin-top: 16px;
+}
+
+.content .books .book .expired {
+    display: none;
+    font-size: 25px;
+    color: #EC1F44;
+    margin-top: 16px;
+}
+
+.content .books .book .person>.photo {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-top: 7px;
+    margin-right: 5px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+}
+
+.pageButton {
+    position: absolute;
+    top: 1224px;
+}
+
+.pageButton div {
+    display: inline-block;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.footer {
+    position: relative;
+    height: 425px;
+    background: #C6D0D1;
+    color: white;
+    font-size: 24px;
+}
+
+.footer .absoluteUs {
+    position: absolute;
+    top: 93px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 33px;
+    width: 842px;
+}
+
+.footer .absoluteUs>div {
+    display: inline-block;
+    width: 160px;
+    border-left: 3px solid white;
+    text-align: center;
+}
+
+.footer .absoluteUs>div:nth-child(1) {
+    border-left: none;
+}
+
+.footer .service {
+    position: absolute;
+    top: 151px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer .copyright {
+    position: absolute;
+    top: 276px;
+    left: 50%;
+    transform: translateX(-50%);
+}

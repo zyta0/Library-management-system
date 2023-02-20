@@ -2,34 +2,42 @@
     margin: 0;
 }
 
-body {
+.color {
+    height: 1814px;
     background-color: #e4f4f4;
 }
 
 .w {
-            width: 1500px;
-            margin: auto;
-        }
+    width: 1920px;
+    margin: auto;
+}
 
 a {
     text-decoration: none;
 }
-a:link{
-            color: #000;
-        }
-        a:hover{
-            color: #000;
-        }
-        a:visited{
-            color: #000;
-        }
-        a:active{
-            color: #000;
-        }
+
+a:link {
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:active {
+    color: #000;
+}
+
 .nav {
     position: relative;
     height: 80px;
-    background-color: white;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: 'PingFang SC';
 }
 
 .pic {
@@ -100,7 +108,7 @@ a:link{
     width: 230px;
     border: 0px;
     border-radius: 5px;
-    background-color: #f4f8fa;
+    background: #A8D6F7;
 }
 
 .icon-sousuo1 {
@@ -126,7 +134,6 @@ a:link{
     top: 10px;
     height: 60px;
     border-radius: 50%;
-    ;
 }
 
 .message {
@@ -135,7 +142,7 @@ a:link{
     left: 1290px;
 }
 
-.message .icon-xiaoxi {
+.icon-xiaoxi {
     font-size: 30px;
 }
 
@@ -145,7 +152,7 @@ a:link{
     top: 23px;
 }
 
-.subject .icon-yejian {
+.icon-yejian {
     font-size: 30px;
 }
 
@@ -153,6 +160,10 @@ a:link{
     position: absolute;
     left: 1390px;
     top: 25px;
+}
+
+.hiddenLog {
+    display: none;
 }
 
 .typeCenter {
@@ -272,8 +283,14 @@ a:link{
 }
 
 .classification .classifiedNavigationBar>.classificationDetails .signed {
+    color: rgba(144,200,251,1);
     cursor: pointer;
-    border-bottom: 3px solid black;
+    border-bottom: 5px solid rgba(144, 200, 251, 1);
+}
+
+.classification .classifiedNavigationBar>.classificationDetails div:hover {
+    color: rgba(144, 200, 251, 1);
+    border-bottom: 5px solid rgba(144, 200, 251, 1);
 }
 
 .classification .viewMoreBooks {
@@ -291,4 +308,39 @@ a:link{
 
 .classification .viewMoreBooks .icon-xiangxiazhanhang {
     font-size: 30px;
+}
+
+.footer {
+    position: relative;
+    height: 425px;
+    background: #C6D0D1;
+    color: white;
+    font-size: 24px;
+}
+
+.footer .absoluteUs {
+    position: absolute;
+    top: 93px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 33px;
+    width: 842px;
+}
+
+.footer .absoluteUs>div {
+    display: inline-block;
+    width: 160px;
+    border-left: 3px solid white;
+    text-align: center;
+}
+
+.footer .absoluteUs>div:nth-child(1) {
+    border-left: none;
+}
+
+.footer .copyright {
+    position: absolute;
+    top: 276px;
+    left: 50%;
+    transform: translateX(-50%);
 }

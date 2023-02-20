@@ -2,18 +2,43 @@
     margin: 0;
 }
 
+.color {
+    height: 1460px;
+    background-color: #e4f4f4;
+    padding-top: 60px;
+}
+
+.w {
+    width: 1920px;
+    margin: auto;
+}
+
 a {
     text-decoration: none;
 }
 
-body {
-    background-color: #e4f4f4;
+a:link {
+    color: #000;
+}
+
+a:hover {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:active {
+    color: #000;
 }
 
 .nav {
     position: relative;
     height: 80px;
-    background-color: white;
+    background-color: #fff;
+    font-size: 20px;
+    font-family: 'PingFang SC';
 }
 
 .pic {
@@ -84,7 +109,7 @@ body {
     width: 230px;
     border: 0px;
     border-radius: 5px;
-    background-color: #f4f8fa;
+    background: #A8D6F7;
 }
 
 .icon-sousuo1 {
@@ -110,7 +135,6 @@ body {
     top: 10px;
     height: 60px;
     border-radius: 50%;
-    ;
 }
 
 .message {
@@ -139,12 +163,25 @@ body {
     top: 25px;
 }
 
+.hiddenLog {
+    display: none;
+}
+
+input {
+    width: 595px;
+    height: 62px;
+    font-size: 16px;
+    color: #a2a4a6;
+    background-color: #e2effb;
+    border: none;
+    border-radius: 32px;
+}
+
 .typeCenter {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     width: 1200px;
-    margin-top: 30px;
 }
 
 .selectionBar {
@@ -161,16 +198,7 @@ body {
 .selectionBar .selectBox {
     position: relative;
     font-size: 26px;
-}
-
-input {
-    width: 595px;
-    height: 62px;
-    font-size: 20px;
-    color: #a2a4a6;
-    background-color: #e2effb;
-    border: none;
-    border-radius: 32px;
+    cursor: pointer;
 }
 
 .selectionBar .selectedSign {
@@ -190,14 +218,14 @@ input {
 }
 
 .information>div {
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     background-color: white;
 }
 
 .information .tab {
     display: flex;
     height: 40px;
-    font-size: 28px;
+    font-size: 26px;
     line-height: 40px;
 }
 
@@ -208,14 +236,14 @@ input {
 
 .information .tab .changes {
     display: block;
-    font-size: 17px;
+    font-size: 20px;
     color: #999999;
     border-bottom: 1px solid #eef8f8;
 }
 
 .information .tab .preserve {
     display: none;
-    font-size: 17px;
+    font-size: 20px;
     color: #999999;
     border-bottom: 1px solid #eef8f8;
 }
@@ -263,7 +291,7 @@ input {
     left: 150px;
     background-color: white;
     border: none;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .information .personInformation .genderGelection {
@@ -272,7 +300,7 @@ input {
 }
 
 .information .personInformation .genderGelection input {
-    width: 13px;
+    width: 22px;
     height: 13px;
 }
 
@@ -299,4 +327,39 @@ input {
 .information .changePassword .details>input {
     display: inline-block;
     margin-top: 40px;
+}
+
+.footer {
+    position: relative;
+    height: 425px;
+    background: #C6D0D1;
+    color: white;
+    font-size: 24px;
+}
+
+.footer .absoluteUs {
+    position: absolute;
+    top: 93px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 33px;
+    width: 842px;
+}
+
+.footer .absoluteUs>div {
+    display: inline-block;
+    width: 160px;
+    border-left: 3px solid white;
+    text-align: center;
+}
+
+.footer .absoluteUs>div:nth-child(1) {
+    border-left: none;
+}
+
+.footer .copyright {
+    position: absolute;
+    top: 276px;
+    left: 50%;
+    transform: translateX(-50%);
 }

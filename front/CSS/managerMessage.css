@@ -2,8 +2,29 @@
     margin: 0;
 }
 
+.color {
+    background-color: #E4F4F4;
+    height: 981px;
+}
+
 a {
     text-decoration: none;
+}
+
+a:link {
+    color: #74C9FB;
+}
+
+a:hover {
+    color: #74C9FB;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:active {
+    color: #000;
 }
 
 .pic img {
@@ -14,6 +35,7 @@ a {
     height: 80px;
     width: 100%;
     line-height: 80px;
+    background: rgba(255, 253, 253, 1);
 }
 
 .typeCenter {
@@ -33,59 +55,95 @@ a {
     position: absolute;
     top: 0;
     right: 0;
-    width: 50%;
+    width: 56%;
     cursor: pointer;
 }
 
-.function>span {
+.function span {
     display: inline-block;
-    width: 14%;
-    height: 72px;
+    width: 19%;
+    height: 75px;
     text-align: center;
 }
 
-.function>span:hover {
-    border-bottom: 3px solid black;
+.function span:hover {
+    color: #74C9FB;
+    border-bottom: 3px solid #74C9FB;
 }
 
-.function>div {
+.function .headPortrait {
     display: inline-block;
+    position: absolute;
+    left: 459px;
+    top: 19px;
+    width: 40px;
+    height: 42.5px;
+    background-color: burlywood;
+    border-radius: 50%;
 }
 
-.search input {
-    padding: 3px;
-    height: 30px;
-    width: 230px;
-    border: 0px;
-    border-radius: 5px;
-    background-color: #f4f8fa;
+.function .message .icon-xiaoxi {
+    display: inline-block;
+    position: absolute;
+    left: 559px;
+    top: 3px;
+    font-size: 33px;
+}
+
+.navigationBar .function .icon-search {
+    position: absolute;
+    top: 2px;
+    left: 404px;
+    color: white;
+}
+
+.function .search {
+    width: 160px;
+    height: 29.75px;
+    background: #A8D6F7;
+    border: none;
+    border-radius: 14px;
 }
 
 .content {
-    width: 100%;
-    background-color: darkseagreen;
-    border-radius: 4%;
+    position: absolute;
+    top: 39px;
+    width: 1298px;
+    height: 791px;
+    background: #FFFFFF;
+    border-radius: 24px;
 }
 
 .content .selectionBar {
-    height: 60px;
+    height: 92px;
 }
 
 .content .selectionBar span {
     display: inline-block;
-    width: 120px;
-    font-size: 25px;
-    margin: 2% 1% 0 5%;
+    margin-top: 39px;
+    margin-left: 105px;
+    width: 146px;
+    height: 48px;
+    font-weight: 500;
+    font-size: 33px;
+    line-height: 40px;
     cursor: pointer;
     text-align: center;
 }
 
-.content .selectionBar span:hover {
-    border-bottom: 5px solid black;
+.content .selectionBar .signed{
+    color: #74C9FB;
+    border-bottom: 5px solid #74C9FB;
 }
 
+.content .selectionBar span:hover {
+    color: #74C9FB;
+    border-bottom: 5px solid #74C9FB;
+}
 .content .detail {
-    padding: 30px;
+    position: absolute;
+    top: 165px;
+    width: 100%;
 }
 
 .content .books {
@@ -94,29 +152,67 @@ a {
 }
 
 .content .books .book {
-    height: 220px;
+    position: relative;
+    height: 195px;
     width: 300px;
-    background-color: deepskyblue;
-    margin-bottom: 60px;
+    margin-bottom: 144px;
 }
 
 .content .books .book>img {
     float: left;
-    width: 150px;
-    height: 100%;
+    width: 154px;
+    height: 195px;
     background-color: green;
 }
 
 .content .books .book>div {
-    margin-left: 160px;
+    margin-left: 184px;
+}
+
+.content .books .book>.bookName {
+    font-size: 33px;
+}
+
+.content .books .book>.author {
+    font-size: 10px;
+    color: #808080;
+}
+
+.content .books .book>.person {
+    font-size: 10px;
+    color: #979797;
 }
 
 .content .books .book .person>.photo {
     display: inline-block;
-    width: 25px;
-    height: 25px;
-    background-color: gold;
+    width: 21px;
+    height: 21px;
+    margin-top: 7px;
+    margin-right: 5px;
+    background-color: #D9D9D9;
     border-radius: 50%;
+}
+
+.content .books .book button{
+    width: 46px;
+    height: 24px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 24px;
+    background-color: #A8D6F7;
+    color: rgba(255, 255, 255, 1);;
+}
+
+.content .books .book .button button:nth-child(2){
+margin-left: 10px;
+}
+
+.pageButton {
+    position: absolute;
+    top: 896px;
+    width: 500px;
 }
 
 .pageButton div {
@@ -125,4 +221,39 @@ a {
     margin-top: 2%;
     margin-left: 4%;
     cursor: pointer;
+}
+
+.footer {
+    position: relative;
+    height: 425px;
+    background: #C6D0D1;
+    color: white;
+    font-size: 24px;
+}
+
+.footer .absoluteUs {
+    position: absolute;
+    top: 93px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 33px;
+    width: 842px;
+}
+
+.footer .absoluteUs>div {
+    display: inline-block;
+    width: 160px;
+    border-left: 3px solid white;
+    text-align: center;
+}
+
+.footer .absoluteUs>div:nth-child(1) {
+    border-left: none;
+}
+
+.footer .copyright {
+    position: absolute;
+    top: 276px;
+    left: 50%;
+    transform: translateX(-50%);
 }
