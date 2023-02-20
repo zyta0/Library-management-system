@@ -4,7 +4,6 @@
         let timeLimit = document.querySelectorAll(".timeLimit");//获取是否到期显示区域
         let person = document.querySelectorAll(".person");//获取借阅人显示区域
 
-
         toBeReturned.addEventListener("click", () => {
             inAdvance.classList.remove("signed");
             toBeReturned.classList.add("signed");
