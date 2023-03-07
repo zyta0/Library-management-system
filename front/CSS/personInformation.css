@@ -3,7 +3,9 @@
 }
 
 .color {
+    margin: auto;
     height: 1460px;
+    width: 1920px;
     background-color: #e4f4f4;
     padding-top: 60px;
 }
@@ -143,7 +145,7 @@ a:active {
     left: 1290px;
 }
 
-.icon-xiaoxi {
+.message .icon-xiaoxi {
     font-size: 30px;
 }
 
@@ -153,7 +155,7 @@ a:active {
     top: 23px;
 }
 
-.icon-yejian {
+.subject .icon-yejian {
     font-size: 30px;
 }
 
@@ -331,6 +333,8 @@ input {
 
 .footer {
     position: relative;
+    width: 1920px;
+    margin: auto;
     height: 425px;
     background: #C6D0D1;
     color: white;

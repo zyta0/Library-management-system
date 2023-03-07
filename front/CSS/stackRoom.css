@@ -142,7 +142,7 @@ a:active {
     left: 1290px;
 }
 
-.icon-xiaoxi {
+ .message .icon-xiaoxi {
     font-size: 30px;
 }
 
@@ -152,7 +152,7 @@ a:active {
     top: 23px;
 }
 
-.icon-yejian {
+.subject .icon-yejian {
     font-size: 30px;
 }
 
@@ -311,8 +311,10 @@ a:active {
 }
 
 .footer {
+    margin: auto;
     position: relative;
     height: 425px;
+    width: 1920px;
     background: #C6D0D1;
     color: white;
     font-size: 24px;
@@ -343,4 +345,8 @@ a:active {
     top: 276px;
     left: 50%;
     transform: translateX(-50%);
+}
+.color {
+    width: 1920px;
+    margin: auto;
 }
