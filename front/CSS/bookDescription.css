@@ -139,12 +139,12 @@ a:active{
     display: none;
 }
 
-.document {
+/* .document {
     position: relative;
     width: 100%;
     height: 1720px;
     background: #E4F4F4;
-}
+} */
 
 .top {
     position: absolute;
@@ -156,10 +156,11 @@ a:active{
 
 .middle {
     position: relative;
-    top: 65px;
-    width: 100%;
+    /* top: 65px; */
+    width: 1920px;
     height: 1655px;
     background: #E4F4F4;
+    margin: auto;
 }
 
 .content {

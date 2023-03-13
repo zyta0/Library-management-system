@@ -168,8 +168,9 @@ a:active {
 }
 
 .middle {
+    margin: auto;
     position: relative;
-    width: 100%;
+    width: 1920px;
     height: 1985px;
     background: #E4F4F4;
 }

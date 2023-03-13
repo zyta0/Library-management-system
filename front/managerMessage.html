@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3875338_yxgeekcgecn.css">
-    <link rel="stylesheet" href="./CSS/managerMessage.css">
     <title>图书管理系统管理员端</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/c/font_3875338_wnri7f7l1eq.css">
+    <link rel="stylesheet" href="./CSS/managerMessage.css">
 </head>
 
 <body>
@@ -20,191 +20,161 @@
                 </a>
             </div>
             <div class="function">
-                <span class="index">首页</span>
-                <span class="BorrowingSituation">借阅情况</span>
-                <div class="search">
-                    <input type="text">
-                </div>
-                <span class="message">消息</span>
-                <span class="setting">设置</span>
+                <span class="index"><a href="./managerIndex.html">首页</a></span>
+                <span class="BorrowingSituation"><a href="./managerBorrowingSituation.html">借阅情况</a></span>
+                <input type="text" class="search">
+                <div class="iconfont icon-search"></div>
+                <div class="headPortrait"></div>
+                <div class="message"><a href="./managerMessage.html"><i class="iconfont icon-xiaoxi"></i></a></div>
             </div>
         </div>
     </div>
-    <div class="typeCenter">
-        <div class="content">
-            <div class="selectionBar">
-                <span class="loanRequest">借阅请求</span>
-                <span class="reservationRequest">预约请求</span>
-            </div>
-            <div class="detail">
-                <div class="books">
-                    <div class="book">
-                        <img src="" alt="">
-                        <div class="bookName">
-                            书名
-                        </div>
-                        <div class="author">
-                            作者
-                        </div><br><br>
-                        <div class="person">
-                            借阅人：<br>
-                            <div class="photo"></div>姓名
-                        </div>
-                        <div class="timeLimit">
-                            借阅时间：X天
-                        </div><br>
-                        <button>同意</button>
-                        <button>拒绝</button>
-                    </div>
-                    <div class="book"><img src="" alt="">
-                        <div class="bookName">
-                            书名
-                        </div>
-                        <div class="author">
-                            作者
-                        </div><br><br>
-                        <div class="person">
-                            借阅人：<br>
-                            <div class="photo"></div>姓名
-                        </div>
-                        <div class="timeLimit">
-                            借阅时间：X天
-                        </div><br>
-                        <button>同意</button>
-                        <button>拒绝</button>
-                    </div>
-                    <div class="book"><img src="" alt="">
-                        <div class="bookName">
-                            书名
-                        </div>
-                        <div class="author">
-                            作者
-                        </div><br><br>
-                        <div class="person">
-                            借阅人：<br>
-                            <div class="photo"></div>姓名
-                        </div>
-                        <div class="timeLimit">
-                            借阅时间：X天
-                        </div><br>
-                        <button>同意</button>
-                        <button>拒绝</button>
-                    </div>
+    <div class="color">
+        <div class="typeCenter">
+            <div class="content">
+                <div class="selectionBar">
+                    <span class="loanRequest signed">借阅书籍</span>
+                    <span class="reservationRequest">预约请求</span>
                 </div>
-                <div class="books">
-                    <div class="book"><img src="" alt="">
-                        <div class="bookName">
-                            书名
+                <div class="detail">
+                    <div class="books">
+                        <div class="book"><img src="" alt="">
+                            <div class="bookName">
+                                书名
+                            </div>
+                            <div class="author">
+                                作者
+                            </div><br>
+                            <div class="person">
+                                借阅人：<br>
+                                <div class="photo"></div>姓名
+                            </div>
+                            <div class="timeLimit">
+                                借阅时间：X天
+                            </div><br>
+                            <div class="button">
+                                <button>同意</button>
+                                <button>拒绝</button>
+                            </div>
                         </div>
-                        <div class="author">
-                            作者
-                        </div><br><br>
-                        <div class="person">
-                            借阅人：<br>
-                            <div class="photo"></div>姓名
+                        <div class="book"><img src="" alt="">
+                            <div class="bookName">
+                                书名
+                            </div>
+                            <div class="author">
+                                作者
+                            </div><br>
+                            <div class="person">
+                                借阅人：<br>
+                                <div class="photo"></div>姓名
+                            </div>
+                            <div class="timeLimit">
+                                借阅时间：X天
+                            </div><br>
+                            <div class="button">
+                                <button>同意</button>
+                                <button>拒绝</button>
+                            </div>
                         </div>
-                        <div class="timeLimit">
-                            借阅时间：X天
-                        </div><br>
-                        <button>同意</button>
-                        <button>拒绝</button>
+                        <div class="book"><img src="" alt="">
+                            <div class="bookName">
+                                书名
+                            </div>
+                            <div class="author">
+                                作者
+                            </div><br>
+                            <div class="person">
+                                借阅人：<br>
+                                <div class="photo"></div>姓名
+                            </div>
+                            <div class="timeLimit">
+                                借阅时间：X天
+                            </div><br>
+                            <div class="button">
+                                <button>同意</button>
+                                <button>拒绝</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="book"><img src="" alt="">
-                        <div class="bookName">
-                            书名
+                    <div class="books">
+                        <div class="book"><img src="" alt="">
+                            <div class="bookName">
+                                书名
+                            </div>
+                            <div class="author">
+                                作者
+                            </div><br>
+                            <div class="person">
+                                借阅人：<br>
+                                <div class="photo"></div>姓名
+                            </div>
+                            <div class="timeLimit">
+                                借阅时间：X天
+                            </div><br>
+                            <div class="button">
+                                <button>同意</button>
+                                <button>拒绝</button>
+                            </div>
                         </div>
-                        <div class="author">
-                            作者
-                        </div><br><br>
-                        <div class="person">
-                            借阅人：<br>
-                            <div class="photo"></div>姓名
+                        <div class="book"><img src="" alt="">
+                            <div class="bookName">
+                                书名
+                            </div>
+                            <div class="author">
+                                作者
+                            </div><br>
+                            <div class="person">
+                                借阅人：<br>
+                                <div class="photo"></div>姓名
+                            </div>
+                            <div class="timeLimit">
+                                借阅时间：X天
+                            </div><br>
+                            <div class="button">
+                                <button>同意</button>
+                                <button>拒绝</button>
+                            </div>
                         </div>
-                        <div class="timeLimit">
-                            借阅时间：X天
-                        </div><br>
-                        <button>同意</button>
-                        <button>拒绝</button>
-                    </div>
-                    <div class="book"><img src="" alt="">
-                        <div class="bookName">
-                            书名
+                        <div class="book"><img src="" alt="">
+                            <div class="bookName">
+                                书名
+                            </div>
+                            <div class="author">
+                                作者
+                            </div><br>
+                            <div class="person">
+                                借阅人：<br>
+                                <div class="photo"></div>姓名
+                            </div>
+                            <div class="timeLimit">
+                                借阅时间：X天
+                            </div><br>
+                            <div class="button">
+                                <button>同意</button>
+                                <button>拒绝</button>
+                            </div>
                         </div>
-                        <div class="author">
-                            作者
-                        </div><br><br>
-                        <div class="person">
-                            借阅人：<br>
-                            <div class="photo"></div>姓名
-                        </div>
-                        <div class="timeLimit">
-                            借阅时间：X天
-                        </div><br>
-                        <button>同意</button>
-                        <button>拒绝</button>
-                    </div>
-                </div>
-                <div class="books">
-                    <div class="book"><img src="" alt="">
-                        <div class="bookName">
-                            书名
-                        </div>
-                        <div class="author">
-                            作者
-                        </div><br><br>
-                        <div class="person">
-                            借阅人：<br>
-                            <div class="photo"></div>姓名
-                        </div>
-                        <div class="timeLimit">
-                            借阅时间：X天
-                        </div><br>
-                        <button>同意</button>
-                        <button>拒绝</button>
-                    </div>
-                    <div class="book"><img src="" alt="">
-                        <div class="bookName">
-                            书名
-                        </div>
-                        <div class="author">
-                            作者
-                        </div><br><br>
-                        <div class="person">
-                            借阅人：<br>
-                            <div class="photo"></div>姓名
-                        </div>
-                        <div class="timeLimit">
-                            借阅时间：X天
-                        </div><br>
-                        <button>同意</button>
-                        <button>拒绝</button>
-                    </div>
-                    <div class="book"><img src="" alt="">
-                        <div class="bookName">
-                            书名
-                        </div>
-                        <div class="author">
-                            作者
-                        </div><br><br>
-                        <div class="person">
-                            借阅人：<br>
-                            <div class="photo"></div>姓名
-                        </div>
-                        <div class="timeLimit">
-                            借阅时间：X天
-                        </div><br>
-                        <button>同意</button>
-                        <button>拒绝</button>
                     </div>
                 </div>
             </div>
+            <div class="pageButton">
+                <div class="iconfont icon-xiangzuo1"></div>
+                <div class="iconfont icon-xiangyou1"></div>
+            </div>
         </div>
-        <div class="pageButton">
-            <div class="iconfont icon-xiangzuo1"></div>
-            <div class="iconfont icon-xiangyou1"></div>
+    </div>
+    <div class="footer">
+        <div class="absoluteUs">
+            <div>关于我们</div>
+            <div>联系我们</div>
+            <div>版权所有</div>
+            <div>意见反馈</div>
+            <div>帮助中心</div>
         </div>
+        <div class="copyright">Copyright © 2019 云顶书院图书管理系统 All Rights Reserved</div>
     </div>
 
+    <script src="./JS/managerMessage.js"></script>
 </body>
 
 </html>
