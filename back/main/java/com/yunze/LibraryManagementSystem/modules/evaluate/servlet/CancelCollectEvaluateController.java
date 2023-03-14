@@ -2,6 +2,7 @@ package com.yunze.LibraryManagementSystem.modules.evaluate.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Evaluate;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.CollectionService;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.EvaluateService;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.impl.CollectionServiceImpl;
@@ -46,7 +47,8 @@ public class CancelCollectEvaluateController extends HttpServlet {
         //获取int型数据
         int evaluateId = (int) jsonMap.get("evaluateId");
         HttpSession session = request.getSession();
-        int readerId = (int)session.getAttribute("reader_id");
+        Reader r = (Reader) session.getAttribute("reader");
+        int readerId = r.getReaderId();
         //处理数据
         CollectionService collectionService = new CollectionServiceImpl();
         int result1 = collectionService.cancelCollect(evaluateId, readerId);

@@ -1,12 +1,11 @@
 package com.yunze.LibraryManagementSystem.modules.evaluate.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yunze.LibraryManagementSystem.modules.borrowbook.json.BorrowRequest;
 import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Evaluate;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 import com.yunze.LibraryManagementSystem.modules.evaluate.json.Post;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.EvaluateService;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.impl.EvaluateServiceImpl;
-import com.yunze.LibraryManagementSystem.modules.utils.DataUtils;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -47,7 +46,8 @@ public class PostEvaluateController extends HttpServlet {
         // 处理数据
         Evaluate evaluate = new Evaluate();
         HttpSession httpSession = request.getSession();
-        evaluate.setReaderId((int)httpSession.getAttribute("reader_id"));
+        Reader r = (Reader) httpSession.getAttribute("reader");
+        evaluate.setReaderId(r.getReaderId());
         evaluate.setBookId(post.getBookId());
         evaluate.setPublishTime(new Date());
         evaluate.setEvaluate(post.getEvaluate());

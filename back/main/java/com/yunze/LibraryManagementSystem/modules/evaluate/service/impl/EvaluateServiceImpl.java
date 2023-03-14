@@ -2,13 +2,13 @@ package com.yunze.LibraryManagementSystem.modules.evaluate.service.impl;
 
 import com.yunze.LibraryManagementSystem.modules.borrowbook.dao.BookDao;
 import com.yunze.LibraryManagementSystem.modules.evaluate.dao.EvaluateDao;
-import com.yunze.LibraryManagementSystem.modules.evaluate.dao.ReaderDao;
+import com.yunze.LibraryManagementSystem.modules.login.dao.ReaderDao;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.dao.impl.BookDaoImpl;
 import com.yunze.LibraryManagementSystem.modules.evaluate.dao.impl.EvaluateDaoImpl;
-import com.yunze.LibraryManagementSystem.modules.evaluate.dao.impl.ReaderDaoImpl;
+import com.yunze.LibraryManagementSystem.modules.login.dao.impl.ReaderDaoImpl;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.entity.Book;
 import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Evaluate;
-import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Reader;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.EvaluateService;
 import com.yunze.LibraryManagementSystem.modules.utils.DBUtils;
 import com.yunze.LibraryManagementSystem.modules.utils.DataUtils;
@@ -35,13 +35,11 @@ public class EvaluateServiceImpl implements EvaluateService {
                     evaluates.addAll(evaluates1);
                 }
             }
-            List<Reader> readers = readerDao.select(str);
+            Reader reader = readerDao.select(str);
             List<Evaluate> evaluates2 = null;
-            if(readers != null) {//根据用户名查
-                for (Reader reader1 : readers) {
-                    evaluates2 = evaluateDao.select(reader1.getReaderId());
-                    evaluates.addAll(evaluates2);
-                }
+            if(reader != null) {//根据用户名查
+                evaluates2 = evaluateDao.select(reader.getReaderId());
+                evaluates.addAll(evaluates2);
             }
             //降序排序，按时间
             Collections.sort(evaluates, new Comparator<Evaluate>() {

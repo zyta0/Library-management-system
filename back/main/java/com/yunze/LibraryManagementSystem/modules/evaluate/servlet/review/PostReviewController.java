@@ -2,6 +2,7 @@ package com.yunze.LibraryManagementSystem.modules.evaluate.servlet.review;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Evaluate;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Review;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.EvaluateService;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.ReviewService;
@@ -48,7 +49,8 @@ public class PostReviewController extends HttpServlet {
         int evaluateId = (int) jsonMap.get("evaluateId");
         String r = (String) jsonMap.get("review");
         HttpSession session = request.getSession();
-        int readerId = (int)session.getAttribute("reader_id");
+        Reader re = (Reader)session.getAttribute("reader");
+        int readerId = re.getReaderId();
         //处理数据
         ReviewService reviewService = new ReviewServiceImpl();
         Review review = new Review();

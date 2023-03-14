@@ -1,6 +1,6 @@
 package com.yunze.LibraryManagementSystem.modules.filter;
 
-import com.yunze.LibraryManagementSystem.modules.evaluate.entity.User;
+import com.yunze.LibraryManagementSystem.modules.login.entity.User;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebFilter;
@@ -26,11 +26,11 @@ public class CheckFilter implements javax.servlet.Filter {
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 
         HttpSession session = request.getSession();
-        User user = (User) session.getAttribute("user");
+        User user = (User) session.getAttribute("reader");
         if(user != null){//登录过
             filterChain.doFilter(request,response);
         }else{//登录页面
-            response.sendRedirect(request.getContextPath() + "/loginMgr.html");//todo
+            response.sendRedirect(request.getContextPath() + "/login.html");//todo
         }
     }
 
