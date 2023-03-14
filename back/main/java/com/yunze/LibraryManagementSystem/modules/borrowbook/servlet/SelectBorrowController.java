@@ -6,6 +6,7 @@ import com.yunze.LibraryManagementSystem.modules.borrowbook.entity.Borrow;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.json.LendOrRenewRequest;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.service.BorrowService;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.service.impl.BorrowServiceImpl;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -48,7 +49,8 @@ public class SelectBorrowController extends HttpServlet {
         //只负责调用业务逻辑
         HttpSession session = request.getSession();
         BorrowService borrowService = new BorrowServiceImpl();
-        int readerId = (int)session.getAttribute("reader_id");
+        Reader r = (Reader) session.getAttribute("reader");
+        int readerId = r.getReaderId();
         Book book = lendOrRenewRequest.getBook();
         int bookId = book.getId();
         Borrow borrow = borrowService.select(readerId, bookId);

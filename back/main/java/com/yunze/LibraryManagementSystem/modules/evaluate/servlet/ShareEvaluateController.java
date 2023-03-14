@@ -1,11 +1,9 @@
 package com.yunze.LibraryManagementSystem.modules.evaluate.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Collection;
 import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Evaluate;
-import com.yunze.LibraryManagementSystem.modules.evaluate.service.CollectionService;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.EvaluateService;
-import com.yunze.LibraryManagementSystem.modules.evaluate.service.impl.CollectionServiceImpl;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.impl.EvaluateServiceImpl;
 
 import javax.servlet.*;
@@ -15,7 +13,6 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 /**
@@ -47,7 +44,8 @@ public class ShareEvaluateController extends HttpServlet {
         //获取int型数据
         int evaluateId = (int) jsonMap.get("evaluateId");
         HttpSession session = request.getSession();
-        int readerId = (int)session.getAttribute("reader_id");
+        Reader r = (Reader) session.getAttribute("reader");
+        int readerId = r.getReaderId();
         //处理数据
         //书评的分享量+1
         EvaluateService evaluateService = new EvaluateServiceImpl();

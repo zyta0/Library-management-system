@@ -1,12 +1,11 @@
 package com.yunze.LibraryManagementSystem.modules.borrowbook.servlet;
 
-import com.alibaba.fastjson.JSONObject;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.entity.Book;
-import com.alibaba.fastjson.JSON;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.entity.Borrow;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.json.BorrowRequest;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.service.BorrowService;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.service.impl.BorrowServiceImpl;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 import com.yunze.LibraryManagementSystem.modules.utils.DataUtils;
 
 import javax.servlet.*;
@@ -18,7 +17,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -57,7 +55,8 @@ public class BorrowBookController extends HttpServlet {
         //只负责调用业务逻辑
         HttpSession session = request.getSession();
         Borrow borrow = new Borrow();
-        borrow.setReaderId((int)session.getAttribute("reader_id"));
+        Reader r = (Reader)session.getAttribute("reader");
+        borrow.setReaderId(r.getReaderId());
         borrow.setBookId(book.getId());
         borrow.setBorrowDate(borrowDate);
         borrow.setDue(due);

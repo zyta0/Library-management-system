@@ -1,6 +1,7 @@
 package com.yunze.LibraryManagementSystem.modules.follow.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 import com.yunze.LibraryManagementSystem.modules.follow.entity.Follow;
 import com.yunze.LibraryManagementSystem.modules.follow.service.FollowService;
 import com.yunze.LibraryManagementSystem.modules.follow.service.impl.FollowServiceImpl;
@@ -28,7 +29,8 @@ public class ShowFansController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        int readerId = (int)session.getAttribute("reader_id");
+        Reader reader = (Reader) session.getAttribute("reader");
+        int readerId = reader.getReaderId();
         FollowService followService = new FollowServiceImpl();
         List<Follow> fans = followService.selectFans(readerId);
         Map<String, Object> responseMap = new HashMap<>();

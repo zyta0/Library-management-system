@@ -1,10 +1,7 @@
 package com.yunze.LibraryManagementSystem.modules.evaluate.dao.impl;
 
-import com.yunze.LibraryManagementSystem.modules.advanced.impl.EvaluateRowMapper;
 import com.yunze.LibraryManagementSystem.modules.advanced.impl.ReviewRowMapper;
-import com.yunze.LibraryManagementSystem.modules.evaluate.dao.ReaderDao;
 import com.yunze.LibraryManagementSystem.modules.evaluate.dao.ReviewDao;
-import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Evaluate;
 import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Review;
 import com.yunze.LibraryManagementSystem.modules.utils.DaoUtils;
 import com.yunze.LibraryManagementSystem.modules.utils.DataUtils;
