@@ -38,8 +38,9 @@ public class ShowFansController extends HttpServlet {
         for(Follow fan : fans){
             fanList.add(fan.getFanId());
         }
+        response.setStatus(200);
         responseMap.put("status", "success");
-        responseMap.put("code", 2000);
+        responseMap.put("code", 200);
         responseMap.put("fans", fanList);
         ObjectMapper mapper = new ObjectMapper();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");

@@ -53,12 +53,14 @@ public class ShowEvaluateByLabel extends HttpServlet {
         List<Evaluate> list = evaluateService.showByLabel(labelId);
         Map<String, Object> responseMap = new HashMap<>();
         if(list == null){
+            response.setStatus(404);
             responseMap.put("status", "failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 404);
             responseMap.put("message", "查找失败");
         }else{
+            response.setStatus(200);
             responseMap.put("status", "success");
-            responseMap.put("code", 2000);
+            responseMap.put("code", 200);
             responseMap.put("message", "查找成功");
             responseMap.put("label", labelService.select(labelId));
             responseMap.put("evaluates", list);

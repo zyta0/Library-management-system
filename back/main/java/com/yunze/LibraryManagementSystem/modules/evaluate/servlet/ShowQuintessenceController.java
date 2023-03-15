@@ -38,8 +38,9 @@ public class ShowQuintessenceController extends HttpServlet {
 
         Map<String, Object> responseMap = new HashMap<>();
         if (evaluateList.isEmpty()) {
+            response.setStatus(404);
             responseMap.put("status", "failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 404);
             responseMap.put("message", "未找到");
         } else {
             List<LabelEvaluate> list = new ArrayList<>();
@@ -49,8 +50,9 @@ public class ShowQuintessenceController extends HttpServlet {
                 LabelEvaluate labelEvaluate = new LabelEvaluate(label, evaluate);
                 list.add(labelEvaluate);
             }
+            response.setStatus(200);
             responseMap.put("status", "success");
-            responseMap.put("code", 2000);
+            responseMap.put("code", 200);
             responseMap.put("message", "请求成功");
             responseMap.put("label_evaluate", list);
         }

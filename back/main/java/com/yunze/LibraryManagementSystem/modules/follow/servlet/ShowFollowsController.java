@@ -39,8 +39,9 @@ public class ShowFollowsController extends HttpServlet {
             followList.add(follow.getReaderId());
         }
         Map<String, Object> responseMap = new HashMap<>();
+        response.setStatus(200);
         responseMap.put("status", "success");
-        responseMap.put("code", 2000);
+        responseMap.put("code", 200);
         responseMap.put("follows", followList);
         ObjectMapper mapper = new ObjectMapper();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");

@@ -52,12 +52,14 @@ public class FollowController extends HttpServlet {
         int result = followService.follow(follow);
         Map<String, Object> responseMap = new HashMap<>();
         if(result == 0){
+            response.setStatus(400);
             responseMap.put("status", "failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 400);
             responseMap.put("message", "关注失败,可能已关注过");
         }else{
+            response.setStatus(200);
             responseMap.put("status", "success");
-            responseMap.put("code", 2000);
+            responseMap.put("code", 200);
             responseMap.put("message", "关注成功");
             responseMap.put("follow", follow);
         }

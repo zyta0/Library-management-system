@@ -58,13 +58,15 @@ public class PostEvaluateController extends HttpServlet {
         int result = evaluateService.postEvaluate(evaluate);
         //响应
         java.util.Map<String, Object> responseMap = new HashMap<>();
-        if(result == 0){//自定义状态码
+        if(result == 0){
+            response.setStatus(500);
             responseMap.put("status", "failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 500);
             responseMap.put("message", "发布失败");
         }else{
+            response.setStatus(200);
             responseMap.put("status", "success");
-            responseMap.put("code", 2000);
+            responseMap.put("code", 200);
             responseMap.put("message", "发布成功");
 
             responseMap.put("evaluate", evaluate);

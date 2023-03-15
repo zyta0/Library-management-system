@@ -50,12 +50,14 @@ public class UnfollowController extends HttpServlet {
         int result = followService.unfollow(readerId, fanId);
         Map<String, Object> responseMap = new HashMap<>();
         if(result == 0){
+            response.setStatus(500);
             responseMap.put("status", "failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 500);
             responseMap.put("message", "取消关注失败");
         }else{
+            response.setStatus(200);
             responseMap.put("status", "success");
-            responseMap.put("code", 2000);
+            responseMap.put("code", 200);
             responseMap.put("message", "取消关注成功");
         }
         response.getWriter().write(mapper.writeValueAsString(responseMap));

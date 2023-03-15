@@ -50,21 +50,23 @@ public class UpdateEvaluateController extends HttpServlet {
         Evaluate evaluate = evaluateService.search(evaluateId);
         java.util.Map<String, Object> responseMap = new HashMap<>();
         if(evaluate == null){
+            response.setStatus(404);
             responseMap.put("status", "failure");
-            responseMap.put("code", 1000);
+            responseMap.put("code", 404);
             responseMap.put("message", "书评不存在");
         }else {
             evaluate.setEvaluate(ev);
             int result = evaluateService.updateEvaluate(evaluate);
             if (result == 0) {
+                response.setStatus(500);
                 responseMap.put("status", "failure");
-                responseMap.put("code", 4001);
+                responseMap.put("code", 500);
                 responseMap.put("message", "修改失败");
             } else {
+                response.setStatus(200);
                 responseMap.put("status", "success");
-                responseMap.put("code", 2000);
+                responseMap.put("code", 200);
                 responseMap.put("message", "修改成功");
-
                 responseMap.put("evaluate", evaluate);
             }
         }

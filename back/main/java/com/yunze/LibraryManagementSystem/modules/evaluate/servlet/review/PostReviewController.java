@@ -64,20 +64,23 @@ public class PostReviewController extends HttpServlet {
         Evaluate evaluate = evaluateService.search(evaluateId);
         Map<String, Object> responseMap = new HashMap<>();
         if(evaluate == null){
+            response.setStatus(404);
             responseMap.put("status", "failure");
-            responseMap.put("code", 1000);
+            responseMap.put("code", 404);
             responseMap.put("massage", "错误参数，书评不存在");
         }else {
             evaluate.setReview(evaluate.getReview() + 1);
             int result2 = evaluateService.updateEvaluate(evaluate);
 
             if (result1 == 0 || result2 == 0) {
+                response.setStatus(500);
                 responseMap.put("status", "failure");
-                responseMap.put("code", 4001);
+                responseMap.put("code", 500);
                 responseMap.put("massage", "回复失败");
             } else {
+                response.setStatus(200);
                 responseMap.put("status", "success");
-                responseMap.put("code", 2000);
+                responseMap.put("code", 200);
                 responseMap.put("massage", "回复成功");
                 responseMap.put("review", review);
             }

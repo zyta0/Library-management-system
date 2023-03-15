@@ -59,20 +59,23 @@ public class CollectEvaluateController extends HttpServlet {
         Evaluate evaluate = evaluateService.search(evaluateId);
         Map<String, Object> responseMap = new HashMap<>();
         if(evaluate == null){
+            response.setStatus(404);
             responseMap.put("status", "failure");
-            responseMap.put("code", 1000);
+            responseMap.put("code", 404);
             responseMap.put("massage", "错误参数，书评不存在");
         }else {
             evaluate.setCollection(evaluate.getCollection() + 1);
             int result2 = evaluateService.updateEvaluate(evaluate);
 
             if (result1 == 0 || result2 == 0) {
+                response.setStatus(500);
                 responseMap.put("status", "failure");
-                responseMap.put("code", 4001);
+                responseMap.put("code", 500);
                 responseMap.put("massage", "收藏失败");
             } else {
+                response.setStatus(200);
                 responseMap.put("status", "success");
-                responseMap.put("code", 2000);
+                responseMap.put("code", 200);
                 responseMap.put("massage", "收藏成功");
             }
         }

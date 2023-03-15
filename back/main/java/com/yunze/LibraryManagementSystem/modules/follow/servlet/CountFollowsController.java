@@ -32,8 +32,9 @@ public class CountFollowsController extends HttpServlet {
         FollowService followService = new FollowServiceImpl();
         int count = followService.followCount(fanId);
         Map<String, Object> responseMap = new HashMap<>();
+        response.setStatus(200);
         responseMap.put("status", "success");
-        responseMap.put("code", 2000);
+        responseMap.put("code", 200);
         responseMap.put("followsCount", count);
         ObjectMapper mapper = new ObjectMapper();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");

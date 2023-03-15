@@ -38,12 +38,14 @@ public class LendBookController extends HttpServlet {
         int result = borrowService.lendBook(borrow);
         Map<String, Object> responseMap  = new HashMap<>();
         if(result == 0){
+            response.setStatus(500);
             responseMap.put("status","failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 500);
             responseMap.put("message", "归还失败");
         }else{
+            response.setStatus(200);
             responseMap.put("status","success");
-            responseMap.put("code", 2000);
+            responseMap.put("code", 200);
             responseMap.put("message", "归还成功");
         }
         // 将 Java 对象转换为 JSON 数据

@@ -65,13 +65,15 @@ public class BorrowBookController extends HttpServlet {
 
         //响应
         java.util.Map<String, Object> responseMap = new HashMap<>();
-        if(result == 0){//自定义状态码
+        if(result == 0){
+            response.setStatus(400);
             responseMap.put("status", "failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 400);
             responseMap.put("message", "已借此书，此次借书失败");
         }else{
+            response.setStatus(200);
             responseMap.put("status", "success");
-            responseMap.put("code", 2000);
+            responseMap.put("code", 200);
             responseMap.put("message", "借书成功");
 
             responseMap.put("borrow", borrow);

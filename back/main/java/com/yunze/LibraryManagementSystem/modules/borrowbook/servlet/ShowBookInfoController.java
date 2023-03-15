@@ -36,20 +36,24 @@ public class ShowBookInfoController extends HttpServlet {
         //只负责调用业务逻辑
         BookService service = new BookServiceImpl();
         List<Book> books = service.ShowBookInfo(str);
+        HttpSession httpSession = request.getSession();
+        httpSession.setAttribute("books", books);
 
         //响应
         java.util.Map<String, Object> responseMap = new HashMap<>();
         if(books != null){
-            //找到书籍，返回状态码2000
+            //找到书籍，返回状态码200
+            response.setStatus(200);
             responseMap.put("status", "success");
-            responseMap.put("code", 2000);
+            responseMap.put("code", 200);
             responseMap.put("message", "请求成功");
 
             responseMap.put("books", books);
         }else{
-            //没找到书籍，状态码4001
+            //没找到书籍，状态码404
+            response.setStatus(404);
             responseMap.put("status", "failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 404);
             responseMap.put("message", "未找到");
         }
         ObjectMapper mapper = new ObjectMapper();
