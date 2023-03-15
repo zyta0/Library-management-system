@@ -2,6 +2,7 @@ package com.yunze.LibraryManagementSystem.modules.evaluate.servlet.review;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Evaluate;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Review;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.EvaluateService;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.ReviewService;
@@ -48,7 +49,8 @@ public class PostReviewController extends HttpServlet {
         int evaluateId = (int) jsonMap.get("evaluateId");
         String r = (String) jsonMap.get("review");
         HttpSession session = request.getSession();
-        int readerId = (int)session.getAttribute("reader_id");
+        Reader re = (Reader)session.getAttribute("reader");
+        int readerId = re.getReaderId();
         //处理数据
         ReviewService reviewService = new ReviewServiceImpl();
         Review review = new Review();
@@ -62,20 +64,23 @@ public class PostReviewController extends HttpServlet {
         Evaluate evaluate = evaluateService.search(evaluateId);
         Map<String, Object> responseMap = new HashMap<>();
         if(evaluate == null){
+            response.setStatus(404);
             responseMap.put("status", "failure");
-            responseMap.put("code", 1000);
+            responseMap.put("code", 404);
             responseMap.put("massage", "错误参数，书评不存在");
         }else {
             evaluate.setReview(evaluate.getReview() + 1);
             int result2 = evaluateService.updateEvaluate(evaluate);
 
             if (result1 == 0 || result2 == 0) {
+                response.setStatus(500);
                 responseMap.put("status", "failure");
-                responseMap.put("code", 4001);
+                responseMap.put("code", 500);
                 responseMap.put("massage", "回复失败");
             } else {
+                response.setStatus(200);
                 responseMap.put("status", "success");
-                responseMap.put("code", 2000);
+                responseMap.put("code", 200);
                 responseMap.put("massage", "回复成功");
                 responseMap.put("review", review);
             }

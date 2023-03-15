@@ -1,6 +1,7 @@
 package com.yunze.LibraryManagementSystem.modules.follow.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 import com.yunze.LibraryManagementSystem.modules.follow.service.FollowService;
 import com.yunze.LibraryManagementSystem.modules.follow.service.impl.FollowServiceImpl;
 
@@ -26,12 +27,14 @@ public class CountFollowsController extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
-        int fanId = (int)session.getAttribute("reader_id");
+        Reader r = (Reader)session.getAttribute("reader");
+        int fanId = r.getReaderId();
         FollowService followService = new FollowServiceImpl();
         int count = followService.followCount(fanId);
         Map<String, Object> responseMap = new HashMap<>();
+        response.setStatus(200);
         responseMap.put("status", "success");
-        responseMap.put("code", 2000);
+        responseMap.put("code", 200);
         responseMap.put("followsCount", count);
         ObjectMapper mapper = new ObjectMapper();
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");

@@ -1,7 +1,6 @@
 package com.yunze.LibraryManagementSystem.modules.borrowbook.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.yunze.LibraryManagementSystem.modules.evaluate.entity.User;
+import com.yunze.LibraryManagementSystem.modules.login.entity.User;
 import com.yunze.LibraryManagementSystem.modules.utils.DataUtils;
 
 import java.util.Date;

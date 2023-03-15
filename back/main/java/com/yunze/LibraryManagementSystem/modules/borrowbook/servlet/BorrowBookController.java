@@ -1,12 +1,11 @@
 package com.yunze.LibraryManagementSystem.modules.borrowbook.servlet;
 
-import com.alibaba.fastjson.JSONObject;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.entity.Book;
-import com.alibaba.fastjson.JSON;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.entity.Borrow;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.json.BorrowRequest;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.service.BorrowService;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.service.impl.BorrowServiceImpl;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 import com.yunze.LibraryManagementSystem.modules.utils.DataUtils;
 
 import javax.servlet.*;
@@ -18,7 +17,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -57,7 +55,8 @@ public class BorrowBookController extends HttpServlet {
         //只负责调用业务逻辑
         HttpSession session = request.getSession();
         Borrow borrow = new Borrow();
-        borrow.setReaderId((int)session.getAttribute("reader_id"));
+        Reader r = (Reader)session.getAttribute("reader");
+        borrow.setReaderId(r.getReaderId());
         borrow.setBookId(book.getId());
         borrow.setBorrowDate(borrowDate);
         borrow.setDue(due);
@@ -66,13 +65,15 @@ public class BorrowBookController extends HttpServlet {
 
         //响应
         java.util.Map<String, Object> responseMap = new HashMap<>();
-        if(result == 0){//自定义状态码
+        if(result == 0){
+            response.setStatus(400);
             responseMap.put("status", "failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 400);
             responseMap.put("message", "已借此书，此次借书失败");
         }else{
+            response.setStatus(200);
             responseMap.put("status", "success");
-            responseMap.put("code", 2000);
+            responseMap.put("code", 200);
             responseMap.put("message", "借书成功");
 
             responseMap.put("borrow", borrow);

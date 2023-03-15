@@ -51,8 +51,9 @@ public class OtherFansController extends HttpServlet {
             fanList.add(fan.getFanId());
         }
         Map<String, Object> responseMap = new HashMap<>();
+        response.setStatus(200);
         responseMap.put("status", "success");
-        responseMap.put("code", 2000);
+        responseMap.put("code", 200);
         responseMap.put("fans", fanList);
         response.getWriter().write(mapper.writeValueAsString(responseMap));
     }

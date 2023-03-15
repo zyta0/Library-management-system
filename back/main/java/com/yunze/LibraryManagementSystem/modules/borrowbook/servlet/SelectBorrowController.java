@@ -6,6 +6,7 @@ import com.yunze.LibraryManagementSystem.modules.borrowbook.entity.Borrow;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.json.LendOrRenewRequest;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.service.BorrowService;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.service.impl.BorrowServiceImpl;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
@@ -48,7 +49,8 @@ public class SelectBorrowController extends HttpServlet {
         //只负责调用业务逻辑
         HttpSession session = request.getSession();
         BorrowService borrowService = new BorrowServiceImpl();
-        int readerId = (int)session.getAttribute("reader_id");
+        Reader r = (Reader) session.getAttribute("reader");
+        int readerId = r.getReaderId();
         Book book = lendOrRenewRequest.getBook();
         int bookId = book.getId();
         Borrow borrow = borrowService.select(readerId, bookId);
@@ -60,8 +62,9 @@ public class SelectBorrowController extends HttpServlet {
         String action = lendOrRenewRequest.getAction();//获取请求参数
         java.util.Map<String, Object> responseMap = new HashMap<>();
         if(action.equals("lend")) {if(borrow == null){
+            response.setStatus(400);
             responseMap.put("status","failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 400);
             responseMap.put("message", "未借此书");
             response.getWriter().write(mapper.writeValueAsString(responseMap));
         }else {
@@ -70,21 +73,24 @@ public class SelectBorrowController extends HttpServlet {
         }
         } else if (action.equals("renew")) {
             if(borrow == null){
+                response.setStatus(400);
                 responseMap.put("status","failure");
-                responseMap.put("code", 4001);
+                responseMap.put("code", 400);
                 responseMap.put("message", "未借此书");
                 response.getWriter().write(mapper.writeValueAsString(responseMap));
             }else {
+                response.setStatus(301);//重定向
                 responseMap.put("status","success");
-                responseMap.put("code", 2000);
+                responseMap.put("code", 301);
                 responseMap.put("message", "已借此书");
                 responseMap.put("borrow", borrow);
                 response.getWriter().write(mapper.writeValueAsString(responseMap));
             }
         }else{
             //如果参数值不合法，返回错误页面
+            response.setStatus(400);
             responseMap.put("status","failure");
-            responseMap.put("code", 1000);
+            responseMap.put("code", 400);
             responseMap.put("message", "错误参数，请求失败");
             response.getWriter().write(mapper.writeValueAsString(responseMap));
         }

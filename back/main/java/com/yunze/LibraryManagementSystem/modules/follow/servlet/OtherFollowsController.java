@@ -50,8 +50,9 @@ public class OtherFollowsController extends HttpServlet {
             followList.add(follow.getReaderId());
         }
         Map<String, Object> responseMap = new HashMap<>();
+        response.setStatus(200);
         responseMap.put("status", "success");
-        responseMap.put("code", 2000);
+        responseMap.put("code", 200);
         responseMap.put("follows", followList);
         response.getWriter().write(mapper.writeValueAsString(responseMap));
     }

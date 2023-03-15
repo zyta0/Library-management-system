@@ -47,13 +47,15 @@ public class ShowBySearchController extends HttpServlet {
                 LabelEvaluate labelEvaluate = new LabelEvaluate(label, evaluate);
                 labelEvaluates.add(labelEvaluate);
             }
+            response.setStatus(200);
             responseMap.put("status", "success");
-            responseMap.put("code", 2000);
+            responseMap.put("code", 200);
             responseMap.put("message", "请求成功");
             responseMap.put("evaluates", labelEvaluates);
         }else{
+            response.setStatus(404);
             responseMap.put("status", "failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 404);
             responseMap.put("message", "未找到");
         }
         ObjectMapper mapper = new ObjectMapper();

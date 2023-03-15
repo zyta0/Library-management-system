@@ -1,6 +1,7 @@
 package com.yunze.LibraryManagementSystem.modules.follow.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.yunze.LibraryManagementSystem.modules.login.entity.Reader;
 import com.yunze.LibraryManagementSystem.modules.follow.entity.Follow;
 import com.yunze.LibraryManagementSystem.modules.follow.service.FollowService;
 import com.yunze.LibraryManagementSystem.modules.follow.service.impl.FollowServiceImpl;
@@ -43,19 +44,22 @@ public class FollowController extends HttpServlet {
         int readerId = (int) jsonMap.get("readerId");
 
         HttpSession session = request.getSession();
-        int fanId = (int)session.getAttribute("reader_id");
+        Reader r = (Reader) session.getAttribute("reader");
+        int fanId = r.getReaderId();
 
         FollowService followService = new FollowServiceImpl();
         Follow follow = new Follow(readerId, fanId, new Date());
         int result = followService.follow(follow);
         Map<String, Object> responseMap = new HashMap<>();
         if(result == 0){
+            response.setStatus(400);
             responseMap.put("status", "failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 400);
             responseMap.put("message", "关注失败,可能已关注过");
         }else{
+            response.setStatus(200);
             responseMap.put("status", "success");
-            responseMap.put("code", 2000);
+            responseMap.put("code", 200);
             responseMap.put("message", "关注成功");
             responseMap.put("follow", follow);
         }

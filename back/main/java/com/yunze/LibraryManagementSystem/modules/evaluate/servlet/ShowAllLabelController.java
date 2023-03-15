@@ -31,12 +31,14 @@ public class ShowAllLabelController extends HttpServlet {
         List<Label> list = labelService.showAll();
         Map<String, Object> responseMap = new HashMap<>();
         if(list.isEmpty()){
+            response.setStatus(404);
             responseMap.put("status", "failure");
-            responseMap.put("code", 4001);
+            responseMap.put("code", 404);
             responseMap.put("massage", "获取失败");
         }else{
+            response.setStatus(200);
             responseMap.put("status", "success");
-            responseMap.put("code", 2000);
+            responseMap.put("code", 200);
             responseMap.put("massage", "获取成功");
             responseMap.put("labels", list);
         }

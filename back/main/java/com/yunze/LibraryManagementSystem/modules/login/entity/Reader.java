@@ -1,7 +1,8 @@
-package com.yunze.LibraryManagementSystem.modules.evaluate.entity;
+package com.yunze.LibraryManagementSystem.modules.login.entity;
 
 public class Reader extends User {
     private int readerId;
+    private String password;
     private String name;
     private String telephone;
     private String email;
@@ -13,7 +14,9 @@ public class Reader extends User {
     public Reader() {
     }
 
-    public Reader(String name, String telephone, String email, String dept, Integer status, int readerType, String demo) {
+    public Reader(int readerId, String name, String password, String telephone, String email, String dept, Integer status, int readerType, String demo) {
+        this.readerId = readerId;
+        this.password = password;
         this.name = name;
         this.telephone = telephone;
         this.email = email;
@@ -23,8 +26,8 @@ public class Reader extends User {
         this.demo = demo;
     }
 
-    public Reader(int readerId, String name, String telephone, String email, String dept, Integer status, int readerType, String demo) {
-        this.readerId = readerId;
+    public Reader(String name, String password, String telephone, String email, String dept, Integer status, int readerType, String demo) {
+        this.password = password;
         this.name = name;
         this.telephone = telephone;
         this.email = email;
@@ -98,11 +101,20 @@ public class Reader extends User {
         this.demo = demo;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
         return "Reader{" +
                 "readerId=" + readerId +
                 ", name='" + name + '\'' +
+                ", password='" + password + '\'' +
                 ", telephone='" + telephone + '\'' +
                 ", email='" + email + '\'' +
                 ", dept='" + dept + '\'' +
