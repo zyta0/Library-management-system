@@ -8,7 +8,7 @@ public interface LabelService {
     public int insert(Label label);
     public int remove(Label label);
     public int update(Label label);
-    public Label select(String name);
+    public List<Label> select(String name);
     public Label select(int id);
     public List<Label> showAll();
 

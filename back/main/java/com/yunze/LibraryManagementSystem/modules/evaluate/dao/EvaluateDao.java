@@ -11,5 +11,6 @@ public interface EvaluateDao {
     public Evaluate search(int evaluateId);
     public int update(Evaluate evaluate);
     public List<Evaluate> selectAll();
-    public List<Evaluate> selectByLabel(int label);
+    public Evaluate selectByLabelId(int labelId);
+
 }

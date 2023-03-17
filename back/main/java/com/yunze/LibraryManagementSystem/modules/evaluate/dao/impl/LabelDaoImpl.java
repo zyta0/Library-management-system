@@ -24,13 +24,10 @@ public class LabelDaoImpl implements LabelDao {
     }
 
     @Override
-    public Label select(String name) {
-        String sql = "select * from label where name = ?;";
-        List<Label> list = daoUtils.commonsSelect(sql, new LabelRowMapper(), name);
-        if (!list.isEmpty()) {
-            return list.get(0);
-        }
-        return null;
+    public List<Label> select(String name) {
+        String sql = "select * from label where name like ?;";
+        List<Label> list = daoUtils.commonsSelect(sql, new LabelRowMapper(), "%" + name + "%");
+        return list;
     }
 
     @Override
