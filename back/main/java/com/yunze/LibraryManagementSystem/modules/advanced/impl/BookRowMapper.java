@@ -17,12 +17,13 @@ public class BookRowMapper implements RowMapper<Book> {
             String isbn = resultSet.getString("isbn");
             String name = resultSet.getString("name");
             Date publishTime = resultSet.getDate("publish_time");//sql.Date  是  util.Date  的子类
+            String image = resultSet.getString("image");
             int pages = resultSet.getInt("pages");
             int account = resultSet.getInt("account");
             String type = resultSet.getString("type");
             String introduce = resultSet.getString("introduce");
             String evaluate = resultSet.getString("evaluate");
-            book = new Book(id, author, isbn, name, publishTime, pages, account, type, introduce, evaluate);
+            book = new Book(id, author, isbn, name, publishTime, image, pages, account, type, introduce, evaluate);
             return book;
         } catch (SQLException e) {
             e.printStackTrace();

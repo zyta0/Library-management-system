@@ -2,6 +2,9 @@ package com.yunze.LibraryManagementSystem.modules.evaluate.service.impl;
 
 import com.yunze.LibraryManagementSystem.modules.borrowbook.dao.BookDao;
 import com.yunze.LibraryManagementSystem.modules.evaluate.dao.EvaluateDao;
+import com.yunze.LibraryManagementSystem.modules.evaluate.dao.LabelDao;
+import com.yunze.LibraryManagementSystem.modules.evaluate.dao.impl.LabelDaoImpl;
+import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Label;
 import com.yunze.LibraryManagementSystem.modules.login.dao.ReaderDao;
 import com.yunze.LibraryManagementSystem.modules.borrowbook.dao.impl.BookDaoImpl;
 import com.yunze.LibraryManagementSystem.modules.evaluate.dao.impl.EvaluateDaoImpl;
@@ -143,16 +146,21 @@ public class EvaluateServiceImpl implements EvaluateService {
 
 
     @Override
-    public List<Evaluate> showByLabel(int labelId){
-        List<Evaluate> evaluates =  null;
+    public List<Evaluate> showByLabel(String labelName){
+        List<Evaluate> evaluates =  new ArrayList<>();
+        LabelDao labelDao = new LabelDaoImpl();
+        List<Label> labels = null;
         try {
             DBUtils.begin();
-            evaluates = evaluateDao.selectByLabel(labelId);
+            labels = labelDao.select(labelName);
+            for (Label label : labels){
+                evaluates.add(evaluateDao.selectByLabelId(label.getId()));
+            }
             //降序排序，按热度
             Collections.sort(evaluates, new Comparator<Evaluate>() {
                 @Override
                 public int compare(Evaluate o1, Evaluate o2) {
-                    return o2.getPraise() - o1.getPraise();
+                    return (3*o2.getPraise() + 2*o2.getCollection() + 2*o2.getReview() +o2.getShare() + 2*o2.getView()) - (3*o1.getPraise() + 2*o1.getCollection() + 2*o1.getReview() +o1.getShare() + 2*o1.getView());
                 }
             });
             DBUtils.commit();
@@ -161,6 +169,21 @@ public class EvaluateServiceImpl implements EvaluateService {
             e.printStackTrace();
         }
         return evaluates;
+    }
+
+    @Override
+    public Evaluate showByLabelId(int labelId) {
+        Evaluate evaluate = null;
+        DBUtils.begin();
+        try {
+            DBUtils.begin();
+            evaluate = evaluateDao.selectByLabelId(labelId);
+            DBUtils.commit();
+        } catch (Exception e) {
+            DBUtils.rollback();
+            e.printStackTrace();
+        }
+        return evaluate;
     }
 
     @Override

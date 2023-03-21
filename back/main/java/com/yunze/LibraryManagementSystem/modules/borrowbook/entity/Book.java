@@ -11,6 +11,7 @@ public class Book {
     private String isbn;
     private String name;
     private Date publishTime;
+    private String image;
     private int pages;
     private int account;
     private String type;
@@ -20,12 +21,13 @@ public class Book {
     public Book() {
     }
 
-    public Book(int id, String author, String isbn, String name, Date publishTime, int pages,int account, String type, String introduce, String evaluate) {
+    public Book(int id, String author, String isbn, String name, Date publishTime, String image, int pages, int account, String type, String introduce, String evaluate) {
         this.id = id;
         this.author = author;
         this.isbn = isbn;
         this.name = name;
         this.publishTime = publishTime;
+        this.image = image;
         this.pages = pages;
         this.account = account;
         this.type = type;
@@ -33,11 +35,12 @@ public class Book {
         this.evaluate = evaluate;
     }
 
-    public Book(String author, String isbn, String name, Date publish_time, int pages, int account, String type, String introduce, String evaluate) {
+    public Book(String author, String isbn, String name, Date publishTime, String image, int pages, int account, String type, String introduce, String evaluate) {
         this.author = author;
         this.isbn = isbn;
         this.name = name;
-        this.publishTime = publish_time;
+        this.publishTime = publishTime;
+        this.image = image;
         this.pages = pages;
         this.account = account;
         this.type = type;
@@ -125,6 +128,14 @@ public class Book {
         this.evaluate = evaluate;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
@@ -133,6 +144,7 @@ public class Book {
                 ", isbn='" + isbn + '\'' +
                 ", name='" + name + '\'' +
                 ", publishTime=" + DataUtils.utilToStr(publishTime) +
+                ", image='" + image + '\'' +
                 ", pages=" + pages +
                 ", account=" + account +
                 ", type='" + type + '\'' +

@@ -59,11 +59,11 @@ public class EvaluateDaoImpl implements EvaluateDao {
     }
 
     @Override
-    public List<Evaluate> selectByLabel(int labelId){
+    public Evaluate selectByLabelId(int labelId){
         String sql = "select * from evaluate where label_id = ?;";
         List<Evaluate> list = daoUtils.commonsSelect(sql, new EvaluateRowMapper(), labelId);
         if (!list.isEmpty()) {
-            return list;
+            return list.get(0);
         }
         return null;
     }

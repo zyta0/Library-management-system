@@ -2,8 +2,7 @@ package com.yunze.LibraryManagementSystem.modules.evaluate.servlet;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Evaluate;
-import com.yunze.LibraryManagementSystem.modules.evaluate.entity.Label;
-import com.yunze.LibraryManagementSystem.modules.evaluate.json.Post;
+import com.yunze.LibraryManagementSystem.modules.evaluate.json.LabelEvaluate;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.EvaluateService;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.LabelService;
 import com.yunze.LibraryManagementSystem.modules.evaluate.service.impl.EvaluateServiceImpl;
@@ -16,6 +15,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,12 +45,12 @@ public class ShowEvaluateByLabel extends HttpServlet {
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         mapper.setDateFormat(dateFormat);
         Map<String, Object> jsonMap = mapper.readValue(json.toString(), Map.class);
-        //获取int型数据
-        int labelId = (int) jsonMap.get("labelId");
+        String labelName = (String) jsonMap.get("label_name");
 
         EvaluateService evaluateService = new EvaluateServiceImpl();
         LabelService labelService = new LabelServiceImpl();
-        List<Evaluate> list = evaluateService.showByLabel(labelId);
+        List<Evaluate> list = evaluateService.showByLabel(labelName);
+        List<LabelEvaluate> labelEvaluateList = new ArrayList<>();
         Map<String, Object> responseMap = new HashMap<>();
         if(list == null){
             response.setStatus(404);
@@ -58,12 +58,15 @@ public class ShowEvaluateByLabel extends HttpServlet {
             responseMap.put("code", 404);
             responseMap.put("message", "查找失败");
         }else{
+            for(Evaluate evaluate : list){
+                LabelEvaluate labelEvaluate = new LabelEvaluate(labelService.select(evaluate.getLabelId()), evaluate);
+                labelEvaluateList.add(labelEvaluate);
+            }
             response.setStatus(200);
             responseMap.put("status", "success");
             responseMap.put("code", 200);
             responseMap.put("message", "查找成功");
-            responseMap.put("label", labelService.select(labelId));
-            responseMap.put("evaluates", list);
+            responseMap.put("label_evaluates", labelEvaluateList);
         }
         response.getWriter().write(mapper.writeValueAsString(responseMap));
     }
