@@ -53,17 +53,17 @@ public class LabelServiceImpl implements LabelService {
     }
 
     @Override
-    public Label select(String name) {
-        Label label = null;
+    public List<Label> select(String name) {
+        List<Label> labels = null;
         try {
             DBUtils.begin();
-            label = labelDao.select(name);
+            labels = labelDao.select(name);
             DBUtils.commit();
         } catch (Exception e) {
             DBUtils.rollback();
             e.printStackTrace();
         }
-        return label;
+        return labels;
     }
 
     @Override

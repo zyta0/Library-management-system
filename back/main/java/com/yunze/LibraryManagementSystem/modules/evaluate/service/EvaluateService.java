@@ -10,7 +10,8 @@ public interface EvaluateService {
     public List<Evaluate> showByTime();//最近评论
     public List<Evaluate> showHot();//热门评论
     public List<Evaluate> showQuintessence();//精华评论
-    List<Evaluate> showByLabel(int labelId);//根据label显示相关评论
+    public List<Evaluate> showByLabel(String labelName);//根据label显示相关评论
+    public Evaluate showByLabelId(int labelId);
     public int postEvaluate(Evaluate evaluate);//发布评论
     public int deleteEvaluate(int evaluateId);//删除评论
     public int updateEvaluate(Evaluate evaluate);//修改评论内容，动态更新浏览量点赞量等数据

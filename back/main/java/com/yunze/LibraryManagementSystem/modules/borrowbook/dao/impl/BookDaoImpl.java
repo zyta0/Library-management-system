@@ -15,13 +15,13 @@ public class BookDaoImpl implements BookDao {
     @Override
     public List<Book> select(String str) {
         List<Book> list = null;
-        String sql = "select * from book where name = ?;";
-        list = daoUtils.commonsSelect(sql, new BookRowMapper(), str);
+        String sql = "select * from book where name like ?;";
+        list = daoUtils.commonsSelect(sql, new BookRowMapper(), "%" + str + "%");
         if(!list.isEmpty()) {
             return list;
         }
-        sql = "select * from book where author = ?;";
-        list = daoUtils.commonsSelect(sql, new BookRowMapper(), str);
+        sql = "select * from book where author like ?;";
+        list = daoUtils.commonsSelect(sql, new BookRowMapper(), "%" + str + "%");
         if(!list.isEmpty()) {
             return list;
         }
@@ -41,8 +41,8 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public int insert(Book book) {
-        String sql = "insert into book (author, isbn, name, publish_time, pages, account, type, introduce, evaluate) values(?,?,?,?,?,?,?,?,?);";
-        Object[] args = {book.getAuthor(), book.getIsbn(), book.getName(),DataUtils.utilToSql(book.getPublishTime()), book.getPages(), book.getAccount(), book.getType(),book.getIntroduce(),book.getEvaluate()};
+        String sql = "insert into book (author, isbn, name, publish_time, image, pages, account, type, introduce, evaluate) values(?,?,?,?,?,?,?,?,?,?);";
+        Object[] args = {book.getAuthor(), book.getIsbn(), book.getName(),DataUtils.utilToSql(book.getPublishTime()), book.getImage(), book.getPages(), book.getAccount(), book.getType(),book.getIntroduce(),book.getEvaluate()};
         return daoUtils.commonsUpdate(sql, args);
     }
 
@@ -54,8 +54,8 @@ public class BookDaoImpl implements BookDao {
 
     @Override
     public int update(Book book) {
-        String sql = "update book set author = ?, isbn = ?, name = ?, publish_time = ?, pages = ?, account = ?, type = ?, introduce = ?, evaluate = ? where id = ?;";
-        Object[] args = {book.getAuthor(), book.getIsbn(), book.getName(),DataUtils.utilToSql(book.getPublishTime()), book.getPages(), book.getAccount(), book.getType(),book.getIntroduce(),book.getEvaluate(), book.getId()};
+        String sql = "update book set author = ?, isbn = ?, name = ?, publish_time = ?, image = ?, pages = ?, account = ?, type = ?, introduce = ?, evaluate = ? where id = ?;";
+        Object[] args = {book.getAuthor(), book.getIsbn(), book.getName(),DataUtils.utilToSql(book.getPublishTime()), book.getImage(), book.getPages(), book.getAccount(), book.getType(),book.getIntroduce(),book.getEvaluate(), book.getId()};
         return daoUtils.commonsUpdate(sql, args);
     }
 

@@ -7,7 +7,7 @@ import java.util.List;
 public interface LabelDao {
     public int insert(Label label);
     public int remove(Label label);
-    public Label select(String name);
+    public List<Label> select(String name);
     public Label select(int id);
     public int update(Label label);
     public List<Label> showAll();
