@@ -10,7 +10,8 @@
             loanRequest.classList.add("signed");
             for (let i = 0; i < timeLimit.length; i++) {
                 timeLimit[i].style.display = "block";
-                person[i].style.marginTop = "0";
+                person[i].className ="person";
+
             }
             for (let i = 0; i < button.length; i++) {
                 button[i].style.display = "block";
@@ -21,9 +22,76 @@
             reservationRequest.classList.add("signed");
             for (let i = 0; i < timeLimit.length; i++) {
                 timeLimit[i].style.display = "none";
-                person[i].style.marginTop ="46px";
+                person[i].className ="person2";
             }
             for (let i = 0; i < button.length; i++) {
                 button[i].style.display = "none";
             }
+        })
+
+//管理员信息页面的请求与点击是的页面切换
+        let bookPic = document.querySelectorAll(".book>img");
+        let bookName = document.querySelectorAll(".bookName");
+        let author = document.querySelectorAll(".author");
+        let personName = document.querySelectorAll(".person>span");
+        axios({
+            method: "post",
+            url: "http://frp-fly.top:57378/BookBorrowRequestServlet"
+        })
+            .then((result) => {
+                console.log(result.data);
+                for (let i = 0; i < result.data.length; i++) {
+                    bookName[i].innerText = result.data[i].name;
+                    author[i].innerText = result.data[i].author;
+                    personName[i].innerText = result.data[i].appointee;
+                    bookName[i].previousElementSibling.src = `${result.data[i].url}`;
+                    if (result.data[i].url.includes(".png")) {
+                        bookName[i].previousElementSibling.src = `${result.data[i].url}`;
+                    }
+                }
+            })
+            .catch((err) => {
+                console.log("出错了！", err)
+            })
+        loanRequest.addEventListener("click", () => {
+            axios({
+                method: "post",
+                url: "http://frp-fly.top:57378/BookBorrowRequestServlet"
+            })
+                .then((result) => {
+                    console.log(result.data);
+                    for (let i = 0; i < result.data.length; i++) {
+                        bookName[i].innerText = result.data[i].name;
+                        author[i].innerText = result.data[i].author;
+                        personName[i].innerText = result.data[i].appointee;
+                        bookName[i].previousElementSibling.src = `${result.data[i].url}`;
+                        if (result.data[i].url.includes(".png")) {
+                            bookName[i].previousElementSibling.src = `${result.data[i].url}`;
+                        }
+                    }
+                })
+                .catch((err) => {
+                    console.log("出错了！", err)
+                })
+        })
+        reservationRequest.addEventListener("click", () => {
+            axios({
+                method: "post",
+                url: "http://frp-fly.top:57378/BookAppointmentRequestServlet"
+            })
+                .then((result) => {
+                    console.log(result.data);
+                    for (let i = 0; i < result.data.length; i++) {
+                        bookName[i].innerText = result.data[i].name;
+                        author[i].innerText = result.data[i].author;
+                        personName[i].innerText = result.data[i].appointee;
+                        bookName[i].previousElementSibling.src = `${result.data[i].url}`;
+                        if (result.data[i].url.includes(".png")) {
+                            bookName[i].previousElementSibling.src = `${result.data[i].url}`;
+                        }
+                    }
+                })
+                .catch((err) => {
+                    console.log("出错了！", err)
+                })
         })
