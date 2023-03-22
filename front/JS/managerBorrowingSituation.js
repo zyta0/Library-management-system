@@ -20,3 +20,31 @@
                 person[i].style.marginTop ="26px";
             }
         })
+
+//待归还页面的请求
+        let bookName = document.querySelectorAll(".bookName");
+        let author = document.querySelectorAll(".author");
+        let personName = document.querySelectorAll(".person>span");
+        axios({
+            method: "post",
+            url: "http://frp-fly.top:57378/WaitingReturnServlet"
+        })
+            .then((result) => {
+                console.log(result.data);
+                console.log(result.data[0].url);
+                console.log(result.data[1].url);
+                console.log(result.data[2].url);
+                for (let i = 0; i < result.data.length; i++) {
+                    bookName[i].innerText = result.data[i].name;
+                    author[i].innerText = result.data[i].author;
+                    personName[i].innerText = result.data[i].borrower;
+                    bookName[i].previousElementSibling.src=`${result.data[i].url}`;
+                    if(result.data[i].url.includes(".png")){
+                        bookName[i].previousElementSibling.src = `${result.data[i].url}`;
+                        console.log(bookName[i].previousElementSibling.src);
+                    }
+                }
+            })
+            .catch((err) => {
+                console.log("出错了！", err)
+            })
