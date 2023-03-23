@@ -6,8 +6,12 @@ const btnRev = document.getElementById("learnMoreRev");
 const turnLeft = document.getElementById("turnLeft");
 const turnRight = document.getElementById("turnRight");
 const reccommandBook = document.getElementById("recommandBook");
+const bookDet = document.querySelectorAll(".recBook div");
+
 
 const test = document.getElementById("test");
+
+let htmlUrl = "./bookDescription.html?name=";
 //检查登录状态
 function checkState() {
     const tokenStr = localStorage.getItem("token");
@@ -58,10 +62,6 @@ function animate() {
         carouselMapPic.style.left = carouselMapPic.offsetLeft - step + "px"
     }
 }
-//左右切换
-function dirTrans() {
-    
-}
 
 // 轮播图效果
  setInterval(() => {
@@ -79,17 +79,9 @@ btnFootText.addEventListener("click", () => document.location.assign("../front/s
 // 热点书评跳转书友圈
 btnRev.addEventListener("click", () => document.location.assign("../front/companionshipOfBooks.html"))
 
-axios.defaults.withCredentials = true
-test.addEventListener("click", ()=>{
-    axios({
-        method: "POST",
-        url: "http://frp-fly.top:15946/Library_management_system_war_exploded/safe/borrowBookController",
-        data: {
-            
-        }
-    }).then(res => {
-        console.log(res);
+bookDet.forEach((ele) => {
+    ele.addEventListener("click", () => {
+        htmlUrl += `${ele.textContent}`
+        location.assign(htmlUrl);
     })
 })
-
-
