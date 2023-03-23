@@ -7,14 +7,20 @@
                 }
                 classificationDetails[i].className = "signed";
             })
+
         }
         
-//书库页面的请求
+//请求后端分类的数据
         let bookPic = document.querySelectorAll(".bookPic>img");
         let bookName = document.querySelectorAll(".bookName");
-        axios({
+        for (let i = 0; i < classificationDetails.length; i++) {
+            classificationDetails[i].addEventListener('click', function () {
+                axios({
                 method: "post",
-                url: "http://frp-fly.top:57378/bookServlet"
+                url: "http://frp-fly.top:57378/ClassifyServlet",
+                data:{
+                    classification: `${classificationDetails[i].innerText}`
+                }
             })
                 .then((result) => {
                     console.log(result.data);
@@ -26,3 +32,6 @@
                 .catch((err) => {
                     console.log("出错了！", err)
                 })
+            })
+            
+        }
