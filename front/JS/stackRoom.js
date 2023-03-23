@@ -1,3 +1,15 @@
+const logReg = document.getElementById("login");
+
+function checkState() {
+    const tokenStr = localStorage.getItem("token");
+    if (tokenStr == null) {
+        return
+    } else {
+        logReg.classList.replace("logReg", "hiddenLog")
+    }
+}
+checkState()
+
 //classificationDetails点击时对应的装饰出现，其余消失
         let classificationDetails = document.querySelectorAll(".classificationDetails>div") //获取分类导航栏里的功能
         for (let i = 0; i < classificationDetails.length; i++) {

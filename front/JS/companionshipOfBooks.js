@@ -4,6 +4,17 @@ const evaluateThree = document.getElementById('evaluateThree')
 const evaluateFour = document.getElementById('evaluateFour')
 const evaluateFive = document.getElementById('evaluateFive')
 const newMan = document.getElementById('newMan')
+const logReg = document.getElementById("login");
+
+function checkState() {
+    const tokenStr = localStorage.getItem("token");
+    if (tokenStr == null) {
+        return
+    } else {
+        logReg.classList.replace("logReg", "hiddenLog")
+    }
+}
+checkState()
 
 axios.defaults.baseURL = 'http://frp-fly.top:18252/Library_management_system_war_exploded/'
 

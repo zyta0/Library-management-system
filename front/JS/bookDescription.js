@@ -4,9 +4,19 @@ const str = document.getElementById('str')
 const author = document.getElementById('author')
 const publishTime = document.getElementById('publishTime')
 const evaluate = document.getElementById('evaluate')
+const logReg = document.getElementById("login");
 
 let bookname = decodeURIComponent(location.search).split("=")[1];
-// console.log(bookname);
+
+function checkState() {
+    const tokenStr = localStorage.getItem("token");
+    if (tokenStr == null) {
+        return
+    } else {
+        logReg.classList.replace("logReg", "hiddenLog")
+    }
+}
+checkState()
 
 axios.defaults.baseURL = 'http://frp-fly.top:18252/Library_management_system_war_exploded/'
 
