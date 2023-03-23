@@ -81,5 +81,8 @@ bookDet.forEach((ele) => {
     ele.addEventListener("click", () => {
         htmlUrl += `${ele.textContent}`
         location.assign(htmlUrl);
+        htmlUrl = htmlUrl.split("=")[0] + "=";
+        console.log(htmlUrl);
     })
 })
+
