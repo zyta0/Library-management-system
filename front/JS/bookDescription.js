@@ -18,7 +18,7 @@ function checkState() {
 }
 checkState()
 
-axios.defaults.baseURL = 'http://frp-fly.top:18252/Library_management_system_war_exploded/'
+axios.defaults.baseURL = 'http://nqcv7igb.shenzhuo.vip:50375/Library_management_system_war_exploded/'
 
 axios({
     method: 'GET',
@@ -35,18 +35,3 @@ axios({
     publishTime.innerHTML = res.data.books[0].publishTime
     evaluate.innerHTML = res.data.books[0].evaluate
 })
-
-// let id33 = {
-//     id: 3,
-//         author: '罗贯中',
-//         isbn: 'SGYY20200728',
-//         name: '三国演义',
-//         pages:'445'
-// }
-// axios({
-//     method: 'post',
-//     url: '/safe/borrowBookController',
-//     data: {
-//         id33
-//     }
-// })

@@ -16,23 +16,12 @@ function checkState() {
 }
 checkState()
 
-axios.defaults.baseURL = 'http://frp-fly.top:18252/Library_management_system_war_exploded/'
-
-// axios({
-//     method: 'GET',
-//     url: '/showBySearchController',
-//     params: {
-//         str:'红楼梦'
-//     }
-// }).then((res) => {
-//     console.log(res.data);
-// })
+axios.defaults.baseURL = 'http://nqcv7igb.shenzhuo.vip:50375/Library_management_system_war_exploded/'
 
 axios({
     method: 'GET',
     url: '/showNewEvaluateController',
 }).then((res) => {
-    console.log(res.data);
     evaluateOne.innerHTML = res.data.label_evaluate[0].evaluate.evaluate
 })
 
@@ -40,7 +29,6 @@ axios({
     method: 'GET',
     url: '/showNewEvaluateController',
 }).then((res) => {
-    console.log(res.data);
     evaluateTwo.innerHTML = res.data.label_evaluate[1].evaluate.evaluate
 })
 
@@ -67,24 +55,6 @@ axios({
     console.log(res.data);
     evaluateFive.innerHTML = res.data.label_evaluate[4].evaluate.evaluate
 })
-
-// axios({
-//     method: 'GET',
-//     url: '/showAllLabelController',
-// }).then((res) => {
-//     console.log(res.data);
-// })
-
-// axios({
-//     method: 'POST',
-//     url: '/showEvaluateByLabel',
-//     params: {
-//         label_name:''
-//     }
-// }).then((res) => {
-//     console.log(res.data);
-// })
-
 
 axios({
     method: 'GET',
