@@ -37,9 +37,9 @@
     </div>
     <div class="carouselMap w">
         <ul class="carouselMapPic">
-            <li><img src="https://ta0.oss-cn-beijing.aliyuncs.com/3.jpg" alt=""></li>
-            <li><img src="https://ta0.oss-cn-beijing.aliyuncs.com/16.jpg" alt=""></li>
-            <li><img src="https://ta0.oss-cn-beijing.aliyuncs.com/ac6eddc451da81cb1a83519d0cb4a11f08243150.webp" alt=""></li>
+            <li><img src="./images/carouseMap1.jpg" alt=""></li>
+            <li><img src="./images/carouseMap2.jpg" alt=""></li>
+            <li><img src="./images/carouseMap1.jpg" alt=""></li>
         </ul>
         <ul class="lis">
             <li></li>
@@ -53,8 +53,40 @@
                 <span class="recommandText">推荐阅读</span>
                 <span class="boundary"></span>
             </div>
-            <div class="recommandBook">
+            <div class="recommandBook" id="recommandBook">
+                <div class="recBook" id="test">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/ming.png" alt="">
+                    <div>明朝那些事儿</div>
+                </div>
                 <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/wei.png" alt="">
+                    <div>围城</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/%E9%BB%91%E6%9A%97%E6%A3%AE%E6%9E%97.jpg" alt="">
+                    <div>黑暗森林</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/OIP-C.jpg" alt="">
+                    <div>死神永生</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/bailuyuan.jpg" alt="">
+                    <div>白鹿原</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/pingfandeshijie.png" alt="">
+                    <div>平凡的世界</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/rensheng.png" alt="">
+                    <div>人生</div>
+                </div>
+                <div class="recBook">
+                    <img src="https://ta0.oss-cn-beijing.aliyuncs.com/wei.png" alt="">
+                    <div>围城</div>
+                </div>
+                <div class="recBook" id="testBook">
                     <img src="https://ta0.oss-cn-beijing.aliyuncs.com/ming.png" alt="">
                     <div>明朝那些事儿</div>
                 </div>
@@ -88,8 +120,8 @@
                 </div>
             </div>
             <div class="recFoot">
-                <span class="iconfont icon-xiangzuo"></span>
-                <span class="iconfont icon-xiangyou"></span>
+                <span class="iconfont icon-xiangzuo" id="turnLeft"></span>
+                <span class="iconfont icon-xiangyou" id="turnRight"></span>
                 <button class="footText">了解更多</button>
             </div>
         </div>
@@ -137,14 +169,17 @@
             <div class="notConOuter">
                 <div class="notContent">
                     <span>1.借书规则</span>
+                    <p>一.借阅期限：每次借阅为一个月，满一个月可续借一次</p>
+                    <p>二.部分书籍不外借，只限在书院基地阅览</p>
                 </div>
                 <div class="notContent">
                     <span>2.还书提醒</span>
+                    <p>一.书籍需保存完好，无破损</p>
+                    <p>二.规定期限内无法还书的请续借</p>
                 </div>
             </div>
         </div>
     </div>
-    <script src="./JS/index.js"></script>
     <div class="footer w">
         <ul>
             <li><a href="">关于我们</a></li>
@@ -155,5 +190,7 @@
         </ul>
         <span class="copyRight">Copyright © 2023 云顶书院图书管理系统 All Rights Reserved</span>
     </div>
+    <script src="./JS/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>

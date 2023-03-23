@@ -188,6 +188,7 @@
             padding: 5px;
             background-color:#fff;
             border-radius: 20px;
+            overflow: hidden;
         }
         .recHead{
             position: relative;
@@ -224,14 +225,15 @@
             top: 155px;
             left: 44px;
             background-color: #fff;
-            width: 1012px;
+            width: 2100px;
             height: 603px;
+            transition: ease-in 0.5s;
         }
         .recBook{
             position: relative;
             top: 40px;
             display: inline-block;
-            margin-right: 55px;
+            margin-right: 65px;
             margin-bottom: 60px;
             width: 193px;
             height: 300px;
@@ -253,6 +255,7 @@
             font-weight: 500;
             font-size: 25px;
             line-height: 50px;
+            cursor: pointer;
         }
         .recFoot{
             position: absolute;
@@ -271,17 +274,31 @@
         .footText{
             position: absolute;
             left: 800px;
-            top: 3px;
+            top: -20px;
             display: inline-block;
             background: #BCE7FA;
-            color: white;
+            color: #fff;
             text-align: center;
-            width: 100px;
-            height: 30px;
+            width: 150px;
+            height: 50px;
             line-height: 30px;
             border-radius: 10px;
             border: 0px;
             cursor: pointer;
+            font-size: 18px;
+        }
+        .footText::after{
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            content: '\00bb';
+            font-size: 38px;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        .footText:hover::after{
+            opacity: 1;
+            padding-right: 10px;
         }
         .rank{
             position: absolute;
@@ -410,6 +427,20 @@
             border-radius: 10px;
             border: 0px;
             cursor: pointer;
+            font-size: 18px;
+        }
+        #learnMoreRev::after{
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            content: '\00bb';
+            font-size: 38px;
+            opacity: 0;
+            transition: 0.5s;
+        }
+        #learnMoreRev:hover::after{
+            opacity: 1;
+            padding-right: 10px;
         }
         .icon-xiangxiazhanhang{
             font-size: 30px;
@@ -482,4 +513,9 @@
             left: 50%;
             transform: translateX(-50%);
             font-size: 24px;
+        }
+        .notContent p{
+            font-size: 30px;
+            padding-left: 25px;
+            margin-top: 20px;
         }

@@ -97,3 +97,26 @@
         p {
             cursor: pointer;
         }
+        #checkName,
+        #checkCode,
+        #checkEmail,
+        #checkPwd{
+            position: absolute;
+            right: 30px;
+            text-align: left;
+            width: 150px;
+            color: red;
+            font-weight: bold;
+        }
+        #checkName{
+            top: 140px;
+        }
+        #checkCode{
+            top: 350px;
+        }
+        #checkEmail{
+            top: 420px;
+        }
+        #checkPwd{
+            top: 490px;
+        }

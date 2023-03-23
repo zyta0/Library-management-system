@@ -155,7 +155,7 @@
             cursor: pointer;
         }
         .midNav span:hover{
-            border-bottom: #3f74b3 solid 5px ;
+            border-bottom: #3f74b3 solid 3px ;
         }
         .borrowBook{
             position: relative;
