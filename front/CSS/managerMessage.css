@@ -183,7 +183,24 @@ a:active {
     color: #979797;
 }
 
+.content .books .book>.person2 {
+    top: 135px;
+    position: absolute;
+    font-size: 10px;
+    color: #979797;
+}
+
 .content .books .book .person>.photo {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin-top: 7px;
+    margin-right: 5px;
+    background-color: #D9D9D9;
+    border-radius: 50%;
+}
+
+.content .books .book .person2>.photo {
     display: inline-block;
     width: 21px;
     height: 21px;
