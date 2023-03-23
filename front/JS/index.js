@@ -8,9 +8,6 @@ const turnRight = document.getElementById("turnRight");
 const reccommandBook = document.getElementById("recommandBook");
 const bookDet = document.querySelectorAll(".recBook div");
 
-
-const test = document.getElementById("test");
-
 let htmlUrl = "./bookDescription.html?name=";
 //检查登录状态
 function checkState() {
@@ -79,6 +76,7 @@ btnFootText.addEventListener("click", () => document.location.assign("../front/s
 // 热点书评跳转书友圈
 btnRev.addEventListener("click", () => document.location.assign("../front/companionshipOfBooks.html"))
 
+//跳转书籍详情页
 bookDet.forEach((ele) => {
     ele.addEventListener("click", () => {
         htmlUrl += `${ele.textContent}`
