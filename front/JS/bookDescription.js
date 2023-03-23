@@ -6,9 +6,9 @@ const publishTime = document.getElementById('publishTime')
 const evaluate = document.getElementById('evaluate')
 
 let bookname = decodeURIComponent(location.search).split("=")[1];
-console.log(bookname);
+// console.log(bookname);
 
-axios.defaults.baseURL = 'http://frp-fly.top:15946/Library_management_system_war_exploded/'
+axios.defaults.baseURL = 'http://frp-fly.top:18252/Library_management_system_war_exploded/'
 
 axios({
     method: 'GET',
@@ -17,7 +17,7 @@ axios({
         str:bookname
     }
 }).then((res) => {
-    console.log(res.data);
+    // console.log(res.data);
     str.innerHTML = res.data.books[0].name
     description.innerHTML = res.data.books[0].introduce
     picture.src = res.data.books[0].image 
