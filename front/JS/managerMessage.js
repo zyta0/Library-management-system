@@ -51,7 +51,7 @@
                 }
             })
             .catch((err) => {
-                console.log("出错了！", err)
+                alert("出错了！", err)
             })
         loanRequest.addEventListener("click", () => {
             axios({
@@ -68,7 +68,7 @@
                     }
                 })
                 .catch((err) => {
-                    console.log("出错了！", err)
+                    alert("出错了！", err)
                 })
         })
         reservationRequest.addEventListener("click", () => {
@@ -86,6 +86,6 @@
                     }
                 })
                 .catch((err) => {
-                    console.log("出错了！", err)
+                    alert("出错了！", err)
                 })
         })

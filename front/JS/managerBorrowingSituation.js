@@ -39,7 +39,7 @@
                 }
             })
             .catch((err) => {
-                console.log("出错了！", err)
+                alert("出错了！", err)
             })
 
 //点击待归还导航栏刷新信息
@@ -58,7 +58,7 @@
                     }
                 })
                 .catch((err) => {
-                    console.log("出错了！", err)
+                    alert("出错了！", err)
                 })
         })
         inAdvance.addEventListener("click", () => {
@@ -76,6 +76,6 @@
                     }
                 })
                 .catch((err) => {
-                    console.log("出错了！", err)
+                    alert("出错了！", err)
                 })
         })

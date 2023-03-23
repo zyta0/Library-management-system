@@ -30,7 +30,7 @@
                     }
                 })
                 .catch((err) => {
-                    console.log("出错了！", err)
+                    alert("出错了！", err)
                 })
             })
             
