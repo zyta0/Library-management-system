@@ -71,10 +71,10 @@ turnLeft.addEventListener("click", () => reccommandBook.style.left =  44+ "px");
 turnRight.addEventListener("click", () => reccommandBook.style.left = -1000 + "px");
  
  // 推荐阅读跳转书库
-btnFootText.addEventListener("click", () => document.location.assign("../front/stackRoom.html"))
+btnFootText.addEventListener("click", () => document.location.assign("../stackRoom.html"))
 
 // 热点书评跳转书友圈
-btnRev.addEventListener("click", () => document.location.assign("../front/companionshipOfBooks.html"))
+btnRev.addEventListener("click", () => document.location.assign("../companionshipOfBooks.html"))
 
 //跳转书籍详情页
 bookDet.forEach((ele) => {
