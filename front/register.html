@@ -9,13 +9,13 @@
 <body>
     <div class="outer">
         <div class="text"><img src="https://ta0.oss-cn-beijing.aliyuncs.com/%E4%BA%91%E9%A1%B6%E4%B9%A6%E9%99%A2.png" alt=""> 云顶书院图书管理系统</div>
-        <div class="info">
+        <div class="info" id="info">
             <div class="realNameOuter">
                 <input type="text" id="realName" placeholder="姓名">
             </div>
-            <div class="department">
+            <div class="department" id="department">
                 <span>方向</span>
-                <div class="depContent">
+                <div class="depContent" id="depCont">
                     <p>CPU&OS</p>
                     <p>Java</p>
                     <p>秘书处</p>
@@ -24,7 +24,7 @@
                     <p>设计</p>
                 </div>
             </div>
-            <div class="issueNum">
+            <div class="issueNum" id="issNum">
                 <span>期数</span>
                 <div class="issueNumCont">
                     <p>七期</p>
@@ -32,13 +32,17 @@
                     <p>五期</p>
                 </div>
             </div>
-            <!-- <div class="inviCode">邀请码</div> -->
             <input type="text" placeholder="邀请码" id="inviCode">
             <input type="text" placeholder="邮箱" id="account">
             <input type="password" placeholder="密码" id="pwd">
         </div>
         <button id="btn">注册</button>
-        <script src="./JS/register.js"></script>
+        <span id="checkName"></span>
+        <span id="checkCode"></span>
+        <span id="checkEmail"></span>
+        <span id="checkPwd"></span>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./JS/register.js"></script>
 </body>
 </html>
