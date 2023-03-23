@@ -1,4 +1,3 @@
-const logReg = document.getElementById("login");
 
 function checkState() {
     const tokenStr = localStorage.getItem("token");
@@ -29,12 +28,25 @@ checkState()
                 url: "http://frp-fly.top:57378/bookServlet"
             })
                 .then((result) => {
-                    console.log(result.data);
-                    for (let i = 0; i < result.data.length; i++) {
+                    for (let i = 13; i < result.data.length; i++) {
                         bookName[i].innerText = result.data[i].name;
                         bookPic[i].src = `${result.data[i].url}`;
                     }
                 })
                 .catch((err) => {
-                    console.log("出错了！", err)
+                    alert("出错了！", err)
                 })
+
+        
+const bookDet = document.querySelectorAll(".book .bookPic")  
+console.log(bookDet);      
+let htmlUrl = "./bookDescription.html?name=";
+bookDet.forEach((ele) => {
+    ele.addEventListener("click", () => {
+        htmlUrl += `${ele.nextElementSibling.textContent}`
+        location.assign(htmlUrl);
+        htmlUrl = htmlUrl.split("=")[0] + "=";
+        console.log(htmlUrl);
+    })
+})
+        
