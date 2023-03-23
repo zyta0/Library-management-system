@@ -46,17 +46,17 @@ function selInfo(event,lim,aimObj) {
 //检查用户信息是否填完整
 function checkCom(config) {
     let flag = 0;
-    infoArr.forEach((ele) => {
-        if (ele == '') {
-            flag = 1
-            source.cancel();
-        }
-    })
-    if (flag == 1) {
-        // source.cancel();
-        alert("您的信息还未完善哦");
-        return config;
-    }
+    // infoArr.forEach((ele) => {
+    //     if (ele == '') {
+    //         flag = 1
+    //         source.cancel();
+    //     }
+    // })
+    // if (flag == 1) {
+    //     // source.cancel();
+    //     alert("您的信息还未完善哦");
+    //     return config;
+    // }
     checkInfo.forEach((ele) => {
         if (ele.textContent != '') {
             flag = 2;
@@ -128,7 +128,7 @@ btn.addEventListener("click", () => {
     axios({
         cancelToken: source.token,
         method: "POST",
-        url: "http://127.0.0.1:8888/register",
+        url: "http://7l4ghd8r.shenzhuo.vip:50365/register",
         headers: { "Content-Type": "application/json;charset=UTF-8" },
         data: {
             username: `${userName.value}`,
@@ -141,7 +141,7 @@ btn.addEventListener("click", () => {
     }).then((res) => {
         if (res.data.code == 200) {
             alert("注册成功,赶快去登录吧！");
-            location.assign("../front/login.html");
+            location.assign("../login.html");
         } else {
             if (res.data.message == "validating: expr_path=InviCode, cause=Invalid code") {
                 alert("您的邀请码不对哦");
