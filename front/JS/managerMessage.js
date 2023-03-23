@@ -65,9 +65,6 @@
                         author[i].innerText = result.data[i].author;
                         personName[i].innerText = result.data[i].appointee;
                         bookName[i].previousElementSibling.src = `${result.data[i].url}`;
-                        if (result.data[i].url.includes(".png")) {
-                            bookName[i].previousElementSibling.src = `${result.data[i].url}`;
-                        }
                     }
                 })
                 .catch((err) => {
@@ -86,9 +83,6 @@
                         author[i].innerText = result.data[i].author;
                         personName[i].innerText = result.data[i].appointee;
                         bookName[i].previousElementSibling.src = `${result.data[i].url}`;
-                        if (result.data[i].url.includes(".png")) {
-                            bookName[i].previousElementSibling.src = `${result.data[i].url}`;
-                        }
                     }
                 })
                 .catch((err) => {

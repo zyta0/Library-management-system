@@ -106,56 +106,6 @@ a:active {
     border-radius: 14px;
 }
 
-.bulletinBoard {
-    position: relative;
-    top: 53px;
-    width: 1286px;
-    height: 403px;
-    background: rgba(255, 255, 255, 1);
-    border-radius: 20px;
-}
-
-.bulletinBoard .title .name {
-    position: absolute;
-    top: 23px;
-    left: 45px;
-    width: 64px;
-    height: 26px;
-}
-
-.bulletinBoard .title .change {
-    position: absolute;
-    top: 20px;
-    left: 1208px;
-    color: #979797;
-}
-
-.bulletinBoard .details {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    position: absolute;
-    top: 72px;
-    left: 99px;
-    width: 1063px;
-    height: 232px;
-    margin: 0 auto;
-}
-
-.bulletinBoard .details>div {
-    height: 70px;
-    font-weight: 500;
-    font-size: 32px;
-    border-bottom: 6px solid #D9D9D9;
-}
-
-.bulletinBoard .viewMoreBooks {
-    position: absolute;
-    top: 356px;
-    left: 1164px;
-    color: #979797;
-}
-
 .classification {
     position: relative;
     top: 74px;
@@ -248,7 +198,7 @@ a:active {
 
 .pageButton {
     position: absolute;
-    top: 1942px;
+    top: 1497px;
 }
 
 .pageButton div {
