@@ -153,6 +153,7 @@ a:active {
 }
 
 .content .books .book {
+    position: relative;
     height: 195px;
     width: 300px;
     margin-bottom: 130px;
@@ -179,13 +180,16 @@ a:active {
 }
 
 .content .books .book>.person {
+    position: absolute;
+    top: 121px;
     font-size: 10px;
 }
 
 .content .books .book .notDue {
+    position: absolute;
+    top: 171px;
     font-size: 25px;
     color: #35BCF5;
-    margin-top: 16px;
 }
 
 .content .books .book .expired {

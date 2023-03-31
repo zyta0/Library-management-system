@@ -31,20 +31,51 @@
         })
             .then((result) => {
                 console.log(result.data);
-                console.log(result.data[0].url);
-                console.log(result.data[1].url);
-                console.log(result.data[2].url);
                 for (let i = 0; i < result.data.length; i++) {
                     bookName[i].innerText = result.data[i].name;
                     author[i].innerText = result.data[i].author;
                     personName[i].innerText = result.data[i].borrower;
                     bookName[i].previousElementSibling.src=`${result.data[i].url}`;
-                    if(result.data[i].url.includes(".png")){
-                        bookName[i].previousElementSibling.src = `${result.data[i].url}`;
-                        console.log(bookName[i].previousElementSibling.src);
-                    }
                 }
             })
             .catch((err) => {
-                console.log("出错了！", err)
+                alert("出错了！", err)
             })
+
+//点击待归还导航栏刷新信息
+        toBeReturned.addEventListener("click", () => {
+            axios({
+                method: "post",
+                url: "http://frp-fly.top:57378/WaitingReturnServlet"
+            })
+                .then((result) => {
+                    console.log(result.data);
+                    for (let i = 0; i < result.data.length; i++) {
+                        bookName[i].innerText = result.data[i].name;
+                        author[i].innerText = result.data[i].author;
+                        personName[i].innerText = result.data[i].borrower;
+                        bookName[i].previousElementSibling.src = `${result.data[i].url}`;
+                    }
+                })
+                .catch((err) => {
+                    alert("出错了！", err)
+                })
+        })
+        inAdvance.addEventListener("click", () => {
+            axios({
+                method: "post",
+                url: "http://frp-fly.top:57378/AppointmentCheckServlet"
+            })
+                .then((result) => {
+                    console.log(result);
+                    for (let i = 0; i < result.data.length; i++) {
+                        bookName[i].innerText = result.data[i].name;
+                        author[i].innerText = result.data[i].author;
+                        personName[i].innerText = result.data[i].appointee;
+                        bookName[i].previousElementSibling.src = `${result.data[i].url}`;
+                    }
+                })
+                .catch((err) => {
+                    alert("出错了！", err)
+                })
+        })

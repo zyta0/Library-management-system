@@ -12,12 +12,10 @@ let htmlUrl = "./bookDescription.html?name=";
 //检查登录状态
 function checkState() {
     const tokenStr = localStorage.getItem("token");
-    const token = JSON.parse(tokenStr)
-    const now = new Date().getTime()
-    if (token == null) {
+    // const token = JSON.parse(tokenStr)
+    // const now = new Date().getTime()
+    if (tokenStr == null) {
         return
-    }else if (now - token.startTime > 1000*60*60) {
-        localStorage.removeItem("token")
     } else {
         logReg.classList.replace("logReg","hiddenLog")
     }
@@ -82,7 +80,6 @@ bookDet.forEach((ele) => {
         htmlUrl += `${ele.textContent}`
         location.assign(htmlUrl);
         htmlUrl = htmlUrl.split("=")[0] + "=";
-        console.log(htmlUrl);
     })
 })
 

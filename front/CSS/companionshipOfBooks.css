@@ -716,3 +716,43 @@ a:active {
     font-size: 24px;
     font-family: 'PingFang SC';
 }
+
+#evaluateOne {
+    position: relative;
+    top: 175px;
+    left: 50px;
+    width: 500px;
+
+}
+
+#evaluateTwo {
+    position: relative;
+    top: 250px;
+    left: 50px;
+    width: 500px;
+
+}
+
+#evaluateThree {
+    position: relative;
+    top: 470px;
+    left: 50px;
+    width: 500px;
+
+}
+
+#evaluateFour {
+    position: relative;
+    top: 590px;
+    left: 50px;
+    width: 500px;
+
+}
+
+#evaluateFive {
+    position: relative;
+    top: 780px;
+    left: 50px;
+    width: 500px;
+
+}

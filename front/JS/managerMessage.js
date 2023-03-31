@@ -51,7 +51,7 @@
                 }
             })
             .catch((err) => {
-                console.log("出错了！", err)
+                alert("出错了！", err)
             })
         loanRequest.addEventListener("click", () => {
             axios({
@@ -65,13 +65,10 @@
                         author[i].innerText = result.data[i].author;
                         personName[i].innerText = result.data[i].appointee;
                         bookName[i].previousElementSibling.src = `${result.data[i].url}`;
-                        if (result.data[i].url.includes(".png")) {
-                            bookName[i].previousElementSibling.src = `${result.data[i].url}`;
-                        }
                     }
                 })
                 .catch((err) => {
-                    console.log("出错了！", err)
+                    alert("出错了！", err)
                 })
         })
         reservationRequest.addEventListener("click", () => {
@@ -86,12 +83,9 @@
                         author[i].innerText = result.data[i].author;
                         personName[i].innerText = result.data[i].appointee;
                         bookName[i].previousElementSibling.src = `${result.data[i].url}`;
-                        if (result.data[i].url.includes(".png")) {
-                            bookName[i].previousElementSibling.src = `${result.data[i].url}`;
-                        }
                     }
                 })
                 .catch((err) => {
-                    console.log("出错了！", err)
+                    alert("出错了！", err)
                 })
         })

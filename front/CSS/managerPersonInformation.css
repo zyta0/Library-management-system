@@ -1,0 +1,299 @@
+* {
+    margin: 0;
+}
+
+.color {
+    height: 2048px;
+    background-color: #E4F4F4;
+    padding-top: 60px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #000;
+}
+
+a:visited {
+    color: #000;
+}
+
+a:active {
+    color: #000;
+}
+
+.pic img {
+    width: 80px;
+}
+
+.navigationBar {
+    height: 80px;
+    width: 100%;
+    line-height: 80px;
+    background: rgba(255, 253, 253, 1);
+}
+
+.typeCenter {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    height: 100%;
+}
+
+.navigationBar .pic {
+    width: 80px;
+    height: 80px;
+}
+
+.function {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 56%;
+    cursor: pointer;
+}
+
+.function span {
+    display: inline-block;
+    width: 19%;
+    height: 75px;
+    text-align: center;
+}
+
+.function .index {
+    color: #74C9FB;
+}
+
+.function span:hover {
+    color: #74C9FB;
+    border-bottom: 3px solid #74C9FB;
+}
+
+.function .headPortrait {
+    display: inline-block;
+    position: absolute;
+    left: 459px;
+    top: 19px;
+    width: 40px;
+    height: 42.5px;
+    background-color: burlywood;
+    border-radius: 50%;
+}
+
+.function .message .icon-xiaoxi {
+    display: inline-block;
+    position: absolute;
+    left: 559px;
+    top: 3px;
+    font-size: 33px;
+}
+
+.navigationBar .function .icon-search {
+    position: absolute;
+    top: 2px;
+    left: 404px;
+    color: white;
+}
+
+.function .search {
+    width: 160px;
+    height: 29.75px;
+    background: #A8D6F7;
+    border: none;
+    border-radius: 14px;
+}
+
+input {
+    width: 595px;
+    height: 62px;
+    font-size: 16px;
+    color: #a2a4a6;
+    background-color: #e2effb;
+    border: none;
+    border-radius: 32px;
+}
+
+.selectionBar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 201px;
+    height: 300px;
+    background-color: white;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.selectionBar .selectBox {
+    position: relative;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.selectionBar .selectedSign {
+    display: none;
+    position: absolute;
+    top: -5px;
+    left: 5px;
+    height: 30px;
+    border: 5px solid #90c8fb;
+}
+
+.information {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 941px;
+}
+
+.information>div {
+    margin-bottom: 60px;
+    background-color: white;
+}
+
+.information .tab {
+    display: flex;
+    height: 40px;
+    font-size: 26px;
+    line-height: 40px;
+}
+
+.information .tab span {
+    flex: 1;
+    border-bottom: 1px solid #eef8f8;
+}
+
+.information .tab .changes {
+    display: block;
+    font-size: 20px;
+    color: #999999;
+    border-bottom: 1px solid #eef8f8;
+}
+
+.information .tab .preserve {
+    display: none;
+    font-size: 20px;
+    color: #999999;
+    border-bottom: 1px solid #eef8f8;
+}
+
+.information .details {
+    position: relative;
+}
+
+.information .personInformation {
+    padding: 0 20px 0 40px;
+    width: 941px;
+    height: 381px;
+}
+
+.information .contactWay {
+    padding: 0 20px 0 40px;
+    width: 941px;
+    height: 381px;
+}
+
+.information .bind {
+    padding: 0 20px 0 40px;
+    width: 941px;
+    height: 181px;
+}
+
+.information .changePassword {
+    padding: 0 20px 0 40px;
+    width: 941px;
+    height: 282px;
+}
+
+.information .details .profilePhoto {
+    margin-top: 42px;
+    width: 142px;
+    height: 142px;
+    background-color: thistle;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.information .details>button {
+    position: absolute;
+    top: 68px;
+    left: 150px;
+    background-color: white;
+    border: none;
+    font-size: 16px;
+}
+
+.information .personInformation .genderGelection {
+    height: 60px;
+    line-height: 60px;
+}
+
+.information .personInformation .genderGelection input {
+    width: 22px;
+    height: 13px;
+}
+
+.information .personInformation .details>input {
+    position: absolute;
+    top: 12px;
+    left: 232px;
+}
+
+.information .personInformation .details>.birthDay {
+    top: 114px;
+}
+
+.information .contactWay input {
+    display: block;
+    margin-top: 40px;
+}
+
+.information .bind input {
+    display: block;
+    margin-top: 40px;
+}
+
+.information .changePassword .details>input {
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.footer {
+    position: relative;
+    width: 1920px;
+    margin: auto;
+    height: 425px;
+    background: #C6D0D1;
+    color: white;
+    font-size: 24px;
+}
+
+.footer .absoluteUs {
+    position: absolute;
+    top: 93px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 33px;
+    width: 842px;
+}
+
+.footer .absoluteUs>div {
+    display: inline-block;
+    width: 160px;
+    border-left: 3px solid white;
+    text-align: center;
+}
+
+.footer .absoluteUs>div:nth-child(1) {
+    border-left: none;
+}
+
+.footer .copyright {
+    position: absolute;
+    top: 276px;
+    left: 50%;
+    transform: translateX(-50%);
+}

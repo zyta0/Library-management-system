@@ -30,21 +30,21 @@ btn.addEventListener("click", () => {
     axios({
         cancelToken: source.token,
         method: "POST",
-        url: "http://frp-fly.top:15946/Library_management_system_war_exploded/loginController",
+        url: "http://7l4ghd8r.shenzhuo.vip:50365/login",
         data: {
-            name: `${account.value}`,
+            account: `${account.value}`,
             password: `${pwd.value}`
         }
     }).then(res => {
-        console.log(res);
         let code = res.data.code;
         if (code != 200) {
-            alert(res.data.message);
+            alert("用户名或密码错误");
             account.value = '';
             pwd.value = '';
         } else {
+            localStorage.setItem("token", res.data.token);
             alert("登录成功");
-            // document.location.replace("../front/index.html")
+            document.location.replace("./index.html")
         }
     }).catch(err => { });
 })
